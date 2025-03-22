@@ -6,7 +6,7 @@ Authors@R:
 Description: Provides tools to import, clean, filter, and prepare Project
     FeederWatch data for analysis. Includes functions for taxonomic
     rollup, easy filtering, zerofilling, merging in site metadata, and more.
-License: GPL-3
+License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
