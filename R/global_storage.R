@@ -4,9 +4,8 @@
 #' @importFrom utils read.csv
 #' @importFrom stats setNames
 utils::globalVariables(c(
-  "HOW_MANY",
-  "SPECIES_CODE",
-  "SUB_ID"
+  "HOW_MANY", "SPECIES_CODE", "SUB_ID", "Year", "Month", "Day",
+  ".PFW_DATE_TEMP", ".PFW_DOY"
 ))
 
 .pfw_env <- new.env(parent = emptyenv()) # Hidden environment for saving import data
