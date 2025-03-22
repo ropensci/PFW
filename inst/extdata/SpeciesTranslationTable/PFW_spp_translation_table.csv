@@ -1,0 +1,1093 @@
+﻿"species_code","alt_full_spp_code","n_locations","scientific_name","american_english_name","taxonomy_version","taxonomic_sort_order"
+"grerhe1",NA,"1","Rhea americana","Greater Rhea",2023,10
+"gretin1",NA,"3","Tinamus major","Great Tinamou",2023,42
+"wfwduc1",NA,"1","Dendrocygna viduata","White-faced Whistling-Duck",2023,231
+"bbwduc",NA,"130","Dendrocygna autumnalis","Black-bellied Whistling-Duck",2023,233
+"fuwduc",NA,"2","Dendrocygna bicolor","Fulvous Whistling-Duck",2023,238
+"snogoo",NA,"149","Anser caerulescens","Snow Goose",2023,256
+"rosgoo",NA,"7","Anser rossii","Ross's Goose",2023,260
+"swagoo2","swagoo1","1","Anser cygnoides (Domestic type)","Swan Goose (Domestic type)",2023,269
+"gwfgoo",NA,"13","Anser albifrons","Greater White-fronted Goose",2023,271
+"gwfgoo2","gwfgoo","1","Anser albifrons gambelli/sponsa","Greater White-fronted Goose (Western)",2023,274
+"domgoo1",NA,"17","Anser sp. (Domestic type)","Domestic goose sp. (Domestic type)",2023,294
+"brant",NA,"3","Branta bernicla","Brant",2023,296
+"bargoo",NA,"1","Branta leucopsis","Barnacle Goose",2023,304
+"cacgoo1",NA,"14","Branta hutchinsii","Cackling Goose",2023,313
+"alcgoo1","cacgoo1","2","Branta hutchinsii leucopareia","Cackling Goose (Aleutian)",2023,314
+"ricgoo1","cacgoo1","2","Branta hutchinsii hutchinsii","Cackling Goose (Richardson's)",2023,315
+"cacgoo2","cacgoo1","1","Branta hutchinsii minima","Cackling Goose (minima)",2023,316
+"cangoo",NA,"2947","Branta canadensis","Canada Goose",2023,324
+"cangoo4","cangoo","19","Branta canadensis moffitti/maxima","Canada Goose (moffitti/maxima)",2023,325
+"cangoo1","cangoo","7","Branta canadensis [canadensis Group]","Canada Goose (canadensis Group)",2023,331
+"x00415",NA,"9","Anser albifrons x Branta canadensis","Greater White-fronted x Canada Goose (hybrid)",2023,338
+"x00759",NA,"4","Anser sp. (Domestic type) x Branta canadensis","Domestic goose sp. x Canada Goose (hybrid)",2023,341
+"x00197",NA,"1","Anser caerulescens x Branta canadensis","Snow x Canada Goose (hybrid)",2023,342
+"hawgoo",NA,"1","Branta sandvicensis","Hawaiian Goose",2023,347
+"mutswa",NA,"117","Cygnus olor","Mute Swan",2023,358
+"truswa",NA,"40","Cygnus buccinator","Trumpeter Swan",2023,363
+"tunswa",NA,"48","Cygnus columbianus","Tundra Swan",2023,365
+"tunswa1","tunswa","2","Cygnus columbianus columbianus","Tundra Swan (Whistling)",2023,366
+"x00418",NA,"2","Cygnus buccinator x columbianus","Trumpeter x Tundra Swan (hybrid)",2023,369
+"y00471",NA,"54","Cygnus buccinator/columbianus","Trumpeter/Tundra Swan",2023,370
+"swan1",NA,"4","Cygnus sp.","swan sp.",2023,375
+"goose1",NA,"2","Anatidae (goose sp.)","goose sp.",2023,393
+"egygoo",NA,"11","Alopochen aegyptiaca","Egyptian Goose",2023,397
+"musduc",NA,"10","Cairina moschata","Muscovy Duck",2023,423
+"musduc3","musduc","117","Cairina moschata (Domestic type)","Muscovy Duck (Domestic type)",2023,424
+"wooduc",NA,"1182","Aix sponsa","Wood Duck",2023,433
+"manduc",NA,"3","Aix galericulata","Mandarin Duck",2023,435
+"baitea",NA,"1","Sibirionetta formosa","Baikal Teal",2023,453
+"buwtea",NA,"88","Spatula discors","Blue-winged Teal",2023,460
+"cintea",NA,"5","Spatula cyanoptera","Cinnamon Teal",2023,461
+"norsho",NA,"68","Spatula clypeata","Northern Shoveler",2023,474
+"gadwal",NA,"70","Mareca strepera","Gadwall",2023,478
+"x00457",NA,"1","Spatula clypeata x Mareca strepera","Northern Shoveler x Gadwall (hybrid)",2023,481
+"eurwig",NA,"1","Mareca penelope","Eurasian Wigeon",2023,485
+"amewig",NA,"117","Mareca americana","American Wigeon",2023,487
+"x00724",NA,"1","Mareca strepera x americana","Gadwall x American Wigeon (hybrid)",2023,491
+"mallar3",NA,"4781","Anas platyrhynchos","Mallard",2023,515
+"mallar2","mallar3","351","Anas platyrhynchos (Domestic type)","Mallard (Domestic type)",2023,518
+"mdxmal1",NA,"23","Cairina moschata x Anas platyrhynchos","Muscovy Duck x Mallard (hybrid)",2023,519
+"x00205",NA,"34","Aix sponsa x Anas platyrhynchos","Wood Duck x Mallard (hybrid)",2023,520
+"x00420",NA,"1","Mareca strepera x Anas platyrhynchos","Gadwall x Mallard (hybrid)",2023,522
+"x00423",NA,"1","Anas platyrhynchos x wyvilliana","Mallard x Hawaiian Duck (hybrid)",2023,527
+"mexduc",NA,"5","Anas diazi","Mexican Duck",2023,534
+"mallar",NA,"17","Anas platyrhynchos/diazi","Mallard/Mexican Duck",2023,536
+"ambduc",NA,"347","Anas rubripes","American Black Duck",2023,537
+"x00004",NA,"138","Anas platyrhynchos x rubripes","Mallard x American Black Duck (hybrid)",2023,539
+"y00600",NA,"59","Anas platyrhynchos/rubripes","Mallard/American Black Duck",2023,540
+"motduc",NA,"85","Anas fulvigula","Mottled Duck",2023,541
+"x00422",NA,"24","Anas platyrhynchos x fulvigula","Mallard x Mottled Duck (hybrid)",2023,544
+"whcpin",NA,"1","Anas bahamensis","White-cheeked Pintail",2023,551
+"norpin",NA,"77","Anas acuta","Northern Pintail",2023,558
+"gnwtea",NA,"104","Anas crecca","Green-winged Teal",2023,574
+"egwtea1","gnwtea","1","Anas crecca crecca","Green-winged Teal (Eurasian)",2023,575
+"agwtea1","gnwtea","9","Anas crecca carolinensis","Green-winged Teal (American)",2023,576
+"x00670",NA,"1","Anas platyrhynchos x crecca","Mallard x Green-winged Teal (hybrid)",2023,585
+"dabduc1",NA,"1","Anatidae sp. (dabbling duck sp.)","dabbling duck sp.",2023,616
+"canvas",NA,"27","Aythya valisineria","Canvasback",2023,627
+"redhea",NA,"34","Aythya americana","Redhead",2023,628
+"rinduc",NA,"188","Aythya collaris","Ring-necked Duck",2023,634
+"gresca",NA,"23","Aythya marila","Greater Scaup",2023,655
+"lessca",NA,"81","Aythya affinis","Lesser Scaup",2023,661
+"x00613",NA,"1","Aythya collaris x affinis","Ring-necked Duck x Lesser Scaup (hybrid)",2023,663
+"scaup",NA,"3","Aythya marila/affinis","Greater/Lesser Scaup",2023,669
+"comeid",NA,"6","Somateria mollissima","Common Eider",2023,676
+"sursco",NA,"4","Melanitta perspicillata","Surf Scoter",2023,688
+"whwsco2",NA,"3","Melanitta deglandi","White-winged Scoter",2023,690
+"whwsco",NA,"3","Melanitta fusca/deglandi/stejnegeri","Velvet/White-winged/Stejneger's Scoter",2023,693
+"blksco2",NA,"1","Melanitta americana","Black Scoter",2023,696
+"lotduc",NA,"8","Clangula hyemalis","Long-tailed Duck",2023,700
+"buffle",NA,"266","Bucephala albeola","Bufflehead",2023,701
+"comgol",NA,"132","Bucephala clangula","Common Goldeneye",2023,702
+"bargol",NA,"11","Bucephala islandica","Barrow's Goldeneye",2023,707
+"y00004",NA,"3","Bucephala clangula/islandica","Common/Barrow's Goldeneye",2023,709
+"hoomer",NA,"463","Lophodytes cucullatus","Hooded Merganser",2023,712
+"x00202",NA,"1","Aix sponsa x Lophodytes cucullatus","Wood Duck x Hooded Merganser (hybrid)",2023,713
+"x00424",NA,"1","Bucephala albeola x Lophodytes cucullatus","Bufflehead x Hooded Merganser (hybrid)",2023,714
+"commer",NA,"251","Mergus merganser","Common Merganser",2023,720
+"commer1","commer","10","Mergus merganser americanus","Common Merganser (North American)",2023,724
+"rebmer",NA,"72","Mergus serrator","Red-breasted Merganser",2023,728
+"x00614",NA,"2","Aythya collaris x Mergus serrator","Ring-necked Duck x Red-breasted Merganser (hybrid)",2023,729
+"mergan1",NA,"2","Mergellus/Lophodytes/Mergus sp.","merganser sp.",2023,733
+"rudduc",NA,"41","Oxyura jamaicensis","Ruddy Duck",2023,736
+"duck1",NA,"32","Anatidae (duck sp.)","duck sp.",2023,750
+"placha",NA,"19","Ortalis vetula","Plain Chachalaca",2023,811
+"rubcha1",NA,"2","Ortalis wagleri","Rufous-bellied Chachalaca",2023,822
+"colcha1",NA,"1","Ortalis columbiana","Colombian Chachalaca",2023,828
+"helgui",NA,"16","Numida meleagris","Helmeted Guineafowl",2023,930
+"mouqua",NA,"88","Oreortyx pictus","Mountain Quail",2023,966
+"norbob",NA,"825","Colinus virginianus","Northern Bobwhite",2023,979
+"norbob1","norbob","6","Colinus virginianus [virginianus Group]","Northern Bobwhite (Eastern)",2023,980
+"scaqua",NA,"174","Callipepla squamata","Scaled Quail",2023,1032
+"x00688",NA,"12","Colinus virginianus x Callipepla squamata","Northern Bobwhite x Scaled Quail (hybrid)",2023,1037
+"calqua",NA,"2953","Callipepla californica","California Quail",2023,1045
+"gamqua",NA,"1037","Callipepla gambelii","Gambel's Quail",2023,1056
+"x00689",NA,"2","Callipepla squamata x gambelii","Scaled x Gambel's Quail (hybrid)",2023,1062
+"y00315",NA,"1","Callipepla californica x gambelii","California x Gambel's Quail (hybrid)",2023,1063
+"monqua",NA,"11","Cyrtonyx montezumae","Montezuma Quail",2023,1065
+"quail1",NA,"9","Odontophoridae sp.","new world quail sp.",2023,1123
+"wiltur",NA,"9721","Meleagris gallopavo","Wild Turkey",2023,1222
+"rufgro",NA,"2270","Bonasa umbellus","Ruffed Grouse",2023,1231
+"dusgro",NA,"12","Dendragapus obscurus","Dusky Grouse",2023,1263
+"soogro1",NA,"5","Dendragapus fuliginosus","Sooty Grouse",2023,1268
+"blugrs",NA,"7","Dendragapus obscurus/fuliginosus","Dusky/Sooty Grouse",2023,1273
+"shtgro",NA,"106","Tympanuchus phasianellus","Sharp-tailed Grouse",2023,1274
+"grpchi",NA,"1","Tympanuchus cupido","Greater Prairie-Chicken",2023,1283
+"greprc1","grpchi","1","Tympanuchus cupido pinnatus","Greater Prairie-Chicken (pinnatus)",2023,1284
+"wilpta",NA,"15","Lagopus lagopus","Willow Ptarmigan",2023,1297
+"rocpta1",NA,"2","Lagopus muta","Rock Ptarmigan",2023,1318
+"ptarmi1",NA,"1","Lagopus sp.","ptarmigan sp.",2023,1349
+"sprgro",NA,"114","Canachites canadensis","Spruce Grouse",2023,1351
+"frsgro1","sprgro","1","Canachites canadensis franklinii/isleibi","Spruce Grouse (Franklin's)",2023,1358
+"grypar",NA,"262","Perdix perdix","Gray Partridge",2023,1393
+"golphe",NA,"1","Chrysolophus pictus","Golden Pheasant",2023,1416
+"rinphe1",NA,"3245","Phasianus colchicus","Ring-necked Pheasant",2023,1420
+"rinphe2",NA,"2","Phasianus versicolor","Green Pheasant",2023,1452
+"rinphe",NA,"11","Phasianus colchicus/versicolor","Ring-necked/Green Pheasant",2023,1457
+"kalphe",NA,"1","Lophura leucomelanos","Kalij Pheasant",2023,1472
+"silphe",NA,"1","Lophura nycthemera","Silver Pheasant",2023,1482
+"compea",NA,"17","Pavo cristatus","Indian Peafowl",2023,1515
+"indpea1","compea","7","Pavo cristatus (Domestic type)","Indian Peafowl (Domestic type)",2023,1516
+"pheasa1",NA,"4","Phasianidae sp. (pheasant sp.)","pheasant sp.",2023,1554
+"redjun1","redjun","4","Gallus gallus (Domestic type)","Red Junglefowl (Domestic type)",2023,1568
+"gryfra",NA,"8","Ortygornis pondicerianus","Gray Francolin",2023,1581
+"relpar1",NA,"2","Alectoris rufa","Red-legged Partridge",2023,1694
+"chukar",NA,"76","Alectoris chukar","Chukar",2023,1698
+"ercfra",NA,"1","Pternistis erckelii","Erckel's Spurfowl",2023,1749
+"leagre",NA,"5","Tachybaptus dominicus","Least Grebe",2023,1825
+"pibgre",NA,"138","Podilymbus podiceps","Pied-billed Grebe",2023,1831
+"horgre",NA,"19","Podiceps auritus","Horned Grebe",2023,1842
+"rengre",NA,"7","Podiceps grisegena","Red-necked Grebe",2023,1845
+"eargre",NA,"4","Podiceps nigricollis","Eared Grebe",2023,1852
+"y00229",NA,"1","Podiceps auritus/nigricollis","Horned/Eared Grebe",2023,1856
+"wesgre",NA,"4","Aechmophorus occidentalis","Western Grebe",2023,1864
+"rocpig",NA,"5","Columba livia","Rock Pigeon",2023,1874
+"rocpig1","rocpig","12614","Columba livia (Feral Pigeon)","Rock Pigeon (Feral Pigeon)",2023,1889
+"whcpig2",NA,"3","Patagioenas leucocephala","White-crowned Pigeon",2023,1976
+"rebpig1",NA,"2","Patagioenas flavirostris","Red-billed Pigeon",2023,1977
+"batpig1",NA,"2436","Patagioenas fasciata","Band-tailed Pigeon",2023,1986
+"batpig2","batpig1","1","Patagioenas fasciata [fasciata Group]","Band-tailed Pigeon (Northern)",2023,1987
+"y00319",NA,"1","Columba livia/Patagioenas fasciata","Rock/Band-tailed Pigeon",2023,1996
+"eutdov",NA,"2","Streptopelia turtur","European Turtle-Dove",2023,2035
+"ortdov",NA,"1","Streptopelia orientalis","Oriental Turtle-Dove",2023,2042
+"eucdov",NA,"7522","Streptopelia decaocto","Eurasian Collared-Dove",2023,2051
+"afcdov1",NA,"57","Streptopelia roseogrisea","African Collared-Dove",2023,2056
+"afrcod1","afcdov1","193","Streptopelia roseogrisea (Domestic type)","African Collared-Dove (Domestic type or Ringed Turtle-Dove)",2023,2059
+"rindov",NA,"23","Streptopelia capicola","Ring-necked Dove",2023,2071
+"strept1",NA,"3","Streptopelia sp.","Streptopelia sp.",2023,2083
+"spodov",NA,"188","Spilopelia chinensis","Spotted Dove",2023,2084
+"zebdov",NA,"25","Geopelia striata","Zebra Dove",2023,2251
+"incdov",NA,"2016","Columbina inca","Inca Dove",2023,2261
+"cogdov",NA,"3445","Columbina passerina","Common Ground Dove",2023,2262
+"rugdov",NA,"4","Columbina talpacoti","Ruddy Ground Dove",2023,2286
+"y00320",NA,"1","Columbina sp.","ground dove/Inca Dove",2023,2303
+"gfqdov",NA,"1","Geotrygon caniceps","Gray-fronted Quail-Dove",2023,2335
+"wfqdov",NA,"1","Geotrygon leucometopia","White-fronted Quail-Dove",2023,2336
+"whtdov",NA,"36","Leptotila verreauxi","White-tipped Dove",2023,2340
+"whwdov",NA,"4320","Zenaida asiatica","White-winged Dove",2023,2404
+"moudov",NA,"82294","Zenaida macroura","Mourning Dove",2023,2427
+"dove1",NA,"37","Columbidae sp.","pigeon/dove sp.",2023,2855
+"grbani",NA,"2","Crotophaga sulcirostris","Groove-billed Ani",2023,3026
+"greroa",NA,"1176","Geococcyx californianus","Greater Roadrunner",2023,3037
+"squcuc1",NA,"2","Piaya cayana","Squirrel Cuckoo",2023,3211
+"yebcuc",NA,"16","Coccyzus americanus","Yellow-billed Cuckoo",2023,3230
+"bkbcuc",NA,"2","Coccyzus erythropthalmus","Black-billed Cuckoo",2023,3235
+"oricuc2",NA,"1","Cuculus optatus","Oriental Cuckoo",2023,3427
+"lesnig",NA,"9","Chordeiles acutipennis","Lesser Nighthawk",2023,3500
+"comnig",NA,"15","Chordeiles minor","Common Nighthawk",2023,3508
+"nighth1",NA,"1","Chordeiles sp.","nighthawk sp.",2023,3522
+"compau",NA,"1","Nyctidromus albicollis","Common Pauraque",2023,3553
+"compoo",NA,"7","Phalaenoptilus nuttallii","Common Poorwill",2023,3604
+"chwwid",NA,"26","Antrostomus carolinensis","Chuck-will's-widow",2023,3610
+"bucnig",NA,"1","Antrostomus ridgwayi","Buff-collared Nightjar",2023,3627
+"easwpw1",NA,"15","Antrostomus vociferus","Eastern Whip-poor-will",2023,3630
+"whcswi",NA,"3","Streptoprocne zonaris","White-collared Swift",2023,3822
+"chiswi",NA,"74","Chaetura pelagica","Chimney Swift",2023,3874
+"vauswi",NA,"4","Chaetura vauxi","Vaux's Swift",2023,3875
+"whtswi",NA,"7","Aeronautes saxatalis","White-throated Swift",2023,4134
+"ruthum1",NA,"2","Chrysolampis mosquitus","Ruby-topaz Hummingbird",2023,4357
+"peacoq1",NA,"1","Lophornis pavoninus","Peacock Coquette",2023,4427
+"maghum1",NA,"32","Eugenes fulgens","Rivoli's Hummingbird",2023,4698
+"plcsta",NA,"1","Heliomaster constantii","Plain-capped Starthroat",2023,4704
+"buthum",NA,"9","Lampornis clemenciae","Blue-throated Mountain-gem",2023,4727
+"luchum",NA,"10","Calothorax lucifer","Lucifer Hummingbird",2023,4773
+"rthhum",NA,"4675","Archilochus colubris","Ruby-throated Hummingbird",2023,4776
+"bkchum",NA,"2103","Archilochus alexandri","Black-chinned Hummingbird",2023,4777
+"archil1",NA,"47","Archilochus colubris/alexandri","Ruby-throated/Black-chinned Hummingbird",2023,4780
+"annhum",NA,"8768","Calypte anna","Anna's Hummingbird",2023,4787
+"coshum",NA,"759","Calypte costae","Costa's Hummingbird",2023,4790
+"x00618",NA,"2","Calypte anna x costae","Anna's x Costa's Hummingbird (hybrid)",2023,4793
+"calypt",NA,"16","Calypte anna/costae","Anna's/Costa's Hummingbird",2023,4794
+"calhum",NA,"178","Selasphorus calliope","Calliope Hummingbird",2023,4795
+"x00619",NA,"2","Calypte anna x Selasphorus calliope","Anna's x Calliope Hummingbird (hybrid)",2023,4797
+"rufhum",NA,"4188","Selasphorus rufus","Rufous Hummingbird",2023,4798
+"allhum",NA,"1425","Selasphorus sasin","Allen's Hummingbird",2023,4803
+"y00001",NA,"44","Selasphorus rufus/sasin","Rufous/Allen's Hummingbird",2023,4808
+"brthum",NA,"384","Selasphorus platycercus","Broad-tailed Hummingbird",2023,4809
+"selasp",NA,"52","Selasphorus sp.","Selasphorus sp.",2023,4829
+"brbhum",NA,"191","Cynanthus latirostris","Broad-billed Hummingbird",2023,4837
+"goceme1",NA,"1","Cynanthus auriceps","Golden-crowned Emerald",2023,4851
+"whehum",NA,"4","Basilinna leucotis","White-eared Hummingbird",2023,4888
+"mexwoo1",NA,"2","Eupherusa ridgwayi","Mexican Woodnymph",2023,4980
+"vichum",NA,"19","Ramosomyia violiceps","Violet-crowned Hummingbird",2023,5012
+"berhum",NA,"2","Saucerottia beryllina","Berylline Hummingbird",2023,5025
+"cinhum1",NA,"1","Amazilia rutila","Cinnamon Hummingbird",2023,5067
+"bubhum",NA,"60","Amazilia yucatanensis","Buff-bellied Hummingbird",2023,5073
+"rtlhum",NA,"1","Amazilia tzacatl","Rufous-tailed Hummingbird",2023,5078
+"whthum2",NA,"2","Leucochloris albicollis","White-throated Hummingbird",2023,5135
+"hummin",NA,"149","Trochilidae sp.","hummingbird sp.",2023,5182
+"clarai11",NA,"3","Rallus crepitans","Clapper Rail",2023,5247
+"rallus",NA,"1","Rallus elegans/crepitans","King/Clapper Rail",2023,5264
+"virrai",NA,"17","Rallus limicola","Virginia Rail",2023,5268
+"sora",NA,"8","Porzana carolina","Sora",2023,5428
+"comgal1",NA,"37","Gallinula galeata","Common Gallinule",2023,5442
+"y00475",NA,"42","Fulica americana","American Coot",2023,5474
+"amecoo","y00475","97","Fulica americana (Red-shielded)","American Coot (Red-shielded)",2023,5477
+"coot1",NA,"1","Fulica sp.","coot sp.",2023,5487
+"purgal2",NA,"1","Porphyrio martinica","Purple Gallinule",2023,5489
+"limpki",NA,"32","Aramus guarauna","Limpkin",2023,5642
+"sancra",NA,"396","Antigone canadensis","Sandhill Crane",2023,5671
+"sancra1","sancra","1","Antigone canadensis canadensis","Sandhill Crane (canadensis)",2023,5672
+"sancra2","sancra","1","Antigone canadensis tabida/rowani","Sandhill Crane (tabida/rowani)",2023,5673
+"sancra5","sancra","27","Antigone canadensis pratensis","Sandhill Crane (pratensis)",2023,5677
+"whocra",NA,"1","Grus americana","Whooping Crane",2023,5690
+"bknsti",NA,"2","Himantopus mexicanus","Black-necked Stilt",2023,5741
+"pagplo",NA,"11","Pluvialis fulva","Pacific Golden-Plover",2023,5787
+"killde",NA,"959","Charadrius vociferus","Killdeer",2023,5798
+"semplo",NA,"2","Charadrius semipalmatus","Semipalmated Plover",2023,5805
+"wilplo",NA,"1","Anarhynchus wilsonia","Wilson's Plover",2023,5894
+"plover2",NA,"1","Charadriidae sp.","plover sp.",2023,5930
+"lobcur",NA,"4","Numenius americanus","Long-billed Curlew",2023,5988
+"lobdow",NA,"1","Limnodromus scolopaceus","Long-billed Dowitcher",2023,6028
+"jacsni",NA,"1","Lymnocryptes minimus","Jack Snipe",2023,6030
+"amewoo",NA,"262","Scolopax minor","American Woodcock",2023,6031
+"comsni",NA,"17","Gallinago gallinago","Common Snipe",2023,6064
+"wilsni1",NA,"51","Gallinago delicata","Wilson's Snipe",2023,6069
+"redpha1",NA,"1","Phalaropus fulicarius","Red Phalarope",2023,6085
+"comsan",NA,"1","Actitis hypoleucos","Common Sandpiper",2023,6090
+"sposan",NA,"31","Actitis macularius","Spotted Sandpiper",2023,6091
+"solsan",NA,"1","Tringa solitaria","Solitary Sandpiper",2023,6094
+"wantat1",NA,"1","Tringa incana","Wandering Tattler",2023,6098
+"lesyel",NA,"2","Tringa flavipes","Lesser Yellowlegs",2023,6109
+"willet1",NA,"1","Tringa semipalmata","Willet",2023,6111
+"willet2","willet1","1","Tringa semipalmata semipalmata","Willet (Eastern)",2023,6112
+"greyel",NA,"7","Tringa melanoleuca","Greater Yellowlegs",2023,6118
+"leasan",NA,"11","Calidris minutilla","Least Sandpiper",2023,6187
+"pecsan",NA,"3","Calidris melanotos","Pectoral Sandpiper",2023,6188
+"wessan",NA,"1","Calidris mauri","Western Sandpiper",2023,6192
+"semsan",NA,"3","Calidris pusilla","Semipalmated Sandpiper",2023,6193
+"parauk",NA,"1","Aethia psittacula","Parakeet Auklet",2023,6351
+"doveki",NA,"2","Alle alle","Dovekie",2023,6376
+"bklkit",NA,"2","Rissa tridactyla","Black-legged Kittiwake",2023,6409
+"bongul",NA,"10","Chroicocephalus philadelphia","Bonaparte's Gull",2023,6422
+"blbgul1",NA,"1","Chroicocephalus bulleri","Black-billed Gull",2023,6428
+"bkhgul",NA,"2","Chroicocephalus ridibundus","Black-headed Gull",2023,6434
+"grygul",NA,"1","Leucophaeus modestus","Gray Gull",2023,6446
+"laugul",NA,"53","Leucophaeus atricilla","Laughing Gull",2023,6448
+"fragul",NA,"3","Leucophaeus pipixcan","Franklin's Gull",2023,6452
+"heegul",NA,"1","Larus heermanni","Heermann's Gull",2023,6470
+"mewgul2",NA,"4","Larus brachyrhynchus","Short-billed Gull",2023,6477
+"ribgul",NA,"584","Larus delawarensis","Ring-billed Gull",2023,6479
+"x00616",NA,"1","Leucophaeus atricilla x Larus delawarensis","Laughing x Ring-billed Gull (hybrid)",2023,6481
+"wesgul",NA,"54","Larus occidentalis","Western Gull",2023,6485
+"hergul",NA,"712","Larus argentatus","Herring Gull",2023,6496
+"amhgul1","hergul","54","Larus argentatus smithsonianus","Herring Gull (American)",2023,6497
+"gbbgul",NA,"60","Larus marinus","Great Black-backed Gull",2023,6516
+"glagul",NA,"25","Larus hyperboreus","Glaucous Gull",2023,6519
+"lbbgul",NA,"2","Larus fuscus","Lesser Black-backed Gull",2023,6526
+"calgul",NA,"58","Larus californicus","California Gull",2023,6539
+"glwgul",NA,"92","Larus glaucescens","Glaucous-winged Gull",2023,6543
+"x00051",NA,"12","Larus occidentalis x glaucescens","Western x Glaucous-winged Gull (hybrid)",2023,6544
+"x00050",NA,"2","Larus argentatus x glaucescens","Herring x Glaucous-winged Gull (hybrid)",2023,6545
+"y00478",NA,"2","Larus glaucoides","Iceland Gull",2023,6553
+"thagul","y00478","4","Larus glaucoides thayeri","Iceland Gull (Thayer's)",2023,6554
+"icegul1","y00478","1","Larus glaucoides glaucoides","Iceland Gull (glaucoides)",2023,6557
+"icegul","y00478","6","Larus glaucoides kumlieni/glaucoides","Iceland Gull (kumlieni/glaucoides)",2023,6558
+"x00617",NA,"2","Larus argentatus x glaucoides","Herring x Iceland Gull (hybrid)",2023,6560
+"larus1",NA,"5","Larus sp.","Larus sp.",2023,6563
+"larus",NA,"66","Larinae sp.","gull sp.",2023,6564
+"leater1",NA,"3","Sternula antillarum","Least Tern",2023,6638
+"gubter2",NA,"1","Gelochelidon nilotica","Gull-billed Tern",2023,6649
+"forter",NA,"12","Sterna forsteri","Forster's Tern",2023,6670
+"comter",NA,"7","Sterna hirundo","Common Tern",2023,6686
+"santer1",NA,"1","Thalasseus sandvicensis","Sandwich Tern",2023,6713
+"royter1",NA,"3","Thalasseus maximus","Royal Tern",2023,6725
+"tern1",NA,"1","Sterninae sp.","tern sp.",2023,6738
+"retloo",NA,"1","Gavia stellata","Red-throated Loon",2023,6768
+"comloo",NA,"105","Gavia immer","Common Loon",2023,6774
+"loon",NA,"1","Gavia sp.","loon sp.",2023,6777
+"woosto",NA,"93","Mycteria americana","Wood Stork",2023,7138
+"magfri",NA,"2","Fregata magnificens","Magnificent Frigatebird",2023,7147
+"norgan",NA,"1","Morus bassanus","Northern Gannet",2023,7165
+"anhing",NA,"97","Anhinga anhinga","Anhinga",2023,7195
+"grecor",NA,"2","Phalacrocorax carbo","Great Cormorant",2023,7224
+"doccor",NA,"215","Nannopterum auritum","Double-crested Cormorant",2023,7253
+"neocor",NA,"13","Nannopterum brasilianum","Neotropic Cormorant",2023,7260
+"cormor1",NA,"1","Phalacrocoracidae sp.","cormorant sp.",2023,7286
+"amwpel",NA,"41","Pelecanus erythrorhynchos","American White Pelican",2023,7288
+"brnpel",NA,"42","Pelecanus occidentalis","Brown Pelican",2023,7289
+"grwpel1",NA,"2","Pelecanus onocrotalus","Great White Pelican",2023,7297
+"amebit",NA,"10","Botaurus lentiginosus","American Bittern",2023,7335
+"leabit",NA,"1","Ixobrychus exilis","Least Bittern",2023,7340
+"ycnher",NA,"32","Nyctanassa violacea","Yellow-crowned Night Heron",2023,7364
+"bcnher",NA,"33","Nycticorax nycticorax","Black-crowned Night Heron",2023,7373
+"bkcnih2","bcnher","1","Nycticorax nycticorax hoactli","Black-crowned Night Heron (American)",2023,7375
+"y00610",NA,"1","Nycticorax nycticorax/Nyctanassa violacea","Yellow-crowned/Black-crowned Night Heron",2023,7379
+"libher",NA,"153","Egretta caerulea","Little Blue Heron",2023,7401
+"triher",NA,"58","Egretta tricolor","Tricolored Heron",2023,7402
+"redegr",NA,"1","Egretta rufescens","Reddish Egret",2023,7406
+"snoegr",NA,"152","Egretta thula","Snowy Egret",2023,7416
+"x00615",NA,"2","Egretta caerulea x thula","Little Blue Heron x Snowy Egret (hybrid)",2023,7419
+"litegr",NA,"4","Egretta garzetta","Little Egret",2023,7421
+"grnher",NA,"134","Butorides virescens","Green Heron",2023,7469
+"grnher1","grnher","1","Butorides virescens virescens/bahamensis","Green Heron (virescens/bahamensis)",2023,7470
+"categr1",NA,"114","Bubulcus ibis","Western Cattle Egret",2023,7487
+"categr",NA,"4","Bubulcus ibis/coromandus","Western/Eastern Cattle Egret",2023,7489
+"greegr",NA,"356","Ardea alba","Great Egret",2023,7491
+"greegr2","greegr","70","Ardea alba egretta","Great Egret (American)",2023,7494
+"graher1",NA,"1","Ardea cinerea","Gray Heron",2023,7507
+"grbher3",NA,"1475","Ardea herodias","Great Blue Heron",2023,7514
+"grbher","grbher3","672","Ardea herodias [herodias Group]","Great Blue Heron (Great Blue)",2023,7515
+"grwher","grbher3","37","Ardea herodias occidentalis","Great Blue Heron (Great White)",2023,7520
+"wurher","grbher3","6","Ardea herodias wardi x occidentalis","Great Blue Heron (Wurdemann's)",2023,7521
+"heron1",NA,"1","Ardeidae sp.","heron sp.",2023,7543
+"whiegr1",NA,"4","Egretta/Bubulcus/Ardea sp.","white egret sp.",2023,7544
+"whiibi",NA,"345","Eudocimus albus","White Ibis",2023,7546
+"gloibi",NA,"38","Plegadis falcinellus","Glossy Ibis",2023,7551
+"whfibi",NA,"4","Plegadis chihi","White-faced Ibis",2023,7552
+"rosspo1",NA,"14","Platalea ajaja","Roseate Spoonbill",2023,7614
+"blkvul",NA,"1051","Coragyps atratus","Black Vulture",2023,7620
+"turvul",NA,"3444","Cathartes aura","Turkey Vulture",2023,7624
+"turvul2","turvul","26","Cathartes aura aura/septentrionalis","Turkey Vulture (Northern)",2023,7625
+"vultur1",NA,"55","Cathartidae sp.","new world vulture sp.",2023,7636
+"osprey",NA,"358","Pandion haliaetus","Osprey",2023,7640
+"osprey1","osprey","5","Pandion haliaetus carolinensis","Osprey (carolinensis)",2023,7642
+"bkskit1",NA,"1","Elanus caeruleus","Black-winged Kite",2023,7650
+"whtkit",NA,"64","Elanus leucurus","White-tailed Kite",2023,7657
+"hobkit",NA,"1","Chondrohierax uncinatus","Hook-billed Kite",2023,7675
+"swtkit",NA,"54","Elanoides forficatus","Swallow-tailed Kite",2023,7699
+"blheag1",NA,"1","Spizaetus tyrannus","Black Hawk-Eagle",2023,7840
+"goleag",NA,"153","Aquila chrysaetos","Golden Eagle",2023,7875
+"miskit",NA,"9","Ictinia mississippiensis","Mississippi Kite",2023,7926
+"wemhar1",NA,"1","Circus aeruginosus","Western Marsh Harrier",2023,7933
+"swahar1",NA,"1","Circus approximans","Swamp Harrier",2023,7941
+"norhar1",NA,"1","Circus cyaneus","Hen Harrier",2023,7949
+"norhar2",NA,"1805","Circus hudsonius","Northern Harrier",2023,7950
+"norhar",NA,"42","Circus cyaneus/hudsonius","Hen/Northern Harrier",2023,7951
+"shshaw",NA,"26472","Accipiter striatus","Sharp-shinned Hawk",2023,8109
+"shshaw2","shshaw","3","Accipiter striatus [velox Group]","Sharp-shinned Hawk (Northern)",2023,8114
+"coohaw",NA,"30415","Accipiter cooperii","Cooper's Hawk",2023,8122
+"y00612",NA,"8","Accipiter striatus/cooperii","Sharp-shinned/Cooper's Hawk",2023,8123
+"norgos",NA,"1446","Accipiter atricapillus","American Goshawk",2023,8149
+"y00666",NA,"3","Accipiter cooperii/atricapillus","Cooper's Hawk/American Goshawk",2023,8154
+"accipi",NA,"850","Accipiter sp.","Accipiter sp.",2023,8157
+"whteag",NA,"1","Haliaeetus albicilla","White-tailed Eagle",2023,8186
+"baleag",NA,"2214","Haliaeetus leucocephalus","Bald Eagle",2023,8187
+"crahaw",NA,"1","Geranospiza caerulescens","Crane Hawk",2023,8202
+"comblh1",NA,"5","Buteogallus anthracinus","Common Black Hawk",2023,8213
+"hrshaw",NA,"102","Parabuteo unicinctus","Harris's Hawk",2023,8250
+"whthaw",NA,"1","Geranoaetus albicaudatus","White-tailed Hawk",2023,8254
+"gryhaw2",NA,"13","Buteo plagiatus","Gray Hawk",2023,8278
+"reshaw",NA,"6994","Buteo lineatus","Red-shouldered Hawk",2023,8284
+"reshaw5","reshaw","311","Buteo lineatus [lineatus Group]","Red-shouldered Hawk (lineatus Group)",2023,8285
+"reshaw2","reshaw","24","Buteo lineatus extimus","Red-shouldered Hawk (extimus)",2023,8289
+"reshaw4","reshaw","65","Buteo lineatus elegans","Red-shouldered Hawk (elegans)",2023,8290
+"brwhaw",NA,"539","Buteo platypterus","Broad-winged Hawk",2023,8293
+"brwhaw1","brwhaw","3","Buteo platypterus platypterus","Broad-winged Hawk (Northern)",2023,8294
+"shthaw",NA,"17","Buteo brachyurus","Short-tailed Hawk",2023,8304
+"swahaw",NA,"86","Buteo swainsoni","Swainson's Hawk",2023,8308
+"zothaw",NA,"11","Buteo albonotatus","Zone-tailed Hawk",2023,8310
+"rethaw",NA,"15957","Buteo jamaicensis","Red-tailed Hawk",2023,8312
+"wrthaw1","rethaw","120","Buteo jamaicensis calurus/alascensis","Red-tailed Hawk (calurus/alascensis)",2023,8313
+"erthaw1","rethaw","324","Buteo jamaicensis borealis","Red-tailed Hawk (borealis)",2023,8316
+"rethaw4","rethaw","16","Buteo jamaicensis abieticola","Red-tailed Hawk (abieticola)",2023,8317
+"hrthaw1","rethaw","2","Buteo jamaicensis harlani","Red-tailed Hawk (Harlan's)",2023,8319
+"krthaw1","rethaw","5","Buteo jamaicensis kriderii","Red-tailed Hawk (Krider's)",2023,8320
+"rethaw2","rethaw","3","Buteo jamaicensis jamaicensis","Red-tailed Hawk (jamaicensis)",2023,8329
+"rethaw3","rethaw","1","Buteo jamaicensis solitudinis","Red-tailed Hawk (solitudinis)",2023,8330
+"rolhaw",NA,"353","Buteo lagopus","Rough-legged Hawk",2023,8332
+"ferhaw",NA,"57","Buteo regalis","Ferruginous Hawk",2023,8339
+"combuz1",NA,"12","Buteo buteo","Common Buzzard",2023,8341
+"buteo",NA,"7","Buteo sp.","Buteo sp.",2023,8377
+"y00221",NA,"1","Buteo/eagle sp.","Buteo/eagle sp.",2023,8379
+"hawk",NA,"391","Accipitridae sp. (hawk sp.)","hawk sp.",2023,8380
+"eagle1",NA,"6","Accipitridae sp. (eagle sp.)","eagle sp.",2023,8381
+"brnowl",NA,"110","Tyto alba","Barn Owl",2023,8416
+"wesowl1",NA,"102","Megascops kennicottii","Western Screech-Owl",2023,8653
+"easowl1",NA,"676","Megascops asio","Eastern Screech-Owl",2023,8664
+"eassco1","easowl1","6","Megascops asio [asio Group]","Eastern Screech-Owl (Northern)",2023,8665
+"screec1",NA,"14","Megascops sp.","screech-owl sp.",2023,8681
+"snoowl1",NA,"99","Bubo scandiacus","Snowy Owl",2023,8704
+"grhowl",NA,"1652","Bubo virginianus","Great Horned Owl",2023,8705
+"nohowl",NA,"41","Surnia ulula","Northern Hawk Owl",2023,8792
+"nopowl",NA,"327","Glaucidium gnoma","Northern Pygmy-Owl",2023,8804
+"moupyo1","nopowl","4","Glaucidium gnoma gnoma","Northern Pygmy-Owl (Mountain)",2023,8805
+"norpyo1","nopowl","3","Glaucidium gnoma [californicum Group]","Northern Pygmy-Owl (Pacific)",2023,8806
+"norpyo2","nopowl","4","Glaucidium gnoma pinicola","Northern Pygmy-Owl (Rocky Mts.)",2023,8810
+"fepowl",NA,"1","Glaucidium brasilianum","Ferruginous Pygmy-Owl",2023,8830
+"burowl",NA,"3","Athene cunicularia","Burrowing Owl",2023,8926
+"motowl",NA,"1","Strix virgata","Mottled Owl",2023,8950
+"spoowl",NA,"1","Strix occidentalis","Spotted Owl",2023,9007
+"brdowl",NA,"2047","Strix varia","Barred Owl",2023,9011
+"x00439",NA,"4","Strix occidentalis x varia","Spotted x Barred Owl (hybrid)",2023,9015
+"grgowl",NA,"87","Strix nebulosa","Great Gray Owl",2023,9035
+"loeowl",NA,"41","Asio otus","Long-eared Owl",2023,9045
+"sheowl",NA,"30","Asio flammeus","Short-eared Owl",2023,9068
+"borowl",NA,"38","Aegolius funereus","Boreal Owl",2023,9088
+"nswowl",NA,"191","Aegolius acadicus","Northern Saw-whet Owl",2023,9096
+"owl1",NA,"7","Strigiformes sp.","owl sp.",2023,9193
+"cittro1",NA,"1","Trogon citreolus","Citreoline Trogon",2023,9327
+"eletro",NA,"1","Trogon elegans","Elegant Trogon",2023,9358
+"rucmot1",NA,"1","Momotus mexicanus","Russet-crowned Motmot",2023,9569
+"rinkin1",NA,"6","Megaceryle torquata","Ringed Kingfisher",2023,10017
+"belkin1",NA,"866","Megaceryle alcyon","Belted Kingfisher",2023,10022
+"grnkin",NA,"3","Chloroceryle americana","Green Kingfisher",2023,10032
+"kingfi1",NA,"3","Alcedinidae sp.","kingfisher sp.",2023,10042
+"wilsap",NA,"96","Sphyrapicus thyroideus","Williamson's Sapsucker",2023,10904
+"yebsap",NA,"13784","Sphyrapicus varius","Yellow-bellied Sapsucker",2023,10907
+"rensap",NA,"356","Sphyrapicus nuchalis","Red-naped Sapsucker",2023,10908
+"y00019",NA,"13","Sphyrapicus varius/nuchalis","Yellow-bellied/Red-naped Sapsucker",2023,10910
+"rebsap",NA,"1586","Sphyrapicus ruber","Red-breasted Sapsucker",2023,10911
+"x00712",NA,"2","Sphyrapicus varius x ruber","Yellow-bellied x Red-breasted Sapsucker (hybrid)",2023,10914
+"rnxsap1",NA,"1","Sphyrapicus nuchalis x ruber","Red-naped x Red-breasted Sapsucker (hybrid)",2023,10915
+"sapsuc",NA,"5","Sphyrapicus sp.","sapsucker sp.",2023,10918
+"lewwoo",NA,"159","Melanerpes lewis","Lewis's Woodpecker",2023,10923
+"rehwoo",NA,"8982","Melanerpes erythrocephalus","Red-headed Woodpecker",2023,10926
+"acowoo",NA,"1623","Melanerpes formicivorus","Acorn Woodpecker",2023,10927
+"yefwoo1",NA,"1","Melanerpes flavifrons","Yellow-fronted Woodpecker",2023,10938
+"gocwoo1",NA,"1","Melanerpes chrysogenys","Golden-cheeked Woodpecker",2023,10944
+"gilwoo",NA,"655","Melanerpes uropygialis","Gila Woodpecker",2023,10957
+"gofwoo",NA,"563","Melanerpes aurifrons","Golden-fronted Woodpecker",2023,10963
+"rebwoo",NA,"54013","Melanerpes carolinus","Red-bellied Woodpecker",2023,10979
+"attwoo1",NA,"82","Picoides dorsalis","American Three-toed Woodpecker",2023,10996
+"attwoo2","attwoo1","1","Picoides dorsalis dorsalis","American Three-toed Woodpecker (Rocky Mts.)",2023,10997
+"attwoo3","attwoo1","1","Picoides dorsalis fasciatus","American Three-toed Woodpecker (Northwest)",2023,10998
+"attwoo4","attwoo1","2","Picoides dorsalis bacatus","American Three-toed Woodpecker (Eastern)",2023,10999
+"bkbwoo",NA,"69","Picoides arcticus","Black-backed Woodpecker",2023,11000
+"y00617",NA,"2","Picoides dorsalis/arcticus","American Three-toed/Black-backed Woodpecker",2023,11001
+"dowwoo",NA,"80674","Dryobates pubescens","Downy Woodpecker",2023,11175
+"nutwoo",NA,"1535","Dryobates nuttallii","Nuttall's Woodpecker",2023,11185
+"labwoo",NA,"1589","Dryobates scalaris","Ladder-backed Woodpecker",2023,11187
+"x00620",NA,"1","Dryobates nuttallii x scalaris","Nuttall's x Ladder-backed Woodpecker (hybrid)",2023,11198
+"recwoo",NA,"34","Dryobates borealis","Red-cockaded Woodpecker",2023,11201
+"haiwoo",NA,"52111","Dryobates villosus","Hairy Woodpecker",2023,11202
+"y00322",NA,"58","Dryobates pubescens/villosus","Downy/Hairy Woodpecker",2023,11225
+"whhwoo",NA,"187","Dryobates albolarvatus","White-headed Woodpecker",2023,11226
+"strwoo",NA,"2","Dryobates stricklandi","Strickland's Woodpecker",2023,11236
+"ariwoo",NA,"3","Dryobates arizonae","Arizona Woodpecker",2023,11237
+"pabwoo1",NA,"1","Campephilus guatemalensis","Pale-billed Woodpecker",2023,11333
+"pilwoo",NA,"19873","Dryocopus pileatus","Pileated Woodpecker",2023,11527
+"norfli",NA,"41231","Colaptes auratus","Northern Flicker",2023,11665
+"yesfli","norfli","464","Colaptes auratus auratus/luteus","Northern Flicker (Yellow-shafted)",2023,11668
+"resfli","norfli","329","Colaptes auratus [cafer Group]","Northern Flicker (Red-shafted)",2023,11671
+"rxyfli","norfli","77","Colaptes auratus luteus x cafer","Northern Flicker (Yellow-shafted x Red-shafted)",2023,11677
+"gilfli",NA,"165","Colaptes chrysoides","Gilded Flicker",2023,11679
+"y00323",NA,"8","Colaptes auratus/chrysoides","Northern/Gilded Flicker",2023,11685
+"woodpe1",NA,"14","Picidae sp.","woodpecker sp.",2023,11699
+"laufal1",NA,"1","Herpetotheres cachinnans","Laughing Falcon",2023,11704
+"baffal1",NA,"1","Micrastur ruficollis","Barred Forest-Falcon",2023,11712
+"y00678",NA,"18","Caracara plancus","Crested Caracara",2023,11727
+"crecar1","y00678","57","Caracara plancus cheriway","Crested Caracara (Northern)",2023,11728
+"leskes1",NA,"1","Falco naumanni","Lesser Kestrel",2023,11756
+"amekes",NA,"3706","Falco sparverius","American Kestrel",2023,11791
+"amekes1","amekes","128","Falco sparverius [sparverius Group]","American Kestrel (Northern)",2023,11792
+"merlin",NA,"2450","Falco columbarius","Merlin",2023,11825
+"merlin1","merlin","1","Falco columbarius [aesalon Group]","Merlin (Eurasian)",2023,11826
+"taimer1","merlin","3","Falco columbarius columbarius","Merlin (Taiga)",2023,11833
+"pramer1","merlin","61","Falco columbarius richardsonii","Merlin (Prairie)",2023,11834
+"blkmer1","merlin","48","Falco columbarius suckleyi","Merlin (Black)",2023,11835
+"aplfal",NA,"1","Falco femoralis","Aplomado Falcon",2023,11853
+"gyrfal",NA,"28","Falco rusticolus","Gyrfalcon",2023,11874
+"perfal",NA,"538","Falco peregrinus","Peregrine Falcon",2023,11875
+"perfal1","perfal","5","Falco peregrinus anatum","Peregrine Falcon (North American)",2023,11876
+"tupfal1","perfal","1","Falco peregrinus calidus/tundrius","Peregrine Falcon (Tundra)",2023,11877
+"prafal",NA,"145","Falco mexicanus","Prairie Falcon",2023,11899
+"smafal",NA,"5","Falco sp. (small falcon sp.)","small falcon sp.",2023,11903
+"falcon",NA,"8","Falco sp.","falcon sp.",2023,11904
+"diurap1",NA,"91","Accipitriformes/Falconiformes sp.","diurnal raptor sp.",2023,11905
+"cockat",NA,"4","Nymphicus hollandicus","Cockatiel",2023,11931
+"eclpar",NA,"1","Eclectus sp.","eclectus sp.",2023,12075
+"rorpar",NA,"4","Psittacula krameri","Rose-ringed Parakeet",2023,12111
+"budger",NA,"107","Melopsittacus undulatus","Budgerigar",2023,12316
+"peflov",NA,"73","Agapornis roseicollis","Rosy-faced Lovebird",2023,12502
+"yeclov",NA,"2","Agapornis personatus","Yellow-collared Lovebird",2023,12508
+"lovebi1",NA,"5","Agapornis sp.","lovebird sp.",2023,12515
+"monpar",NA,"237","Myiopsitta monachus","Monk Parakeet",2023,12576
+"monpar1","monpar","17","Myiopsitta monachus [monachus Group]","Monk Parakeet (Monk)",2023,12577
+"whwpar",NA,"7","Brotogeris versicolurus","White-winged Parakeet",2023,12586
+"yecpar",NA,"9","Brotogeris chiriri","Yellow-chevroned Parakeet",2023,12587
+"recpar",NA,"35","Amazona viridigenalis","Red-crowned Parrot",2023,12662
+"relpar",NA,"2","Amazona autumnalis","Red-lored Parrot",2023,12666
+"yehpar",NA,"2","Amazona oratrix","Yellow-headed Parrot",2023,12682
+"ywcpar",NA,"1","Amazona ochrocephala","Yellow-crowned Parrot",2023,12690
+"orwpar",NA,"1","Amazona amazonica","Orange-winged Parrot",2023,12727
+"mexpar1",NA,"2","Forpus cyanopygius","Mexican Parrotlet",2023,12737
+"orfpar",NA,"2","Eupsittula canicularis","Orange-fronted Parakeet",2023,12850
+"bkhpar",NA,"44","Aratinga nenday","Nanday Parakeet",2023,12878
+"chfmac1",NA,"1","Ara severus","Chestnut-fronted Macaw",2023,12892
+"bucpar",NA,"13","Thectocercus acuticaudatus","Blue-crowned Parakeet",2023,12914
+"grnpar",NA,"14","Psittacara holochlorus","Green Parakeet",2023,12928
+"mitpar",NA,"9","Psittacara mitratus","Mitred Parakeet",2023,12946
+"rempar",NA,"9","Psittacara erythrogenys","Red-masked Parakeet",2023,12953
+"whepar2",NA,"2","Psittacara leucophthalmus","White-eyed Parakeet",2023,12955
+"hispar",NA,"1","Psittacara chloropterus","Hispaniolan Parakeet",2023,12960
+"parake",NA,"17","Psittaciformes sp. (parakeet sp.)","parakeet sp.",2023,12965
+"parrot",NA,"9","Psittaciformes sp. (parrot sp.)","parrot sp.",2023,12966
+"ivbwoo1",NA,"1","Xiphorhynchus flavigaster","Ivory-billed Woodcreeper",2023,14562
+"mastit1",NA,"1","Tityra semifasciata","Masked Tityra",2023,15671
+"secfly1",NA,"1","Leptopogon amaurocephalus","Sepia-capped Flycatcher",2023,15934
+"cotfly1",NA,"1","Todirostrum cinereum","Common Tody-Flycatcher",2023,16126
+"nobtyr",NA,"1","Camptostoma imberbe","Northern Beardless-Tyrannulet",2023,16246
+"olsfly",NA,"11","Contopus cooperi","Olive-sided Flycatcher",2023,16581
+"grepew",NA,"3","Contopus pertinax","Greater Pewee",2023,16583
+"wewpew",NA,"26","Contopus sordidulus","Western Wood-Pewee",2023,16603
+"eawpew",NA,"171","Contopus virens","Eastern Wood-Pewee",2023,16615
+"yebfly",NA,"31","Empidonax flaviventris","Yellow-bellied Flycatcher",2023,16640
+"acafly",NA,"19","Empidonax virescens","Acadian Flycatcher",2023,16641
+"aldfly",NA,"3","Empidonax alnorum","Alder Flycatcher",2023,16642
+"wilfly",NA,"8","Empidonax traillii","Willow Flycatcher",2023,16643
+"wilfly1","wilfly","1","Empidonax traillii traillii","Willow Flycatcher (Eastern)",2023,16644
+"y00324",NA,"1","Empidonax alnorum/traillii","Alder/Willow Flycatcher (Traill's Flycatcher)",2023,16649
+"leafly",NA,"69","Empidonax minimus","Least Flycatcher",2023,16654
+"hamfly",NA,"8","Empidonax hammondii","Hammond's Flycatcher",2023,16655
+"gryfly",NA,"22","Empidonax wrightii","Gray Flycatcher",2023,16656
+"dusfly",NA,"10","Empidonax oberholseri","Dusky Flycatcher",2023,16657
+"wesfly",NA,"17","Empidonax difficilis","Western Flycatcher",2023,16666
+"pasfly","wesfly","93","Empidonax difficilis [difficilis Group]","Western Flycatcher (Pacific-slope)",2023,16667
+"corfly","wesfly","2","Empidonax difficilis occidentalis/hellmayri","Western Flycatcher (Cordilleran)",2023,16671
+"empido",NA,"2","Empidonax sp.","Empidonax sp.",2023,16687
+"blkpho",NA,"2212","Sayornis nigricans","Black Phoebe",2023,16688
+"easpho",NA,"7805","Sayornis phoebe","Eastern Phoebe",2023,16697
+"x00621",NA,"1","Sayornis nigricans x phoebe","Black x Eastern Phoebe (hybrid)",2023,16698
+"saypho",NA,"750","Sayornis saya","Say's Phoebe",2023,16699
+"phoebe1",NA,"7","Sayornis sp.","phoebe sp.",2023,16703
+"verfly",NA,"89","Pyrocephalus rubinus","Vermilion Flycatcher",2023,16718
+"ducfly",NA,"3","Myiarchus tuberculifer","Dusky-capped Flycatcher",2023,16973
+"astfly",NA,"121","Myiarchus cinerascens","Ash-throated Flycatcher",2023,17012
+"nutfly",NA,"1","Myiarchus nuttingi","Nutting's Flycatcher",2023,17015
+"grcfly",NA,"390","Myiarchus crinitus","Great Crested Flycatcher",2023,17021
+"bncfly",NA,"15","Myiarchus tyrannulus","Brown-crested Flycatcher",2023,17022
+"grekis",NA,"51","Pitangus sulphuratus","Great Kiskadee",2023,17055
+"socfly1",NA,"1","Myiozetetes similis","Social Flycatcher",2023,17079
+"trokin",NA,"7","Tyrannus melancholicus","Tropical Kingbird",2023,17139
+"coukin",NA,"25","Tyrannus couchii","Couch's Kingbird",2023,17144
+"caskin",NA,"159","Tyrannus vociferans","Cassin's Kingbird",2023,17146
+"thbkin",NA,"1","Tyrannus crassirostris","Thick-billed Kingbird",2023,17149
+"weskin",NA,"154","Tyrannus verticalis","Western Kingbird",2023,17152
+"y00619",NA,"30","Tyrannus vociferans/verticalis","Cassin's/Western Kingbird",2023,17154
+"easkin",NA,"241","Tyrannus tyrannus","Eastern Kingbird",2023,17156
+"grykin",NA,"7","Tyrannus dominicensis","Gray Kingbird",2023,17158
+"sctfly",NA,"83","Tyrannus forficatus","Scissor-tailed Flycatcher",2023,17172
+"flycat1",NA,"47","Tyrannidae sp.","new world flycatcher sp.",2023,17183
+"golvir1",NA,"2","Vireo hypochryseus","Golden Vireo",2023,18808
+"bkcvir1",NA,"4","Vireo atricapilla","Black-capped Vireo",2023,18814
+"whevir",NA,"442","Vireo griseus","White-eyed Vireo",2023,18816
+"belvir",NA,"69","Vireo bellii","Bell's Vireo",2023,18844
+"belvir1","belvir","1","Vireo bellii bellii/medius","Bell's Vireo (Eastern)",2023,18845
+"belvir2","belvir","1","Vireo bellii arizonae","Bell's Vireo (Arizona)",2023,18848
+"gryvir",NA,"32","Vireo vicinior","Gray Vireo",2023,18850
+"hutvir",NA,"398","Vireo huttoni","Hutton's Vireo",2023,18851
+"hutvir1","hutvir","9","Vireo huttoni [huttoni Group]","Hutton's Vireo (Pacific)",2023,18852
+"yetvir",NA,"149","Vireo flavifrons","Yellow-throated Vireo",2023,18867
+"casvir",NA,"52","Vireo cassinii","Cassin's Vireo",2023,18870
+"buhvir",NA,"473","Vireo solitarius","Blue-headed Vireo",2023,18873
+"plsvir",NA,"15","Vireo plumbeus","Plumbeous Vireo",2023,18878
+"y00484",NA,"1","Vireo cassinii/plumbeus","Cassin's/Plumbeous Vireo",2023,18886
+"solvir1",NA,"27","Vireo cassinii/solitarius/plumbeus","solitary vireo sp.",2023,18887
+"phivir",NA,"13","Vireo philadelphicus","Philadelphia Vireo",2023,18889
+"warvir",NA,"85","Vireo gilvus","Warbling Vireo",2023,18890
+"eawvir1","warvir","1","Vireo gilvus gilvus","Warbling Vireo (Eastern)",2023,18891
+"reevir1",NA,"141","Vireo olivaceus","Red-eyed Vireo",2023,18910
+"reevir",NA,"1","Vireo olivaceus/chivi","Red-eyed/Chivi Vireo",2023,18926
+"yegvir",NA,"5","Vireo flavoviridis","Yellow-green Vireo",2023,18928
+"bkwvir",NA,"1","Vireo altiloquus","Black-whiskered Vireo",2023,18933
+"vireo1",NA,"14","Vireo sp.","vireo sp.",2023,18945
+"brnshr",NA,"1","Lanius cristatus","Brown Shrike",2023,20647
+"logshr",NA,"690","Lanius ludovicianus","Loggerhead Shrike",2023,20684
+"norshr4",NA,"2936","Lanius borealis","Northern Shrike",2023,20696
+"norshr3","norshr4","1","Lanius borealis borealis","Northern Shrike (American)",2023,20702
+"y00620",NA,"73","Lanius ludovicianus/borealis","Loggerhead/Northern Shrike",2023,20703
+"norshr",NA,"96","Lanius borealis/excubitor","Northern/Great Gray Shrike",2023,20721
+"shrike",NA,"29","Lanius sp.","shrike sp.",2023,20767
+"gryjay",NA,"3506","Perisoreus canadensis","Canada Jay",2023,20787
+"gryjay1","gryjay","1","Perisoreus canadensis [canadensis Group]","Canada Jay (Boreal)",2023,20788
+"gryjay3","gryjay","2","Perisoreus canadensis obscurus/griseus","Canada Jay (Pacific)",2023,20796
+"btmjay",NA,"7","Calocitta colliei","Black-throated Magpie-Jay",2023,20821
+"wtmjay1",NA,"1","Calocitta formosa","White-throated Magpie-Jay",2023,20822
+"brnjay",NA,"3","Psilorhinus morio","Brown Jay",2023,20828
+"grnjay",NA,"112","Cyanocorax yncas","Green Jay",2023,20837
+"sabjay",NA,"1","Cyanocorax sanblasianus","San Blas Jay",2023,20854
+"pinjay",NA,"718","Gymnorhinus cyanocephalus","Pinyon Jay",2023,20878
+"stejay",NA,"8790","Cyanocitta stelleri","Steller's Jay",2023,20879
+"blujay",NA,"76739","Cyanocitta cristata","Blue Jay",2023,20899
+"x00622",NA,"4","Cyanocitta stelleri x cristata","Steller's x Blue Jay (hybrid)",2023,20905
+"flsjay",NA,"152","Aphelocoma coerulescens","Florida Scrub-Jay",2023,20906
+"issjay",NA,"1","Aphelocoma insularis","Island Scrub-Jay",2023,20907
+"cowscj1",NA,"4574","Aphelocoma californica","California Scrub-Jay",2023,20908
+"wooscj2",NA,"1568","Aphelocoma woodhouseii","Woodhouse's Scrub-Jay",2023,20918
+"wooscj1","wooscj2","2","Aphelocoma woodhouseii [woodhouseii Group]","Woodhouse's Scrub-Jay (Woodhouse's)",2023,20919
+"wesjay",NA,"27","Aphelocoma californica/woodhouseii","California/Woodhouse's Scrub-Jay",2023,20929
+"mexjay4",NA,"73","Aphelocoma wollweberi","Mexican Jay",2023,20930
+"mexjay",NA,"45","Aphelocoma wollweberi/ultramarina","Mexican/Transvolcanic Jay",2023,20940
+"scrjay",NA,"2931","Aphelocoma sp.","Aphelocoma sp.",2023,20947
+"bkbmag1",NA,"5349","Pica hudsonia","Black-billed Magpie",2023,21085
+"yebmag",NA,"206","Pica nuttalli","Yellow-billed Magpie",2023,21086
+"clanut",NA,"893","Nucifraga columbiana","Clark's Nutcracker",2023,21093
+"houcro1",NA,"1","Corvus splendens","House Crow",2023,21130
+"amecro",NA,"54596","Corvus brachyrhynchos","American Crow",2023,21168
+"fiscro",NA,"1091","Corvus ossifragus","Fish Crow",2023,21181
+"chirav",NA,"44","Corvus cryptoleucus","Chihuahuan Raven",2023,21185
+"crow",NA,"67","Corvus sp. (crow sp.)","crow sp.",2023,21231
+"comrav",NA,"8947","Corvus corax","Common Raven",2023,21235
+"raven",NA,"13","Corvus sp. (raven sp.)","raven sp.",2023,21244
+"carchi",NA,"25191","Poecile carolinensis","Carolina Chickadee",2023,21671
+"bkcchi",NA,"70202","Poecile atricapillus","Black-capped Chickadee",2023,21676
+"x00195",NA,"11","Poecile carolinensis x atricapillus","Carolina x Black-capped Chickadee (hybrid)",2023,21686
+"y00033",NA,"15709","Poecile carolinensis/atricapillus","Carolina/Black-capped Chickadee",2023,21687
+"mouchi",NA,"5586","Poecile gambeli","Mountain Chickadee",2023,21688
+"x00623",NA,"7","Poecile atricapillus x gambeli","Black-capped x Mountain Chickadee (hybrid)",2023,21697
+"chbchi",NA,"6621","Poecile rufescens","Chestnut-backed Chickadee",2023,21705
+"borchi2",NA,"4071","Poecile hudsonicus","Boreal Chickadee",2023,21710
+"gyhchi",NA,"3","Poecile cinctus","Gray-headed Chickadee",2023,21718
+"chicka1",NA,"3","Poecile sp.","chickadee sp.",2023,21724
+"britit",NA,"204","Baeolophus wollweberi","Bridled Titmouse",2023,21756
+"oaktit",NA,"2576","Baeolophus inornatus","Oak Titmouse",2023,21761
+"juntit1",NA,"997","Baeolophus ridgwayi","Juniper Titmouse",2023,21766
+"y00326",NA,"853","Baeolophus inornatus/ridgwayi","Oak/Juniper Titmouse (Plain Titmouse)",2023,21770
+"tuftit",NA,"55697","Baeolophus bicolor","Tufted Titmouse",2023,21771
+"blctit4",NA,"1157","Baeolophus atricristatus","Black-crested Titmouse",2023,21774
+"bcxtit1",NA,"11","Baeolophus bicolor x atricristatus","Tufted x Black-crested Titmouse (hybrid)",2023,21778
+"y00327",NA,"34","Baeolophus bicolor/atricristatus","Tufted/Black-crested Titmouse",2023,21779
+"gretit1",NA,"2","Parus major","Great Tit",2023,21786
+"gretit3","gretit1","1","Parus major [major Group]","Great Tit (Great)",2023,21787
+"verdin",NA,"650","Auriparus flaviceps","Verdin",2023,21876
+"horlar",NA,"249","Eremophila alpestris","Horned Lark",2023,22182
+"horlar3","horlar","2","Eremophila alpestris [alpestris Group]","Horned Lark (Eastern dark Group)",2023,22200
+"horlar1","horlar","2","Eremophila alpestris [strigata Group]","Horned Lark (Western rufous Group)",2023,22216
+"skylar",NA,"2","Alauda arvensis","Eurasian Skylark",2023,22332
+"banswa",NA,"8","Riparia riparia","Bank Swallow",2023,23636
+"treswa",NA,"847","Tachycineta bicolor","Tree Swallow",2023,23649
+"manswa1",NA,"1","Tachycineta albilinea","Mangrove Swallow",2023,23655
+"vigswa",NA,"200","Tachycineta thalassina","Violet-green Swallow",2023,23659
+"purmar",NA,"269","Progne subis","Purple Martin",2023,23666
+"purmar1","purmar","2","Progne subis subis/arboricola","Purple Martin (subis/arboricola)",2023,23667
+"martin1",NA,"1","Progne sp.","new world martin sp. (Progne sp.)",2023,23690
+"nrwswa",NA,"40","Stelgidopteryx serripennis","Northern Rough-winged Swallow",2023,23691
+"nrwswa1","nrwswa","4","Stelgidopteryx serripennis [serripennis Group]","Northern Rough-winged Swallow (Northern)",2023,23692
+"barswa",NA,"278","Hirundo rustica","Barn Swallow",2023,23772
+"barswa2","barswa","1","Hirundo rustica rustica","Barn Swallow (White-bellied)",2023,23773
+"barswa5","barswa","1","Hirundo rustica erythrogaster","Barn Swallow (American)",2023,23780
+"cliswa",NA,"39","Petrochelidon pyrrhonota","Cliff Swallow",2023,23861
+"cavswa",NA,"5","Petrochelidon fulva","Cave Swallow",2023,23869
+"cavswa3","cavswa","1","Petrochelidon fulva pallida","Cave Swallow (Texas)",2023,23875
+"swallo",NA,"5","Hirundinidae sp.","swallow sp.",2023,23885
+"rewbul",NA,"36","Pycnonotus jocosus","Red-whiskered Bulbul",2023,24315
+"revbul",NA,"19","Pycnonotus cafer","Red-vented Bulbul",2023,24335
+"woowar",NA,"1","Phylloscopus sibilatrix","Wood Warbler",2023,24372
+"palwar5",NA,"2","Phylloscopus proregulus","Pallas's Leaf Warbler",2023,24390
+"bushti",NA,"6457","Psaltriparus minimus","Bushtit",2023,24829
+"bushti1","bushti","1","Psaltriparus minimus [minimus Group]","Bushtit (Pacific)",2023,24830
+"bushti2","bushti","2","Psaltriparus minimus plumbeus","Bushtit (Interior)",2023,24836
+"easwar1",NA,"1","Curruca cantillans","Eastern Subalpine Warbler",2023,24932
+"wrenti",NA,"205","Chamaea fasciata","Wrentit",2023,25004
+"swiwhe1",NA,"21","Zosterops simplex","Swinhoe's White-eye",2023,25189
+"warwhe1",NA,"14","Zosterops japonicus","Warbling White-eye",2023,25200
+"reblei",NA,"1","Leiothrix lutea","Red-billed Leiothrix",2023,26113
+"ruckin",NA,"12506","Corthylio calendula","Ruby-crowned Kinglet",2023,26391
+"gockin",NA,"6195","Regulus satrapa","Golden-crowned Kinglet",2023,26395
+"y00425",NA,"15","Corthylio calendula/Regulus satrapa","Ruby-crowned/Golden-crowned Kinglet",2023,26402
+"whbnut",NA,"67821","Sitta carolinensis","White-breasted Nuthatch",2023,26436
+"whbnut2","whbnut","10","Sitta carolinensis carolinensis","White-breasted Nuthatch (Eastern)",2023,26437
+"pygnut",NA,"1972","Sitta pygmaea","Pygmy Nuthatch",2023,26471
+"bnhnut",NA,"5362","Sitta pusilla","Brown-headed Nuthatch",2023,26479
+"rebnut",NA,"44493","Sitta canadensis","Red-breasted Nuthatch",2023,26484
+"nuthat1",NA,"2","Sitta sp.","nuthatch sp.",2023,26546
+"brncre",NA,"18490","Certhia americana","Brown Creeper",2023,26564
+"buggna",NA,"1360","Polioptila caerulea","Blue-gray Gnatcatcher",2023,26669
+"buggna1","buggna","13","Polioptila caerulea caerulea","Blue-gray Gnatcatcher (caerulea)",2023,26677
+"bktgna",NA,"73","Polioptila melanura","Black-tailed Gnatcatcher",2023,26679
+"calgna",NA,"6","Polioptila californica","California Gnatcatcher",2023,26683
+"bkcgna",NA,"4","Polioptila nigriceps","Black-capped Gnatcatcher",2023,26687
+"rocwre",NA,"130","Salpinctes obsoletus","Rock Wren",2023,26696
+"rocwre1","rocwre","1","Salpinctes obsoletus [obsoletus Group]","Rock Wren (Northern)",2023,26697
+"canwre",NA,"89","Catherpes mexicanus","Canyon Wren",2023,26730
+"houwre",NA,"3109","Troglodytes aedon","House Wren",2023,26737
+"houwre1","houwre","73","Troglodytes aedon [aedon Group]","House Wren (Northern)",2023,26738
+"houwre4","houwre","3","Troglodytes aedon [musculus Group]","House Wren (Southern)",2023,26754
+"pacwre1",NA,"889","Troglodytes pacificus","Pacific Wren",2023,26828
+"winwre2","pacwre1","5","Troglodytes pacificus [pacificus Group]","Pacific Wren (pacificus Group)",2023,26838
+"winwre3",NA,"1595","Troglodytes hiemalis","Winter Wren",2023,26844
+"winwre",NA,"148","Troglodytes pacificus/hiemalis","Pacific/Winter Wren",2023,26847
+"sedwre1",NA,"2","Cistothorus stellaris","Sedge Wren",2023,26852
+"marwre",NA,"32","Cistothorus palustris","Marsh Wren",2023,26878
+"marwre1","marwre","1","Cistothorus palustris [paludicola Group]","Marsh Wren (paludicola Group)",2023,26879
+"marwre2","marwre","1","Cistothorus palustris [plesius Group]","Marsh Wren (plesius Group)",2023,26884
+"marwre3","marwre","2","Cistothorus palustris [palustris Group]","Marsh Wren (palustris Group)",2023,26888
+"carwre",NA,"40476","Thryothorus ludovicianus","Carolina Wren",2023,26897
+"carwre1","carwre","1","Thryothorus ludovicianus [ludovicianus Group]","Carolina Wren (Northern)",2023,26898
+"bewwre",NA,"5887","Thryomanes bewickii","Bewick's Wren",2023,26911
+"bewwre3","bewwre","1","Thryomanes bewickii bewickii","Bewick's Wren (bewickii)",2023,26912
+"bewwre1","bewwre","2","Thryomanes bewickii [spilurus Group]","Bewick's Wren (spilurus Group)",2023,26919
+"spowre1",NA,"2","Campylorhynchus gularis","Spotted Wren",2023,26954
+"cacwre",NA,"1160","Campylorhynchus brunneicapillus","Cactus Wren",2023,26957
+"hapwre1",NA,"1","Pheugopedius felix","Happy Wren",2023,27047
+"sinwre1",NA,"1","Thryophilus sinaloa","Sinaloa Wren",2023,27056
+"wren1",NA,"30","Troglodytidae sp.","wren sp.",2023,27192
+"amedip",NA,"21","Cinclus mexicanus","American Dipper",2023,27214
+"hilmyn",NA,"1","Gracula religiosa","Common Hill Myna",2023,27343
+"eursta",NA,"60893","Sturnus vulgaris","European Starling",2023,27356
+"commyn",NA,"23","Acridotheres tristis","Common Myna",2023,27402
+"supsta1",NA,"1","Lamprotornis superbus","Superb Starling",2023,27505
+"blumoc",NA,"2","Melanotis caerulescens","Blue Mockingbird",2023,27534
+"grycat",NA,"4254","Dumetella carolinensis","Gray Catbird",2023,27539
+"cubthr",NA,"1292","Toxostoma curvirostre","Curve-billed Thrasher",2023,27564
+"brnthr",NA,"10315","Toxostoma rufum","Brown Thrasher",2023,27577
+"lobthr",NA,"47","Toxostoma longirostre","Long-billed Thrasher",2023,27580
+"benthr",NA,"66","Toxostoma bendirei","Bendire's Thrasher",2023,27586
+"y00330",NA,"1","Toxostoma curvirostre/bendirei","Curve-billed/Bendire's Thrasher",2023,27590
+"calthr",NA,"495","Toxostoma redivivum","California Thrasher",2023,27594
+"lecthr",NA,"9","Toxostoma lecontei","LeConte's Thrasher",2023,27597
+"crithr",NA,"124","Toxostoma crissale","Crissal Thrasher",2023,27602
+"sagthr",NA,"84","Oreoscoptes montanus","Sage Thrasher",2023,27609
+"bahmoc",NA,"1","Mimus gundlachii","Bahama Mockingbird",2023,27620
+"lotmoc1",NA,"1","Mimus longicaudatus","Long-tailed Mockingbird",2023,27633
+"normoc",NA,"27561","Mimus polyglottos","Northern Mockingbird",2023,27652
+"easblu",NA,"22178","Sialia sialis","Eastern Bluebird",2023,27662
+"easblu1","easblu","2","Sialia sialis sialis/bermudensis","Eastern Bluebird (Eastern)",2023,27663
+"wesblu",NA,"1764","Sialia mexicana","Western Bluebird",2023,27672
+"moublu",NA,"468","Sialia currucoides","Mountain Bluebird",2023,27680
+"bluebi",NA,"14","Sialia sp.","bluebird sp.",2023,27683
+"towsol",NA,"1593","Myadestes townsendi","Townsend's Solitaire",2023,27698
+"varthr",NA,"5424","Ixoreus naevius","Varied Thrush",2023,27788
+"obnthr1",NA,"1","Catharus aurantiirostris","Orange-billed Nightingale-Thrush",2023,27795
+"veery",NA,"68","Catharus fuscescens","Veery",2023,27846
+"gycthr",NA,"10","Catharus minimus","Gray-cheeked Thrush",2023,27851
+"bicthr",NA,"6","Catharus bicknelli","Bicknell's Thrush",2023,27854
+"swathr",NA,"256","Catharus ustulatus","Swainson's Thrush",2023,27857
+"swathr2","swathr","1","Catharus ustulatus [swainsoni Group]","Swainson's Thrush (Olive-backed)",2023,27862
+"herthr",NA,"8220","Catharus guttatus","Hermit Thrush",2023,27866
+"herthr3","herthr","30","Catharus guttatus faxoni/crymophilus","Hermit Thrush (faxoni/crymophilus)",2023,27876
+"cathus",NA,"5","Catharus sp.","Catharus sp.",2023,27879
+"woothr",NA,"575","Hylocichla mustelina","Wood Thrush",2023,27880
+"misthr1",NA,"1","Turdus viscivorus","Mistle Thrush",2023,27962
+"redwin",NA,"2","Turdus iliacus","Redwing",2023,27981
+"eurbla",NA,"3","Turdus merula","Eurasian Blackbird",2023,27987
+"whtrob1",NA,"1","Turdus assimilis","White-throated Thrush",2023,28016
+"clcrob",NA,"23","Turdus grayi","Clay-colored Thrush",2023,28042
+"amerob",NA,"65129","Turdus migratorius","American Robin",2023,28096
+"amerob3","amerob","3","Turdus migratorius nigrideus","American Robin (nigrideus)",2023,28097
+"amerob1","amerob","26","Turdus migratorius [migratorius Group]","American Robin (migratorius Group)",2023,28098
+"rubrob",NA,"7","Turdus rufopalliatus","Rufous-backed Robin",2023,28106
+"rubrob1","rubrob","2","Turdus rufopalliatus rufopalliatus","Rufous-backed Robin (Rufous-backed)",2023,28107
+"fieldf",NA,"5","Turdus pilaris","Fieldfare",2023,28272
+"dusthr2",NA,"1","Turdus eunomus","Dusky Thrush",2023,28285
+"thrush1",NA,"33","Turdidae sp.","thrush sp.",2023,28290
+"whrsha",NA,"3","Copsychus malabaricus","White-rumped Shama",2023,28518
+"eurrob1",NA,"4","Erithacus rubecula","European Robin",2023,28756
+"bohwax",NA,"2814","Bombycilla garrulus","Bohemian Waxwing",2023,29382
+"cedwax",NA,"18069","Bombycilla cedrorum","Cedar Waxwing",2023,29386
+"waxwin",NA,"7","Bombycilla garrulus/cedrorum","Bohemian/Cedar Waxwing",2023,29387
+"grsfly1",NA,"3","Ptiliogonys cinereus","Gray Silky-flycatcher",2023,29400
+"phaino",NA,"298","Phainopepla nitens","Phainopepla",2023,29406
+"oliwar",NA,"1","Peucedramus taeniatus","Olive Warbler",2023,30181
+"orabis1",NA,"7","Euplectes franciscanus","Northern Red Bishop",2023,30428
+"redbis",NA,"1","Euplectes orix","Southern Red Bishop",2023,30429
+"zebfin1","zebfin2","1","Taeniopygia guttata guttata","Zebra Finch (Lesser Sundas)",2023,30519
+"broman1",NA,"6","Spermestes cucullata","Bronze Mannikin",2023,30533
+"afrsil1",NA,"2","Euodice cantans","African Silverbill",2023,30545
+"javspa",NA,"19","Padda oryzivora","Java Sparrow",2023,30549
+"nutman",NA,"284","Lonchura punctulata","Scaly-breasted Munia",2023,30559
+"chemun",NA,"2","Lonchura atricapilla","Chestnut Munia",2023,30600
+"orcwax",NA,"1","Estrilda melpoda","Orange-cheeked Waxbill",2023,30774
+"comwax",NA,"5","Estrilda astrild","Common Waxbill",2023,30784
+"redava",NA,"2","Amandava amandava","Red Avadavat",2023,30837
+"bubcor1",NA,"1","Uraeginthus angolensis","Southern Cordonbleu",2023,30844
+"rebfir2",NA,"1","Lagonosticta senegala","Red-billed Firefinch",2023,30893
+"pitwhy",NA,"18","Vidua macroura","Pin-tailed Whydah",2023,30927
+"sibacc",NA,"1","Prunella montanella","Siberian Accentor",2023,30981
+"houspa",NA,"66831","Passer domesticus","House Sparrow",2023,31018
+"eutspa",NA,"765","Passer montanus","Eurasian Tree Sparrow",2023,31086
+"x00754",NA,"3","Passer domesticus x montanus","House x Eurasian Tree Sparrow (hybrid)",2023,31096
+"y00597",NA,"1","Motacilla flava/tschutschensis","Western/Eastern Yellow Wagtail",2023,31188
+"watpip1",NA,"1","Anthus spinoletta","Water Pipit",2023,31350
+"amepip",NA,"98","Anthus rubescens","American Pipit",2023,31361
+"amepip2","amepip","2","Anthus rubescens [rubescens Group]","American Pipit (rubescens Group)",2023,31363
+"sprpip",NA,"1","Anthus spragueii","Sprague's Pipit",2023,31368
+"pipit1",NA,"1","Anthus sp.","pipit sp.",2023,31406
+"comcha",NA,"4","Fringilla coelebs","Common Chaffinch",2023,31427
+"brambl",NA,"15","Fringilla montifringilla","Brambling",2023,31453
+"evegro",NA,"13082","Coccothraustes vespertinus","Evening Grosbeak",2023,31563
+"hawfin",NA,"1","Coccothraustes coccothraustes","Hawfinch",2023,31572
+"comros",NA,"2","Carpodacus erythrinus","Common Rosefinch",2023,31627
+"pingro",NA,"5535","Pinicola enucleator","Pine Grosbeak",2023,31701
+"gcrfin",NA,"318","Leucosticte tephrocotis","Gray-crowned Rosy-Finch",2023,31776
+"gycrof4","gcrfin","2","Leucosticte tephrocotis [tephrocotis Group]","Gray-crowned Rosy-Finch (Gray-crowned)",2023,31780
+"bkrfin",NA,"84","Leucosticte atrata","Black Rosy-Finch",2023,31786
+"bcrfin",NA,"39","Leucosticte australis","Brown-capped Rosy-Finch",2023,31788
+"rosfin",NA,"909","Leucosticte sp.","rosy-finch sp.",2023,31789
+"houfin",NA,"80782","Haemorhous mexicanus","House Finch",2023,31790
+"purfin",NA,"45129","Haemorhous purpureus","Purple Finch",2023,31804
+"purfin1","purfin","1","Haemorhous purpureus purpureus","Purple Finch (Eastern)",2023,31805
+"purfin2","purfin","4","Haemorhous purpureus californicus","Purple Finch (Western)",2023,31806
+"y00338",NA,"60","Haemorhous mexicanus/purpureus","House/Purple Finch",2023,31808
+"casfin",NA,"3880","Haemorhous cassinii","Cassin's Finch",2023,31809
+"eurgre1",NA,"4","Chloris chloris","European Greenfinch",2023,31816
+"yefcan",NA,"9","Crithagra mozambica","Yellow-fronted Canary",2023,31846
+"comred",NA,"19870","Acanthis flammea","Common Redpoll",2023,31962
+"comred3","comred","2","Acanthis flammea flammea","Common Redpoll (flammea)",2023,31963
+"hoared",NA,"3495","Acanthis hornemanni","Hoary Redpoll",2023,31969
+"x00625",NA,"3","Acanthis flammea x hornemanni","Common x Hoary Redpoll (hybrid)",2023,31972
+"redpol",NA,"46","Acanthis flammea/hornemanni","Common/Hoary Redpoll",2023,31973
+"redcro",NA,"1813","Loxia curvirostra","Red Crossbill",2023,31977
+"redcro1","redcro","1","Loxia curvirostra (type 1)","Red Crossbill (Appalachian or type 1)",2023,32005
+"whwcro",NA,"1333","Loxia leucoptera","White-winged Crossbill",2023,32020
+"crossb",NA,"9","Loxia sp.","crossbill sp.",2023,32023
+"eurgol",NA,"91","Carduelis carduelis","European Goldfinch",2023,32031
+"comcan",NA,"1","Serinus canaria","Island Canary",2023,32052
+"islcan1","comcan","2","Serinus canaria (Domestic type)","Island Canary (Domestic type)",2023,32053
+"canary1",NA,"1","Serinus sp.","Serinus sp.",2023,32070
+"pinsis",NA,"37468","Spinus pinus","Pine Siskin",2023,32073
+"blhsis1",NA,"1","Spinus notatus","Black-headed Siskin",2023,32082
+"lesgol",NA,"7898","Spinus psaltria","Lesser Goldfinch",2023,32087
+"lawgol",NA,"429","Spinus lawrencei","Lawrence's Goldfinch",2023,32094
+"amegfi",NA,"78118","Spinus tristis","American Goldfinch",2023,32095
+"goldfi",NA,"24","Spinus sp. (goldfinch sp.)","new world goldfinch sp.",2023,32103
+"spinus1",NA,"1","Spinus sp.","Spinus sp.",2023,32134
+"y00631",NA,"1","Acanthis/Spinus sp.","Acanthis/Spinus sp.",2023,32135
+"finch1",NA,"7","Fringillidae sp.","finch sp.",2023,32136
+"laplon",NA,"113","Calcarius lapponicus","Lapland Longspur",2023,32138
+"chclon",NA,"3","Calcarius ornatus","Chestnut-collared Longspur",2023,32142
+"smilon",NA,"4","Calcarius pictus","Smith's Longspur",2023,32143
+"mcclon",NA,"3","Rhynchophanes mccownii","Thick-billed Longspur",2023,32144
+"snobun",NA,"2820","Plectrophenax nivalis","Snow Bunting",2023,32146
+"mckbun",NA,"2","Plectrophenax hyperboreus","McKay's Bunting",2023,32152
+"yebbun",NA,"1","Emberiza aureola","Yellow-breasted Bunting",2023,32298
+"rusbun",NA,"6","Emberiza rustica","Rustic Bunting",2023,32302
+"grybun",NA,"1","Emberiza variabilis","Gray Bunting",2023,32314
+"ruwspa",NA,"52","Peucaea carpalis","Rufous-winged Sparrow",2023,32381
+"botspa",NA,"2","Peucaea botterii","Botteri's Sparrow",2023,32394
+"casspa",NA,"17","Peucaea cassinii","Cassin's Sparrow",2023,32406
+"bacspa",NA,"18","Peucaea aestivalis","Bachman's Sparrow",2023,32408
+"graspa",NA,"51","Ammodramus savannarum","Grasshopper Sparrow",2023,32413
+"olispa",NA,"24","Arremonops rufivirgatus","Olive Sparrow",2023,32436
+"chispa",NA,"29996","Spizella passerina","Chipping Sparrow",2023,32460
+"clcspa",NA,"280","Spizella pallida","Clay-colored Sparrow",2023,32466
+"x00198",NA,"1","Spizella passerina x pallida","Chipping x Clay-colored Sparrow (hybrid)",2023,32467
+"bkcspa",NA,"47","Spizella atrogularis","Black-chinned Sparrow",2023,32468
+"fiespa",NA,"8725","Spizella pusilla","Field Sparrow",2023,32473
+"brespa",NA,"139","Spizella breweri","Brewer's Sparrow",2023,32478
+"x00201",NA,"1","Spizella atrogularis x breweri","Black-chinned x Brewer's Sparrow (hybrid)",2023,32482
+"bktspa",NA,"770","Amphispiza bilineata","Black-throated Sparrow",2023,32489
+"larspa",NA,"715","Chondestes grammacus","Lark Sparrow",2023,32500
+"larbun",NA,"84","Calamospiza melanocorys","Lark Bunting",2023,32503
+"amtspa",NA,"31127","Spizelloides arborea","American Tree Sparrow",2023,32567
+"foxspa",NA,"20146","Passerella iliaca","Fox Sparrow",2023,32571
+"foxsp2","foxspa","58","Passerella iliaca [unalaschcensis Group]","Fox Sparrow (Sooty)",2023,32572
+"foxsp4","foxspa","1","Passerella iliaca [megarhyncha Group]","Fox Sparrow (Thick-billed)",2023,32580
+"foxsp3","foxspa","27","Passerella iliaca [schistacea Group]","Fox Sparrow (Slate-colored)",2023,32586
+"foxsp1","foxspa","91","Passerella iliaca iliaca/zaboria","Fox Sparrow (Red)",2023,32592
+"daejun",NA,"88875","Junco hyemalis","Dark-eyed Junco",2023,32595
+"slcjun","daejun","1404","Junco hyemalis hyemalis/carolinensis","Dark-eyed Junco (Slate-colored)",2023,32597
+"daejun1","daejun","72","Junco hyemalis cismontanus","Dark-eyed Junco (cismontanus)",2023,32600
+"orejun","daejun","1240","Junco hyemalis [oreganus Group]","Dark-eyed Junco (Oregon)",2023,32601
+"pisjun","daejun","284","Junco hyemalis mearnsi","Dark-eyed Junco (Pink-sided)",2023,32609
+"whwjun","daejun","63","Junco hyemalis aikeni","Dark-eyed Junco (White-winged)",2023,32611
+"gyhjun","daejun","178","Junco hyemalis caniceps","Dark-eyed Junco (Gray-headed)",2023,32613
+"daejun8","daejun","25","Junco hyemalis [oreganus Group] x caniceps","Dark-eyed Junco (Oregon x Gray-headed)",2023,32614
+"daejun4","daejun","21","Junco hyemalis mearnsi x caniceps","Dark-eyed Junco (Pink-sided x Gray-headed)",2023,32615
+"rebjun1","daejun","22","Junco hyemalis dorsalis","Dark-eyed Junco (Red-backed)",2023,32616
+"yeejun",NA,"31","Junco phaeonotus","Yellow-eyed Junco",2023,32619
+"y00333",NA,"4","Junco hyemalis/phaeonotus","Dark-eyed/Yellow-eyed Junco",2023,32626
+"whcspa",NA,"25240","Zonotrichia leucophrys","White-crowned Sparrow",2023,32658
+"ewcspa1","whcspa","1","Zonotrichia leucophrys leucophrys","White-crowned Sparrow (leucophrys)",2023,32660
+"gwcspa","whcspa","8","Zonotrichia leucophrys gambelii","White-crowned Sparrow (Gambel's)",2023,32662
+"whcspa3","whcspa","1","Zonotrichia leucophrys nuttalli/pugetensis","White-crowned Sparrow (Yellow-billed)",2023,32663
+"nwcspa","whcspa","1","Zonotrichia leucophrys nuttalli","White-crowned Sparrow (nuttalli)",2023,32664
+"pswspa1","whcspa","1","Zonotrichia leucophrys pugetensis","White-crowned Sparrow (pugetensis)",2023,32665
+"gocspa",NA,"5727","Zonotrichia atricapilla","Golden-crowned Sparrow",2023,32667
+"x00053",NA,"1","Zonotrichia leucophrys x atricapilla","White-crowned x Golden-crowned Sparrow (hybrid)",2023,32668
+"harspa",NA,"2477","Zonotrichia querula","Harris's Sparrow",2023,32669
+"whtspa",NA,"42230","Zonotrichia albicollis","White-throated Sparrow",2023,32672
+"x00720",NA,"2","Zonotrichia atricapilla x albicollis","Golden-crowned x White-throated Sparrow (hybrid)",2023,32674
+"x00039",NA,"16","Junco hyemalis x Zonotrichia albicollis","Dark-eyed Junco x White-throated Sparrow (hybrid)",2023,32675
+"y00332",NA,"4","Zonotrichia leucophrys/albicollis","White-crowned/White-throated Sparrow",2023,32676
+"sagspa1",NA,"20","Artemisiospiza nevadensis","Sagebrush Sparrow",2023,32678
+"belspa2",NA,"2","Artemisiospiza belli","Bell's Sparrow",2023,32679
+"sagspa",NA,"20","Artemisiospiza nevadensis/belli","Sagebrush/Bell's Sparrow (Sage Sparrow)",2023,32684
+"vesspa",NA,"259","Pooecetes gramineus","Vesper Sparrow",2023,32688
+"lecspa",NA,"14","Ammospiza leconteii","LeConte's Sparrow",2023,32692
+"seaspa",NA,"13","Ammospiza maritima","Seaside Sparrow",2023,32693
+"nstspa",NA,"2","Ammospiza nelsoni","Nelson's Sparrow",2023,32703
+"nstspa2","nstspa","1","Ammospiza nelsoni subvirgata","Nelson's Sparrow (Atlantic Coast)",2023,32707
+"shtspa",NA,"3","Ammospiza nelsoni/caudacuta","Nelson's/Saltmarsh Sparrow (Sharp-tailed Sparrow)",2023,32713
+"savspa",NA,"1273","Passerculus sandwichensis","Savannah Sparrow",2023,32715
+"savspa4","savspa","21","Passerculus sandwichensis [sandwichensis Group]","Savannah Sparrow (Savannah)",2023,32716
+"ipsspa","savspa","26","Passerculus sandwichensis princeps","Savannah Sparrow (Ipswich)",2023,32730
+"bldspa","savspa","13","Passerculus sandwichensis [guttatus Group]","Savannah Sparrow (Belding's)",2023,32731
+"savspa3","savspa","1","Passerculus sandwichensis sanctorum","Savannah Sparrow (San Benito)",2023,32736
+"labspa","savspa","3","Passerculus sandwichensis rostratus/atratus","Savannah Sparrow (Large-billed)",2023,32737
+"baispa",NA,"3","Centronyx bairdii","Baird's Sparrow",2023,32741
+"henspa",NA,"5","Centronyx henslowii","Henslow's Sparrow",2023,32743
+"sonspa",NA,"49283","Melospiza melodia","Song Sparrow",2023,32748
+"sonspa2","sonspa","8","Melospiza melodia melodia/atlantica","Song Sparrow (melodia/atlantica)",2023,32749
+"linspa",NA,"1719","Melospiza lincolnii","Lincoln's Sparrow",2023,32781
+"swaspa",NA,"757","Melospiza georgiana","Swamp Sparrow",2023,32786
+"rcgspa1",NA,"1","Melozone kieneri","Rusty-crowned Ground-Sparrow",2023,32797
+"cantow",NA,"938","Melozone fusca","Canyon Towhee",2023,32801
+"whttow1",NA,"1","Melozone albicollis","White-throated Towhee",2023,32812
+"abetow",NA,"501","Melozone aberti","Abert's Towhee",2023,32815
+"y00331",NA,"92","Melozone fusca/aberti","Canyon/Abert's Towhee",2023,32820
+"caltow",NA,"3781","Melozone crissalis","California Towhee",2023,32821
+"rucspa",NA,"271","Aimophila ruficeps","Rufous-crowned Sparrow",2023,32845
+"gnttow",NA,"248","Pipilo chlorurus","Green-tailed Towhee",2023,32859
+"spotow",NA,"10498","Pipilo maculatus","Spotted Towhee",2023,32860
+"spotow1","spotow","6","Pipilo maculatus [oregonus Group]","Spotted Towhee (oregonus Group)",2023,32861
+"spotow2","spotow","3","Pipilo maculatus [maculatus Group]","Spotted Towhee (maculatus Group)",2023,32870
+"eastow",NA,"14330","Pipilo erythrophthalmus","Eastern Towhee",2023,32888
+"eastow1","eastow","75","Pipilo erythrophthalmus erythrophthalmus/canaster","Eastern Towhee (Red-eyed)",2023,32889
+"y00226",NA,"349","Pipilo maculatus/erythrophthalmus","Spotted/Eastern Towhee (Rufous-sided Towhee)",2023,32896
+"towhee1",NA,"7","Melozone/Pipilo sp.","towhee sp.",2023,32905
+"yegfin1",NA,"1","Atlapetes luteoviridis","Yellow-green Brushfinch",2023,32920
+"sparro1",NA,"141","Passerellidae sp.","new world sparrow sp.",2023,32995
+"yebcha",NA,"102","Icteria virens","Yellow-breasted Chat",2023,33035
+"yebcha1","yebcha","3","Icteria virens virens","Yellow-breasted Chat (virens)",2023,33036
+"yehbla",NA,"314","Xanthocephalus xanthocephalus","Yellow-headed Blackbird",2023,33039
+"boboli",NA,"11","Dolichonyx oryzivorus","Bobolink",2023,33040
+"wesmea",NA,"570","Sturnella neglecta","Western Meadowlark",2023,33041
+"easmea",NA,"1035","Sturnella magna","Eastern Meadowlark",2023,33044
+"easmea2","easmea","8","Sturnella magna [magna Group]","Eastern Meadowlark (Eastern)",2023,33046
+"meadow",NA,"31","Sturnella neglecta/magna","Western/Eastern Meadowlark",2023,33062
+"lilmea2",NA,"43","Sturnella lilianae","Chihuahuan Meadowlark",2023,33063
+"y01183",NA,"3","Sturnella neglecta/lilianae","Western/Chihuahuan Meadowlark",2023,33067
+"y01184",NA,"15","Sturnella magna/lilianae","Eastern/Chihuahuan Meadowlark",2023,33068
+"stumea1",NA,"5","Sturnella sp.","Sturnella meadowlark sp.",2023,33069
+"yewcac1",NA,"2","Cassiculus melanicterus","Yellow-winged Cacique",2023,33086
+"bkvori",NA,"1","Icterus wagleri","Black-vented Oriole",2023,33146
+"orcori",NA,"301","Icterus spurius","Orchard Oriole",2023,33153
+"orcori2","orcori","1","Icterus spurius spurius","Orchard Oriole (Orchard)",2023,33154
+"hooori",NA,"768","Icterus cucullatus","Hooded Oriole",2023,33156
+"hooori1","hooori","1","Icterus cucullatus [nelsoni Group]","Hooded Oriole (nelsoni Group)",2023,33160
+"y00488",NA,"5","Icterus spurius/cucullatus","Orchard/Hooded Oriole",2023,33165
+"stbori",NA,"5","Icterus pustulatus","Streak-backed Oriole",2023,33198
+"bulori",NA,"452","Icterus bullockii","Bullock's Oriole",2023,33210
+"spbori",NA,"46","Icterus pectoralis","Spot-breasted Oriole",2023,33223
+"altori",NA,"17","Icterus gularis","Altamira Oriole",2023,33226
+"audori",NA,"26","Icterus graduacauda","Audubon's Oriole",2023,33233
+"audori1","audori","1","Icterus graduacauda graduacauda/audubonii","Audubon's Oriole (Audubon's)",2023,33234
+"balori",NA,"2396","Icterus galbula","Baltimore Oriole",2023,33241
+"x00013",NA,"3","Icterus bullockii x galbula","Bullock's x Baltimore Oriole (hybrid)",2023,33242
+"y00022",NA,"167","Icterus bullockii/galbula","Bullock's/Baltimore Oriole",2023,33243
+"scoori",NA,"117","Icterus parisorum","Scott's Oriole",2023,33247
+"oriole",NA,"12","Icterus sp.","new world oriole sp.",2023,33249
+"rewbla",NA,"45163","Agelaius phoeniceus","Red-winged Blackbird",2023,33251
+"rewbla1","rewbla","83","Agelaius phoeniceus [phoeniceus Group]","Red-winged Blackbird (Red-winged)",2023,33252
+"rewbla2","rewbla","1","Agelaius phoeniceus californicus/mailliardorum","Red-winged Blackbird (California Bicolored)",2023,33274
+"tribla",NA,"110","Agelaius tricolor","Tricolored Blackbird",2023,33281
+"tasbla",NA,"1","Agelaius humeralis","Tawny-shouldered Blackbird",2023,33283
+"shicow",NA,"21","Molothrus bonariensis","Shiny Cowbird",2023,33291
+"brocow",NA,"170","Molothrus aeneus","Bronzed Cowbird",2023,33300
+"bnhcow",NA,"36570","Molothrus ater","Brown-headed Cowbird",2023,33307
+"y00336",NA,"12","Molothrus bonariensis/ater","Shiny/Brown-headed Cowbird",2023,33312
+"y00337",NA,"28","Molothrus aeneus/ater","Bronzed/Brown-headed Cowbird",2023,33313
+"rusbla",NA,"2160","Euphagus carolinus","Rusty Blackbird",2023,33322
+"brebla",NA,"4139","Euphagus cyanocephalus","Brewer's Blackbird",2023,33325
+"y00227",NA,"64","Euphagus carolinus/cyanocephalus","Rusty/Brewer's Blackbird",2023,33326
+"comgra",NA,"44823","Quiscalus quiscula","Common Grackle",2023,33327
+"comgra1","comgra","5","Quiscalus quiscula quiscula/stonei","Common Grackle (Florida/Purple)",2023,33328
+"comgra2","comgra","1","Quiscalus quiscula versicolor","Common Grackle (Bronzed)",2023,33331
+"botgra",NA,"2143","Quiscalus major","Boat-tailed Grackle",2023,33332
+"botgra1","botgra","1","Quiscalus major major","Boat-tailed Grackle (major)",2023,33333
+"botgra2","botgra","3","Quiscalus major torreyi/alabamensis","Boat-tailed Grackle (torreyi/alabamensis)",2023,33334
+"grtgra",NA,"1766","Quiscalus mexicanus","Great-tailed Grackle",2023,33338
+"grackl",NA,"14","Quiscalus sp.","grackle sp.",2023,33372
+"oribla1",NA,"1","Gymnomystax mexicanus","Oriole Blackbird",2023,33380
+"yewbla2",NA,"1","Agelasticus thilius","Yellow-winged Blackbird",2023,33404
+"blackb",NA,"133","Icteridae sp.","blackbird sp.",2023,33417
+"ovenbi1",NA,"275","Seiurus aurocapilla","Ovenbird",2023,33419
+"woewar1",NA,"39","Helmitheros vermivorum","Worm-eating Warbler",2023,33423
+"louwat",NA,"60","Parkesia motacilla","Louisiana Waterthrush",2023,33425
+"norwat",NA,"14","Parkesia noveboracensis","Northern Waterthrush",2023,33426
+"y00598",NA,"32","Parkesia motacilla/noveboracensis","Louisiana/Northern Waterthrush",2023,33427
+"gowwar",NA,"6","Vermivora chrysoptera","Golden-winged Warbler",2023,33429
+"buwwar",NA,"40","Vermivora cyanoptera","Blue-winged Warbler",2023,33430
+"brewar",NA,"1","Vermivora chrysoptera x cyanoptera (F1 hybrid)","Brewster's Warbler (hybrid)",2023,33432
+"bawwar",NA,"1069","Mniotilta varia","Black-and-white Warbler",2023,33435
+"prowar",NA,"100","Protonotaria citrea","Prothonotary Warbler",2023,33436
+"swawar",NA,"11","Limnothlypis swainsonii","Swainson's Warbler",2023,33437
+"tenwar",NA,"100","Leiothlypis peregrina","Tennessee Warbler",2023,33445
+"orcwar",NA,"3183","Leiothlypis celata","Orange-crowned Warbler",2023,33446
+"orcwar1","orcwar","35","Leiothlypis celata celata","Orange-crowned Warbler (celata)",2023,33448
+"orcwar3","orcwar","1","Leiothlypis celata lutescens","Orange-crowned Warbler (lutescens)",2023,33450
+"lucwar",NA,"78","Leiothlypis luciae","Lucy's Warbler",2023,33453
+"naswar",NA,"282","Leiothlypis ruficapilla","Nashville Warbler",2023,33454
+"naswar1","naswar","2","Leiothlypis ruficapilla ruficapilla","Nashville Warbler (ruficapilla)",2023,33455
+"naswar2","naswar","1","Leiothlypis ruficapilla ridgwayi","Nashville Warbler (ridgwayi)",2023,33456
+"virwar",NA,"11","Leiothlypis virginiae","Virginia's Warbler",2023,33459
+"conwar",NA,"4","Oporornis agilis","Connecticut Warbler",2023,33464
+"gycyel",NA,"1","Geothlypis poliocephala","Gray-crowned Yellowthroat",2023,33465
+"macwar",NA,"15","Geothlypis tolmiei","MacGillivray's Warbler",2023,33478
+"mouwar",NA,"1","Geothlypis philadelphia","Mourning Warbler",2023,33479
+"kenwar",NA,"10","Geothlypis formosa","Kentucky Warbler",2023,33484
+"comyel",NA,"564","Geothlypis trichas","Common Yellowthroat",2023,33499
+"hoowar",NA,"90","Setophaga citrina","Hooded Warbler",2023,33528
+"amered",NA,"150","Setophaga ruticilla","American Redstart",2023,33529
+"kirwar",NA,"1","Setophaga kirtlandii","Kirtland's Warbler",2023,33530
+"camwar",NA,"87","Setophaga tigrina","Cape May Warbler",2023,33531
+"cerwar",NA,"16","Setophaga cerulea","Cerulean Warbler",2023,33532
+"norpar",NA,"488","Setophaga americana","Northern Parula",2023,33534
+"magwar",NA,"46","Setophaga magnolia","Magnolia Warbler",2023,33550
+"babwar",NA,"24","Setophaga castanea","Bay-breasted Warbler",2023,33554
+"bkbwar",NA,"35","Setophaga fusca","Blackburnian Warbler",2023,33555
+"yelwar",NA,"677","Setophaga petechia","Yellow Warbler",2023,33557
+"yelwar1","yelwar","3","Setophaga petechia [aestiva Group]","Yellow Warbler (Northern)",2023,33558
+"yelwar2","yelwar","2","Setophaga petechia [petechia Group]","Yellow Warbler (Golden)",2023,33578
+"chswar",NA,"27","Setophaga pensylvanica","Chestnut-sided Warbler",2023,33599
+"bkpwar",NA,"50","Setophaga striata","Blackpoll Warbler",2023,33601
+"btbwar",NA,"122","Setophaga caerulescens","Black-throated Blue Warbler",2023,33604
+"palwar",NA,"1086","Setophaga palmarum","Palm Warbler",2023,33611
+"palwar3","palwar","19","Setophaga palmarum palmarum","Palm Warbler (Western)",2023,33612
+"palwar4","palwar","50","Setophaga palmarum hypochrysea","Palm Warbler (Yellow)",2023,33613
+"pinwar",NA,"8188","Setophaga pinus","Pine Warbler",2023,33616
+"yerwar",NA,"15686","Setophaga coronata","Yellow-rumped Warbler",2023,33622
+"myrwar","yerwar","558","Setophaga coronata coronata","Yellow-rumped Warbler (Myrtle)",2023,33623
+"audwar","yerwar","209","Setophaga coronata auduboni","Yellow-rumped Warbler (Audubon's)",2023,33624
+"yerwar3","yerwar","38","Setophaga coronata coronata x auduboni","Yellow-rumped Warbler (Myrtle x Audubon's)",2023,33625
+"x00461",NA,"2","Setophaga palmarum x coronata","Palm x Yellow-rumped Warbler (hybrid)",2023,33630
+"yetwar",NA,"964","Setophaga dominica","Yellow-throated Warbler",2023,33631
+"yetwar1","yetwar","1","Setophaga dominica albilora","Yellow-throated Warbler (albilora)",2023,33632
+"yetwar2","yetwar","1","Setophaga dominica dominica/stoddardi","Yellow-throated Warbler (dominica/stoddardi)",2023,33633
+"prawar",NA,"199","Setophaga discolor","Prairie Warbler",2023,33643
+"barwar",NA,"1","Setophaga subita","Barbuda Warbler",2023,33649
+"grawar",NA,"4","Setophaga graciae","Grace's Warbler",2023,33651
+"btywar",NA,"123","Setophaga nigrescens","Black-throated Gray Warbler",2023,33657
+"towwar",NA,"2210","Setophaga townsendi","Townsend's Warbler",2023,33663
+"x00624",NA,"1","Setophaga coronata x townsendi","Yellow-rumped x Townsend's Warbler (hybrid)",2023,33664
+"herwar",NA,"25","Setophaga occidentalis","Hermit Warbler",2023,33667
+"x00059",NA,"6","Setophaga townsendi x occidentalis","Townsend's x Hermit Warbler (hybrid)",2023,33670
+"gchwar",NA,"18","Setophaga chrysoparia","Golden-cheeked Warbler",2023,33674
+"btnwar",NA,"87","Setophaga virens","Black-throated Green Warbler",2023,33675
+"rucwar",NA,"1","Basileuterus rufifrons","Rufous-capped Warbler",2023,33680
+"gcrwar",NA,"1","Basileuterus culicivorus","Golden-crowned Warbler",2023,33704
+"canwar",NA,"3","Cardellina canadensis","Canada Warbler",2023,33798
+"wlswar",NA,"339","Cardellina pusilla","Wilson's Warbler",2023,33799
+"wilwar1","wlswar","1","Cardellina pusilla pileolata","Wilson's Warbler (pileolata)",2023,33800
+"wilwar2","wlswar","2","Cardellina pusilla pusilla","Wilson's Warbler (pusilla)",2023,33801
+"wilwar3","wlswar","6","Cardellina pusilla chryseola","Wilson's Warbler (chryseola)",2023,33802
+"refwar",NA,"1","Cardellina rubrifrons","Red-faced Warbler",2023,33803
+"paired",NA,"15","Myioborus pictus","Painted Redstart",2023,33810
+"warble",NA,"23","Parulidae sp.","new world warbler sp.",2023,33850
+"heptan",NA,"11","Piranga flava","Hepatic Tanager",2023,33866
+"sumtan",NA,"496","Piranga rubra","Summer Tanager",2023,33885
+"scatan",NA,"156","Piranga olivacea","Scarlet Tanager",2023,33889
+"westan",NA,"267","Piranga ludoviciana","Western Tanager",2023,33892
+"flctan",NA,"1","Piranga bidentata","Flame-colored Tanager",2023,33895
+"rehtan2",NA,"1","Piranga rubriceps","Red-hooded Tanager",2023,33910
+"norcar",NA,"75295","Cardinalis cardinalis","Northern Cardinal",2023,33967
+"norcar1","norcar","104","Cardinalis cardinalis [cardinalis Group]","Northern Cardinal (Common)",2023,33968
+"pyrrhu",NA,"972","Cardinalis sinuatus","Pyrrhuloxia",2023,33987
+"yelgro",NA,"5","Pheucticus chrysopeplus","Yellow Grosbeak",2023,33993
+"robgro",NA,"2918","Pheucticus ludovicianus","Rose-breasted Grosbeak",2023,34009
+"bkhgro",NA,"993","Pheucticus melanocephalus","Black-headed Grosbeak",2023,34011
+"y00334",NA,"125","Pheucticus ludovicianus/melanocephalus","Rose-breasted/Black-headed Grosbeak",2023,34015
+"blubun",NA,"10","Cyanocompsa parellina","Blue Bunting",2023,34046
+"blugrb1",NA,"271","Passerina caerulea","Blue Grosbeak",2023,34051
+"lazbun",NA,"154","Passerina amoena","Lazuli Bunting",2023,34059
+"indbun",NA,"1206","Passerina cyanea","Indigo Bunting",2023,34060
+"ixlbun",NA,"3","Passerina amoena x cyanea","Lazuli x Indigo Bunting (hybrid)",2023,34062
+"orbbun1",NA,"2","Passerina leclancherii","Orange-breasted Bunting",2023,34065
+"varbun",NA,"3","Passerina versicolor","Varied Bunting",2023,34068
+"paibun",NA,"937","Passerina ciris","Painted Bunting",2023,34074
+"dickci",NA,"169","Spiza americana","Dickcissel",2023,34080
+"reccar",NA,"30","Paroaria coronata","Red-crested Cardinal",2023,34083
+"yebcar",NA,"5","Paroaria capitata","Yellow-billed Cardinal",2023,34096
+"tanage",NA,"5","Thraupidae sp. (tanager sp.)","tanager sp. (Thraupidae sp.)",2023,34680
+"saffin",NA,"10","Sicalis flaveola","Saffron Finch",2023,34918
+"yellow4",NA,"1","Sicalis sp.","yellow-finch sp.",2023,34936
+"blbgra1",NA,"1","Volatinia jacarina","Blue-black Grassquit",2023,34951
+"whcsee1",NA,"1","Sporophila morelleti","Morelet's Seedeater",2023,35016
+"whcsee2",NA,"1","Sporophila torqueola","Cinnamon-rumped Seedeater",2023,35019
+"whcsee",NA,"3","Sporophila morelleti/torqueola","Morelet's/Cinnamon-rumped Seedeater",2023,35022
+"grasal2",NA,"1","Saltator grandis","Cinnamon-bellied Saltator",2023,35246
+"passer1",NA,"1","Passeriformes sp.","passerine sp.",2023,35292
+"bird1",NA,"5","Aves sp.","bird sp.",2023,35293
