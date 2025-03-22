@@ -72,7 +72,7 @@ pfw_species <- function(data, species, suppress_ambiguous = FALSE) {
 
     # Suppress ambiguous names if requested
     if (suppress_ambiguous) {
-      missing_names <- missing_names[!grepl("/", missing_names)]
+      missing_names <- missing_names[!grepl("\\)", missing_names)]
     }
 
     if (length(missing_names) > 0) {

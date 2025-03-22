@@ -40,22 +40,24 @@ pfw_zerofill <- function(data) {
     }
 
     # Re-import and re-assign for future use
-    full_data <- do.call(pfw_import, c(list(folder = import_path, filter = TRUE), import_filters))
+    full_data <- suppressMessages(
+      do.call(pfw_import, c(list(folder = import_path, filter = TRUE), import_filters))
+    )
   }
 
   # Apply filters again to match data context
   if (!is.null(filters)) {
     for (f in filters) {
       if (f$type == "region") {
-        full_data <- pfw_region(full_data, f$value)
+        full_data <- suppressMessages(pfw_region(full_data, f$value))
       } else if (f$type == "date") {
-        full_data <- pfw_date(full_data, year = f$value$year, month = f$value$month)
+        full_data <- suppressMessages(pfw_date(full_data, year = f$value$year, month = f$value$month))
       } else if (f$type == "valid" && isTRUE(f$value)) {
         full_data <- full_data[full_data$VALID != 0, ]
       } else if (f$type == "reviewed") {
         full_data <- full_data[full_data$REVIEWED == as.integer(f$value), ]
       } else if (f$type == "rollup" && isTRUE(f$value)) {
-        full_data <- pfw_rollup(full_data)
+        full_data <- suppressMessages(pfw_rollup(full_data))
       }
     }
   }
@@ -80,5 +82,6 @@ pfw_zerofill <- function(data) {
   if (!is.null(filters)) attr(zf_data, "pfw_filters") <- filters
   if (!is.null(import_path)) attr(zf_data, "pfw_import_path") <- import_path
 
+  message("Zerofilling complete.")
   return(invisible(zf_data))
 }

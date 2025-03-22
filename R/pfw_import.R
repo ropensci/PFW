@@ -31,7 +31,7 @@ pfw_import <- function(folder = "data-raw/", filter = FALSE, ...) {
 
     # Skip if it's not a valid PFW observation file
     if (!all(expected_cols %in% names(data))) {
-      message("Skipping file (missing PFW structure): ", file)
+      message("Skipping file (incorrect data structure): ", file)
       next
     }
 
