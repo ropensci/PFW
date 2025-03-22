@@ -52,6 +52,8 @@ pfw_attr(data_filtered)
 data_zf <- pfw_zerofill(data_filtered)
 
 # Attach site description metadata
-data_full <- pfw_sitedata(data_zf)
-
+# Replace "path/to/site_data.csv" with the actual path to the downloaded file
+data_full <- pfw_sitedata(data_zf, path = "path/to/site_data.csv")
+# You can download the site description file from:
+# https://feederwatch.org/explore/raw-dataset-requests/
 ```
