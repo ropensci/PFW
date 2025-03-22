@@ -1,6 +1,6 @@
 Package: PFW
 Title: Tools for Filtering and Processing Data from Project FeederWatch
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: 
     person("Mason", "Maron", , "mmaron101@gmail.com", role = c("aut", "cre"))
 Description: Provides tools to import, clean, filter, and prepare Project
