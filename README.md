@@ -1,11 +1,18 @@
 
-# PFW
+# PFW: Tools for Filtering and Processing Data from Project FeederWatch <img src="Logo.png" align="right" width=140 alt="Hexagonal PFW logo, featuring a Dark-eyed Junco with a seed in its beak."/>
 
 <!-- badges: start -->
+
+[![License: GPL
+v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 <!-- badges: end -->
 
-`PFW` is an R package designed for easy filtering, preparation, and management of data from [Project FeederWatch](https://feederwatch.org/).  
-Included are tools for taxonomic rollup, filtering by survey characteristics (species, state, etc.), merging in site metadata, and zerofilling for presence/absence modeling.
+##Overview
+
+`PFW` is an R package designed for easy filtering, preparation, 
+and management of data from [Project FeederWatch](https://feederwatch.org/).  
+Included are tools for taxonomic rollup, filtering by survey characteristics 
+(species, state, etc.), merging in site metadata, and zerofilling for presence/absence modeling.
 
 ## Installation
 
