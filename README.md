@@ -55,7 +55,7 @@ data_filtered <- pfw_filter(data,
 # View the filters that were applied
 pfw_attr(data_filtered)
 
-# Zerofill missing species/checklist combos
+# Zerofill missing species/survey instance combos
 data_zf <- pfw_zerofill(data_filtered)
 
 # Attach site description metadata
