@@ -45,7 +45,7 @@ update_taxonomy <- function() {
   # Define the save location
   taxonomy_path <- file.path(translation_folder, "PFW_spp_translation_table.csv")
 
-  # If any CSV file exists in the folder, ask before overwriting
+  # If any .csv file exists in the folder, ask before overwriting
   existing_files <- list.files(translation_folder, pattern = "\\.csv$", full.names = TRUE)
   if (length(existing_files) > 0) {
     message("A species translation table file already exists.")
