@@ -7,7 +7,7 @@
 v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 <!-- badges: end -->
 
-##Overview
+## Overview
 
 `PFW` is an R package designed for easy filtering, preparation, 
 and management of data from [Project FeederWatch](https://feederwatch.org/).  
@@ -55,12 +55,12 @@ data_filtered <- pfw_filter(data,
 # View the filters that were applied
 pfw_attr(data_filtered)
 
-# Zerofill missing species/checklist combos
+# Zerofill missing species/survey instance combos
 data_zf <- pfw_zerofill(data_filtered)
 
 # Attach site description metadata
-# Replace "path/to/site_data.csv" with the actual path to the downloaded file
-data_full <- pfw_sitedata(data_zf, path = "path/to/site_data.csv")
+# Replace "path/sitedata.csv" with the actual path to the downloaded file
+data_full <- pfw_sitedata(data_zf, path = "path/sitedata.csv")
 # You can download the site description file from:
 # https://feederwatch.org/explore/raw-dataset-requests/
 ```
