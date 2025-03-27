@@ -2,7 +2,7 @@
 % Please edit documentation in R/pfw_example.R
 \name{pfw_example}
 \alias{pfw_example}
-\title{Load Example Project FeederWatch Dataset}
+\title{Download and Load Example Project FeederWatch Dataset}
 \usage{
 pfw_example()
 }

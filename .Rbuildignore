@@ -1,3 +1,5 @@
 ^PFW\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^Logo\.png$
+^inst/extdata/pfw_example.csv$
