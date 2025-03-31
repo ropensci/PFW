@@ -4,13 +4,13 @@
 #' or scientific names via the species translation table.
 #'
 #' @param data The PFW dataset (a data.table or data.frame).
-#' @param species A character vector of species names (common or scientific).
+#' @param species A character vector of species names (common, scientific, or six-letter species code).
 #' @param suppress_ambiguous (Optional, default = FALSE) TRUE/FALSE on including missing subspecies in the warning. This is mainly as a fix for the pfw_filter function.
 #' @return A filtered dataset containing only the selected species.
 #' @export
 pfw_species <- function(data, species, suppress_ambiguous = FALSE) {
   if (!is.character(species)) {
-    stop("Species must be a character vector (e.g., c('Greater Roadrunner', 'Cactus Wren'))")
+    stop("Species must be a character vector (e.g., c('Greater Roadrunner', 'Spinus pinus', 'lesgol'))")
   }
 
   taxonomy_path <- list.files(
@@ -41,7 +41,8 @@ pfw_species <- function(data, species, suppress_ambiguous = FALSE) {
   # Find species codes
   matching_codes <- unique(species_table$species_code[
     tolower(species_table$american_english_name) %in% species |
-      tolower(species_table$scientific_name) %in% species
+      tolower(species_table$scientific_name) %in% species |
+      tolower(species_table$species_code) %in% species
   ])
 
   # Include subspecies
@@ -52,7 +53,8 @@ pfw_species <- function(data, species, suppress_ambiguous = FALSE) {
 
   # Warn for unmatched species
   not_found <- species[!species %in% tolower(species_table$american_english_name) &
-    !species %in% tolower(species_table$scientific_name)]
+    !species %in% tolower(species_table$scientific_name) &
+    !species %in% tolower(species_table$species_code)]
   if (length(not_found) > 0) {
     warning("The following species were not found in the species table: ", paste(not_found, collapse = ", "))
   }
