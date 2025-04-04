@@ -7,7 +7,7 @@
 pfw_rollup(data)
 }
 \arguments{
-\item{data}{A PFW dataset with a SPECIES_CODE column.}
+\item{data}{A Project FeederWatch dataset.}
 }
 \value{
 A cleaned dataset with only species-level codes and a rollup attribute.

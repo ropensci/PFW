@@ -1,9 +1,11 @@
-#' Zerofill species not detected in each checklist for analysis
+#' Zerofill species not detected in each survey instance for analysis
 #'
 #' This function adds zeros for checklists where selected species were absent,
 #' setting HOW_MANY = 0 for presence/absence-based analyses.
+#' Note that zerofilling entire, unfiltered datasets from Project FeederWatch will take a long time!
 #'
-#' @param data A PFW dataset, optionally filtered for species.
+#' @param data A Project FeederWatch dataset, optionally filtered for species.
+#'
 #' @return A data.table with zerofilled values included for each species.
 #' @export
 pfw_zerofill <- function(data) {

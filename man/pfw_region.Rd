@@ -7,7 +7,7 @@
 pfw_region(data, regions)
 }
 \arguments{
-\item{data}{The active PFW dataset (a data.table or data.frame) in your R project.}
+\item{data}{A Project FeederWatch dataset (a data.table or data.frame).}
 
 \item{regions}{A character vector of regions (e.g., "Washington", "United States").}
 }
@@ -15,5 +15,18 @@ pfw_region(data, regions)
 A filtered dataset containing only the selected regions.
 }
 \description{
-This function filters PFW data to include only specified states, provinces, or countries.
+This function filters Project FeederWatch data to include only specified states, provinces, or countries.
+}
+\examples{
+\dontrun{
+# Filter for data only from Washington using the state name
+data_WA <- pfw_region(data, "Washington")
+
+# Filter for data only from Washington using the state code
+data_WA <- pfw_region(data, "US-WA")
+
+# Filter for data from Washington, Oregon, and California using the state name
+data_westcoastbestcoast <- pfw_region(data, c("Washington", "Oregon", "California"))
+}
+
 }

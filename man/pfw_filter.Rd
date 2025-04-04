@@ -16,7 +16,7 @@ pfw_filter(
 )
 }
 \arguments{
-\item{data}{The PFW dataset (a data.table or data.frame).}
+\item{data}{The Project FeederWatch dataset (a data.table or data.frame).}
 
 \item{species}{(Optional) A character vector of species names (common or scientific).}
 
@@ -36,5 +36,34 @@ pfw_filter(
 A filtered dataset.
 }
 \description{
-This function filters PFW data by species, region, and data validity.
+This function filters Project FeederWatch data by species, region, and data validity.
+}
+\examples{
+\dontrun{
+# Filter for Dark-eyed Junco, Song Sparrow, and Spotted Towhee in Washington in 2023
+data_masonsyard <- pfw_filter(
+  data,
+  species = c("daejun", "sonspa", "spotow"),
+  region = "US-WA",
+  year = 2023
+)
+
+# Filter for all data from Washington, Oregon, or California from November through February for 2001 through 2023
+data_westcoastwinter <- pfw_filter(
+  data,
+  region = c("Washington", "Oregon", "California"),
+  year = 2001:2023,
+  month = 11:2
+)
+
+# Filter for Greater Roadrunner in California, keeping only reviewed records and disabling taxonomic rollup
+data_GRRO_CA <- pfw_filter(
+  data,
+  species = "Greater Roadrunner",
+  region = "California",
+  reviewed = TRUE,
+  rollup = FALSE
+)
+}
+
 }

@@ -1,8 +1,8 @@
 #' Apply Multiple Filters to Project FeederWatch Data
 #'
-#' This function filters PFW data by species, region, and data validity.
+#' This function filters Project FeederWatch data by species, region, and data validity.
 #'
-#' @param data The PFW dataset (a data.table or data.frame).
+#' @param data The Project FeederWatch dataset (a data.table or data.frame).
 #' @param species (Optional) A character vector of species names (common or scientific).
 #' @param region (Optional) A character vector of region names (e.g., "Washington", "British Columbia").
 #' @param year (Optional) Integer or vector of years (e.g., 2010 or 2010:2015).
@@ -10,7 +10,36 @@
 #' @param valid (Optional, default = TRUE) Filter out invalid data. Removes rows where VALID == 0.
 #' @param reviewed (Optional) If specified, filters by review status (TRUE for reviewed, FALSE for unreviewed).
 #' @param rollup (Optional, default = TRUE) Automatically roll up subspecies to species level and remove spuhs, slashes, and hybrids.
+#'
 #' @return A filtered dataset.
+#' @examples
+#' \dontrun{
+#' # Filter for Dark-eyed Junco, Song Sparrow, and Spotted Towhee in Washington in 2023
+#' data_masonsyard <- pfw_filter(
+#'   data,
+#'   species = c("daejun", "sonspa", "spotow"),
+#'   region = "US-WA",
+#'   year = 2023
+#' )
+#'
+#' # Filter for all data from Washington, Oregon, or California from November through February for 2001 through 2023
+#' data_westcoastwinter <- pfw_filter(
+#'   data,
+#'   region = c("Washington", "Oregon", "California"),
+#'   year = 2001:2023,
+#'   month = 11:2
+#' )
+#'
+#' # Filter for Greater Roadrunner in California, keeping only reviewed records and disabling taxonomic rollup
+#' data_GRRO_CA <- pfw_filter(
+#'   data,
+#'   species = "Greater Roadrunner",
+#'   region = "California",
+#'   reviewed = TRUE,
+#'   rollup = FALSE
+#' )
+#' }
+#'
 #' @export
 pfw_filter <- function(data, species = NULL, region = NULL, year = NULL, month = NULL,
                        valid = TRUE, reviewed = NULL, rollup = TRUE) {

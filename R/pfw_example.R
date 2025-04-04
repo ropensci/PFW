@@ -3,7 +3,7 @@
 #' Provides a sample dataset for demonstration and testing purposes.
 #' This dataset includes data from 2021 - May 2024 from Washington, Oregon, and California.
 #'
-#' @return A data.frame of example PFW data.
+#' @return A data.frame of example Project FeederWatch data.
 #' @export
 pfw_example <- function() {
   path <- system.file("extdata", "pfw_example.csv", package = "PFW")

@@ -15,5 +15,12 @@ pfw_sitedata(data, path)
 The original dataset with site metadata merged in.
 }
 \description{
-This function joins habitat and site metadata into PFW observation data using the site description file.
+This function joins habitat and site metadata into Project FeederWatch observation data using the site description file.
+}
+\examples{
+\dontrun{
+# Merge site metadata into  observation data
+data_sites <- pfw_sitedata(data, "data-raw/site_data.csv")
+}
+
 }

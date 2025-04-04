@@ -3,7 +3,8 @@
 #' This function removes spuhs, hybrids, and slashes and
 #' "demotes" subspecies/subspecies intergrades to their parent species.
 #'
-#' @param data A PFW dataset with a SPECIES_CODE column.
+#' @param data A Project FeederWatch dataset.
+#'
 #' @return A cleaned dataset with only species-level codes and a rollup attribute.
 #' @export
 pfw_rollup <- function(data) {

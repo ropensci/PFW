@@ -1,12 +1,19 @@
 #' Download Raw Project FeederWatch Data by Year
 #'
-#' This function downloads raw FeederWatch data for selected years from the Project FeederWatch website.
+#' This function downloads raw data for selected years from the Project FeederWatch website.
 #' It unzips the downloaded data and saves the .csv files into a local folder
 #' (default: "data-raw/"), removing the zip files afterward. It will download all files
 #' required to cover the user-selected years.
 #'
 #' @param years Integer or vector of years (e.g., 2001, 2001:2023, c(1997, 2001, 2023)).
-#' @param folder The folder where PFW data is stored. Default is "data-raw/".
+#' @param folder The folder where Project FeederWatch data is stored. Default is "data-raw/".
+#'
+#' @examples
+#' \dontrun{
+#' # Download data from 2001-2023 into the default folder ("data-raw")
+#' pfw_download(years = 2001:2023)
+#' }
+#'
 #' @export
 pfw_download <- function(years, folder = "data-raw/") {
   if (missing(years) || is.null(years)) stop("You must specify at least one year.")
@@ -28,7 +35,7 @@ pfw_download <- function(years, folder = "data-raw/") {
   zip_links <- links[grepl("PFW_all_\\d{4}_\\d{4}.*\\.zip$", links)]
 
   # Parse year ranges and filter links that overlap with input years
-  #Using this matching method will prevent issues as new years are added to the webpage's data
+  # Using this matching method will prevent issues as new years are added to the webpage's data
   matches <- lapply(zip_links, function(link) {
     match <- regmatches(link, regexec("PFW_all_(\\d{4})_(\\d{4})", link))[[1]]
     if (length(match) == 3) {

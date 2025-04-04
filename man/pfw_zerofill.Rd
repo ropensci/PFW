@@ -2,12 +2,12 @@
 % Please edit documentation in R/pfw_zerofill.R
 \name{pfw_zerofill}
 \alias{pfw_zerofill}
-\title{Zerofill species not detected in each checklist for analysis}
+\title{Zerofill species not detected in each survey instance for analysis}
 \usage{
 pfw_zerofill(data)
 }
 \arguments{
-\item{data}{A PFW dataset, optionally filtered for species.}
+\item{data}{A Project FeederWatch dataset, optionally filtered for species.}
 }
 \value{
 A data.table with zerofilled values included for each species.
@@ -15,4 +15,5 @@ A data.table with zerofilled values included for each species.
 \description{
 This function adds zeros for checklists where selected species were absent,
 setting HOW_MANY = 0 for presence/absence-based analyses.
+Note that zerofilling entire, unfiltered datasets from Project FeederWatch will take a long time!
 }

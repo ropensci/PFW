@@ -9,11 +9,18 @@ pfw_download(years, folder = "data-raw/")
 \arguments{
 \item{years}{Integer or vector of years (e.g., 2001, 2001:2023, c(1997, 2001, 2023)).}
 
-\item{folder}{The folder where PFW data is stored. Default is "data-raw/".}
+\item{folder}{The folder where Project FeederWatch data is stored. Default is "data-raw/".}
 }
 \description{
-This function downloads raw FeederWatch data for selected years from the Project FeederWatch website.
+This function downloads raw data for selected years from the Project FeederWatch website.
 It unzips the downloaded data and saves the .csv files into a local folder
 (default: "data-raw/"), removing the zip files afterward. It will download all files
 required to cover the user-selected years.
+}
+\examples{
+\dontrun{
+# Download data from 2001-2023 into the default folder ("data-raw")
+pfw_download(years = 2001:2023)
+}
+
 }

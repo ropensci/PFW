@@ -16,3 +16,11 @@ A printed description (for a variable) or a data.frame of the full dictionary.
 This function helps users explore the FeederWatch dataset by viewing the full data dictionary
 or searching for definitions for specific variables.
 }
+\examples{
+# View the whole data dictionary
+pfw_dictionary()
+
+# View the data dictionary entry for location ID ("LOC_ID")
+pfw_dictionary("LOC_ID")
+
+}

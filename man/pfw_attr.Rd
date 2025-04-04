@@ -2,17 +2,17 @@
 % Please edit documentation in R/pfw_attr.R
 \name{pfw_attr}
 \alias{pfw_attr}
-\title{View PFW Filter Attributes on Manipulated Project FeederWatch Data}
+\title{View Project FeederWatch Filter Attributes on Manipulated Project FeederWatch Data}
 \usage{
 pfw_attr(data)
 }
 \arguments{
-\item{data}{A filtered PFW dataset (a data.table or data.frame) with filter attributes.}
+\item{data}{A filtered Project FeederWatch dataset (a data.table or data.frame) with filter attributes.}
 }
 \value{
 A named list of applied filters (invisibly).
 }
 \description{
-This function allows users to view all filters they've applied to a filtered PFW dataset
-by printing its recorded filter attributes in a readable format.
+This function allows users to view all filters they've applied to a filtered Project FeederWatch
+dataset by printing its recorded filter attributes in a readable format.
 }

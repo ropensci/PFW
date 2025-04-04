@@ -2,7 +2,7 @@
 % Please edit documentation in R/pfw_truncate.R
 \name{pfw_truncate}
 \alias{pfw_truncate}
-\title{Filter PFW Data to "Standard" Seasonal Window}
+\title{Filter Project FeederWatch Data to "Standard" Seasonal Window}
 \usage{
 pfw_truncate(data)
 }
@@ -15,7 +15,7 @@ A filtered dataset limited to Nov 8 – Apr 3 across years.
 \description{
 Project FeederWatch's Data Users Guide (https://birdscanada.github.io/BirdsCanada_PFW/Start2.html)
 Suggests that data should be truncated by date to avoid biases from years where the
-PFW survey season was extended.
+Project FeederWatch survey season was extended.
 This function filters data to include only observations within the typical FeederWatch season:
 after November 8 and before April 3.
 }

@@ -1,12 +1,31 @@
 #' Filter Project FeederWatch Data by Month and/or Year
 #'
-#' Filters PFW data by year and/or month, allowing range-based filtering and wrapping months around new years.
+#' Filters Project FeederWatch data by year and/or month, allowing range-based filtering and wrapping months around new years.
 #'
-#' @param data A PFW dataset (from pfw_import or a previously filtered version).
+#' @param data A Project FeederWatch dataset (from pfw_import or a previously filtered version).
 #' @param year Optional. Integer or vector of years (e.g., 2010 or 2010:2015).
 #' @param month Optional. Integer or vector of months (1–12). Supports wrapping (e.g., c(11, 2) = Nov–Feb).
 #'
 #' @return A filtered dataset with date filter attributes.
+#' @examples
+#' # Load example data
+#' data <- pfw_example()
+#'
+#' # Filter by a single year
+#' data_2001 <- pfw_date(data, year = 2001)
+#'
+#' # Filter by multiple years
+#' data_0123 <- pfw_date(data, year = 2001:2023)
+#'
+#' # Filter by a single month
+#' data_feb <- pfw_date(data, month = 2)
+#'
+#' # Filter by a span of months
+#' data_winter <- pfw_date(data, month = 11:2)
+#'
+#' # Filter by both year and month
+#' data_filtered <- pfw_date(data, year = 2001:2023, month = 11:2)
+#'
 #' @export
 pfw_date <- function(data, year = NULL, month = NULL) {
   if (missing(data) || is.null(data)) {

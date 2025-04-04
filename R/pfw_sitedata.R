@@ -1,10 +1,18 @@
 #' Merge Site Metadata into Project FeederWatch Data
 #'
-#' This function joins habitat and site metadata into PFW observation data using the site description file.
+#' This function joins habitat and site metadata into Project FeederWatch observation data using the site description file.
 #'
 #' @param data A Project FeederWatch dataset (data.frame or data.table).
 #' @param path File path to a the site description data file from https://feederwatch.org/explore/raw-dataset-requests/.
+#'
 #' @return The original dataset with site metadata merged in.
+#'
+#' @examples
+#' \dontrun{
+#' # Merge site metadata into  observation data
+#' data_sites <- pfw_sitedata(data, "data-raw/site_data.csv")
+#' }
+#'
 #' @export
 pfw_sitedata <- function(data, path) {
   if (missing(data) || is.null(data)) {

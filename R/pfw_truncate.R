@@ -1,8 +1,8 @@
-#' Filter PFW Data to "Standard" Seasonal Window
+#' Filter Project FeederWatch Data to "Standard" Seasonal Window
 #'
 #' Project FeederWatch's Data Users Guide (https://birdscanada.github.io/BirdsCanada_PFW/Start2.html)
 #' Suggests that data should be truncated by date to avoid biases from years where the
-#' PFW survey season was extended.
+#' Project FeederWatch survey season was extended.
 #' This function filters data to include only observations within the typical FeederWatch season:
 #' after November 8 and before April 3.
 #'

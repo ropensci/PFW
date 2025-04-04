@@ -1,12 +1,22 @@
 #' Import Project FeederWatch Data
 #'
-#' This function reads all .csv files downloaded from the PFW website, either from the default "data-raw/" folder
+#' This function reads all .csv files downloaded from the Project FeederWatch website, either from the default "data-raw/" folder
 #' or from a user-specified folder. Optionally, it can apply filters like region, species, year, etc.
 #'
-#' @param folder The folder where PFW data is stored. Default is "data-raw/".
+#' @param folder The folder where Project FeederWatch data is stored. Default is "data-raw/".
 #' @param filter Logical. If TRUE, applies filters using pfw_filter(). Default is FALSE.
 #' @param ... Additional arguments passed to pfw_filter() for filtering (e.g., region, species, year).
-#' @return A combined and optionally filtered data.table containing all PFW data.
+#'
+#' @return A combined and optionally filtered data.table containing all Project FeederWatch data.
+#' @examples
+#' \dontrun{
+#' # Import all downloaded data from the default folder ("data-raw")
+#' data <- pfw_import()
+#'
+#' # Import and filter for Washington checklists from 2023
+#' data_filtered <- pfw_import(filter = TRUE, region = "Washington", year = 2023)
+#' }
+#'
 #' @export
 pfw_import <- function(folder = "data-raw/", filter = FALSE, ...) {
   # Ensure the folder exists
