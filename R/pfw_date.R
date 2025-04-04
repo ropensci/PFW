@@ -8,9 +8,7 @@
 #'
 #' @return A filtered dataset with date filter attributes.
 #' @examples
-#' # Load example data
-#' data <- pfw_example()
-#'
+#' \dontrun{
 #' # Filter by a single year
 #' data_2001 <- pfw_date(data, year = 2001)
 #'
@@ -25,6 +23,7 @@
 #'
 #' # Filter by both year and month
 #' data_filtered <- pfw_date(data, year = 2001:2023, month = 11:2)
+#'}
 #'
 #' @export
 pfw_date <- function(data, year = NULL, month = NULL) {

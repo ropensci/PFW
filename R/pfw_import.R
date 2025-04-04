@@ -75,6 +75,8 @@ pfw_import <- function(folder = "data-raw/", filter = FALSE, ...) {
   do_filter <- isTRUE(filter) || any(names(filter_args) %in% c("species", "region", "year", "month", "valid", "reviewed", "rollup"))
 
   if (do_filter) {
+    if (!"valid" %in% names(filter_args)) filter_args$valid <- NULL
+    if (!"rollup" %in% names(filter_args)) filter_args$rollup <- FALSE
     combined_data <- do.call(pfw_filter, c(list(combined_data), filter_args))
   }
 
