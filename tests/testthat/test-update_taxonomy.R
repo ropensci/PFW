@@ -23,7 +23,7 @@ test_that("update_taxonomy warns when an existing file is present", {
 
   # Create a dummy existing file
   existing_file <- file.path(test_folder, "PFW_spp_translation_table.csv")
-  write.csv(data.frame(Species = "Existing Bird"), existing_file, row.names = FALSE)
+  write.csv(data.frame(Species = "Song Sparrow"), existing_file, row.names = FALSE)
 
   # Override the translation directory and bypass readline()
   withr::with_envvar(

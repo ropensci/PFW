@@ -30,8 +30,17 @@ test_that("pfw_sitedata correctly merges site metadata", {
   expect_equal(merged$feeder_count[2], 1)
 })
 
-test_that("pfw_sitedata throws error with missing path", {
-  expect_error(pfw_sitedata(data.frame(), path = "CoolBugsISawLastMonday.csv"), "Valid path")
+test_that("pfw_sitedata throws error for valid path but bad data", {
+  path <- file.path(tempdir(), "CoolBugsISawLastMonday.csv")
+
+  expect_error(
+    pfw_sitedata(data.frame(), path = path),
+    "must include LOC_ID and PROJ_PERIOD_ID"
+  )
+
+  if (file.exists(path)) {
+    unlink(path)
+  }
 })
 
 test_that("pfw_sitedata throws error with missing columns", {

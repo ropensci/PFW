@@ -9,13 +9,15 @@ pfw_sitedata(data, path)
 \arguments{
 \item{data}{A Project FeederWatch dataset (data.frame or data.table).}
 
-\item{path}{File path to a the site description data file from https://feederwatch.org/explore/raw-dataset-requests/.}
+\item{path}{File path to the site description .csv from https://feederwatch.org/explore/raw-dataset-requests/. If not specified, defaults to "data-raw/site_data.csv".}
 }
 \value{
 The original dataset with site metadata merged in.
 }
 \description{
 This function joins habitat and site metadata into Project FeederWatch observation data using the site description file.
+If the site metadata file is not found, it will be downloaded automatically to the designated path or "data-raw"
+if no path is selected.
 }
 \examples{
 \dontrun{
