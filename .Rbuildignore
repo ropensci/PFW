@@ -3,3 +3,5 @@
 ^LICENSE\.md$
 ^Logo\.png$
 ^inst/extdata/pfw_example.csv$
+^R/celebrate\\.R$
+^man/celebrate\\.Rd$
