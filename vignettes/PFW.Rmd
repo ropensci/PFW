@@ -134,7 +134,9 @@ This will filter your data to only include records from after the 312th day of t
 
 ### Zerofilling your data
 
-Once you've filtered your data to your liking, you'll want to zerofill it before starting any analyses. Because Project FeederWatch data relies on counts of birds detected, there is no data when a bird is not detected, which is required for presence/absence analysis. For example, a survey with 20 Lesser Goldfinches on it will say just that-- `HOW_MANY == 20`-- but a survey with no Lesser Goldfinches on it will have no data instead of `HOW_MANY == 0`. 
+Once you've filtered your data to your liking, you'll have a clean "presence-only" dataset. However, presence/absence data is often required for modeling and analysis. As such, you'll want to zerofill it before starting any analyses. 
+
+Because Project FeederWatch data relies on counts of birds detected, there is no data when a bird is not detected, which is required for presence/absence analysis. For example, a survey with 20 Lesser Goldfinches on it will say just that-- `HOW_MANY == 20`-- but a survey with no Lesser Goldfinches on it will have no data instead of `HOW_MANY == 0`. 
 
 Zerofilling infers zero counts for all species in your dataset when they were not detected by setting `HOW_MANY == 0` for any survey instances (`SUB_ID` values) when the species was not reported. This can be done with any number of species, including the full dataset, but be aware that it can take a long time and produce very large files when applied to large datasets. 
 
@@ -146,7 +148,7 @@ data_zf <- pfw_zerofill(data)
 
 It's that easy! After it's done, your data will be ready for any presence/absence analyses. Behind the scenes, `PFW` saves all filtering steps as attributes on your dataset. When you run pfw_zerofill(), it uses those attributes to apply the same regional, temporal, and taxonomic filters to the full, original dataset before identifying `SUB_ID`s. This ensures zerofilling is applied only within the filters you've set but still includes all survey instances with no counts for the species in your data.
 
-## Helper Functions
+## Helper functions
 
 As you use `PFW`, you may want to check on some things and make sure you're following along with the data and filtering steps. As such, we've also included two "helper" functions in this package. The first, `pfw_attr`, can be used to print a list of all filters you've applied to your data. This is the same set of attributes used during zerofilling to make sure the zerofilled sample matches yours. It can be called like this:
 
