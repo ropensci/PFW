@@ -44,7 +44,7 @@ will download two files: the file containing data from 1996-2000, and the file c
 The next step is to run `pfw_import` to bring your download into your R session. While doing so, you can also apply some filters, including filtering by year. If no filter arguments are passed, `pfw_import` will just import all data from the files you downloaded. You can always filter the data after import by calling `pfw_filter`-- more on that later. Here's an example where the data is imported only from Washington for 2001-2003:
 
 ```{r import, eval = FALSE}
-data_raw <- pfw_import("data_raw", year = 2002:2003, region = "Washington") # "data-raw" will be the default folder from pfw_download and does not need to be included if that is where your raw data is stored
+data_raw <- pfw_import("data_raw/", year = 2002:2003, region = "Washington") # "data-raw" will be the default folder from pfw_download and does not need to be included if that is where your raw data is stored
 ```
 
 If you chose a different file path for `pfw_download`, you'll want to enter it where "data_raw" is in that example. Alternatively, an example dataset is provided, pre-filtered to data from Washington, Oregon, and California from 2021 - May 2024. As long as you're connected to the internet, you can call this dataset with
