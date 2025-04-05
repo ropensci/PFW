@@ -1,0 +1,188 @@
+---
+title: "Introduction to PFW"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to PFW}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE, error = FALSE, message = FALSE
+)
+```
+
+```{r setup}
+suppressPackageStartupMessages(library(PFW))
+```
+
+## Background
+
+[Project FeederWatch](https://feederwatch.org/) is a community-driven survey of backyard birds across North America. As a collaborative effort between the Cornell Lab of Ornithology and Birds Canada, FeederWatch contributors survey in backyards, nature centers, community areas, and other locales from November - April. Thousands of contributors submit data on species counts, habitat information, feeder type, and more. Despite the name, no feeders are required! Project FeederWatch's consistent, site-based data structure spanning multiple decades makes it a valuable resource for modeling changes to distribution and abundance for over 100 bird species throughout North America. 
+
+This vignette serves to download and prepare the [Project FeederWatch Dataset](https://data.mendeley.com/datasets/cptx336tt5/1) for statistical analysis and modeling. The workflow is broken down into three primary sections: the first section focuses on downloading and importing Project FeederWatch data. The second section outlines `PFW` functions for filtering and preparing the data, with the output being a "final" dataset ready for any analyses. The third section outlines peripheral `PFW` functions established to support usability and efficiency.
+
+## Accessing and Importing Project FeederWatch Data
+
+When working with Project FeederWatch data, three main datasets are needed: raw checklist data, site description data, and the species translation table. While the first two are self-explanatory, the species translation table is less direct. This table allows later filtering using common or scientific names, which may be more accessible compared to species codes and comes pre-installed within `PFW`. While all these files can be manually downloaded from https://feederwatch.org/explore/raw-dataset-requests/, we provide functions which download them from within R.
+
+### Downloading and Importing Raw Data
+
+The first step when using Project FeederWatch data is to download the raw datasets, which contain all species counts from all sites alongside some supplementary data. Because the files can be quite large, the data files are broken up into year ranges, such as 1996-2000 and 2006-2010. To download the data you want, you can use the `pfw_download` function with a year or range of years you'd like to download. Note that you must select at least one year within this function. For example:
+
+```{r download, eval = FALSE}
+pfw_download(2000:2003)
+```
+
+will download two files: the file containing data from 1996-2000, and the file containing data from 2001-2005, because both year ranges overlap with the selected years. By default, this will create the directory "data-raw/" within your working directory and download the data there, but you can designate a different path if preferred.
+
+The next step is to run `pfw_import` to bring your download into your R session. While doing so, you can also apply some filters, including filtering by year. If no filter arguments are passed, `pfw_import` will just import all data from the files you downloaded. You can always filter the data after import by calling `pfw_filter`-- more on that later. Here's an example where the data is imported only from Washington for 2001-2003:
+
+```{r import, eval = FALSE}
+data_raw <- pfw_import("data_raw", year = 2002:2003, region = "Washington") # "data-raw" will be the default folder from pfw_download and does not need to be included if that is where your raw data is stored
+```
+
+If you chose a different file path for `pfw_download`, you'll want to enter it where "data_raw" is in that example. Alternatively, an example dataset is provided, pre-filtered to data from Washington, Oregon, and California from 2021 - May 2024. As long as you're connected to the internet, you can call this dataset with
+
+```{r example, eval = FALSE}
+data <- pfw_example()
+```
+
+Doing so will download the data from the [GitHub repository](https://github.com/Visorbearer/PFW/blob/main/inst/extdata/pfw_example.csv) the first time you use it, and call upon the existing file in following uses.
+
+Because Project FeederWatch uses [eBird/Clements Taxonomy](https://www.birds.cornell.edu/clementschecklist/download/), the species translation table and species codes in the raw data are regularly updated. As such, some situations may arise where the translation table included in the package is out of date compared to the raw data you've downloaded. This can be easily fixed by running
+
+```{r update, eval = FALSE}
+update_taxonomy()
+```
+
+and typing "y" when asked if you want to overwrite the existing file. Doing so will download the most recent version of the species translation table directly from the Project FeederWatch website.
+
+Finally, many analyses you may want to do on Project FeederWatch data will likely include site metadata, such as habitat, feeder type, and housing density. At any point after running `pfw_import`, you can run `pfw_sitedata` on your active data in R, like in this example:
+
+```{r site, eval = FALSE}
+data <- pfw_import()
+data <- pfw_sitedata(data, "data-raw/site_data.csv") # "data-raw" is once again the default path, but you can select a different path if preferred
+```
+
+Doing so will automatically download the most recent site metadata from the Project FeederWatch website and save it to the "data-raw" folder as "site_data.csv" by default. However, you can save it to any path preferred. It will also automatically merge the site data into your active data. This will not negatively impact any future filtering efforts. With this, all the data you need for further `PFW` processing will be in your R session and ready to work with!
+
+## Filtering and Zerofilling Project FeederWatch Data
+
+### Filtering your data
+
+Now that all of your data is imported and ready to go, you'll want to clean it up before any analyses. The quickest and easiest way to do this is with `pfw_filter`, the same function you may have used earlier during `pfw_import`. 
+
+`pfw_filter` consolidates several standalone filtering functions into one call for convenience, including:
+
+`pfw_region`, which filters by geographic region (e.g., state, province, country code),
+`pfw_species`, which filters by species using the scientific name, common name, or species code,
+`pfw_date`, which filters by year and/or month (including wrapped month ranges around the end of the year),
+and `pfw_rollup`, which "rolls up" taxonomy to remove hybrids, slashes, and "spuhs" and demotes subspecies to species level.
+
+You can use any combination of these filters within a single `pfw_filter` call, such as
+
+```{r filter, eval = FALSE}
+region_list <- c("Washington", "US-OR", "CA-BC") # Region names or abbreviations are accepted
+species_list <- c("Lawrence's Goldfinch", "Spinus tristis", "lesgol") # Common/scientific names or species codes are accepted
+data_filtered <- pfw_filter(
+  data, 
+  region = region_list, 
+  species = species_list, 
+  year = 2002:2003, 
+  month = 11:2
+  )
+```
+
+By default, rollup is set to `TRUE` when `pfw_filter` is used. You can also control whether only reviewed or valid records are included using the `reviewed` and `valid` arguments within `pfw_filter`. 
+
+If a record submitted to Project FeederWatch is flagged by an automatic process for manual review, it is because the system suspects it may be incorrect or invalid. A record that is not valid and not yet reviewed will be `false` for both. If it is reviewed and deemed invalid, it will be `true` for `reviewed` and `false` for `valid`. If it is reviewed and accepted, both will be `true`.
+
+Per [Bonter & Greig (2021)](https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2021.619682/full), most records submitted to Project FeederWatch will be accepted without issue or a need for review, and as such will default to valid as `true` and reviewed as `false`. The default behavior of `pfw_filter` is to include only data where valid is `true`; records where valid is `false` should be used with caution.
+
+If you'd prefer to apply any of the filters individually, you can use them like in these examples:
+
+```{r regions, eval = FALSE}
+data_westcoast <- pfw_region(data, c("Washington", "Oregon", "California"))
+```
+
+```{r species, eval = FALSE}
+# Filter for Dark-eyed Junco, Song Sparrow, and Spotted Towhee
+data_my_yard <- pfw_species(data, c("Dark-eyed Junco", "Melospiza melodia", "spotow"))
+```
+
+```{r date, eval = FALSE}
+data_filtered <- pfw_date(data, year = 2001:2023, month = 11:2)
+```
+
+```{r rollup, eval = FALSE}
+data_rolled <- pfw_rollup(data)
+```
+
+Additionally, because the Project FeederWatch season was extended in some years, you may want to limit your data to the latest possible start date and earliest possible end date so that all included years have the same number of days. To do this optional filtering, you can run
+
+```{r truncate, eval = FALSE}
+data_truncated <- pfw_truncate(data)
+```
+
+This will filter your data to only include records from after the 312th day of the year and before the 93rd day.
+
+### Zerofilling your data
+
+Once you've filtered your data to your liking, you'll want to zerofill it before starting any analyses. Because Project FeederWatch data relies on counts of birds detected, there is no data when a bird is not detected, which is required for presence/absence analysis. For example, a survey with 20 Lesser Goldfinches on it will say just that-- `HOW_MANY == 20`-- but a survey with no Lesser Goldfinches on it will have no data instead of `HOW_MANY == 0`. 
+
+Zerofilling infers zero counts for all species in your dataset when they were not detected by setting `HOW_MANY == 0` for any survey instances (`SUB_ID` values) when the species was not reported. This can be done with any number of species, including the full dataset, but be aware that it can take a long time and produce very large files when applied to large datasets. 
+
+To zerofill your data, you can follow this example:
+
+```{r zerofill, eval = FALSE}
+data_zf <- pfw_zerofill(data)
+```
+
+It's that easy! After it's done, your data will be ready for any presence/absence analyses. Behind the scenes, `PFW` saves all filtering steps as attributes on your dataset. When you run pfw_zerofill(), it uses those attributes to apply the same regional, temporal, and taxonomic filters to the full, original dataset before identifying `SUB_ID`s. This ensures zerofilling is applied only within the filters you've set but still includes all survey instances with no counts for the species in your data.
+
+## Helper Functions
+
+As you use `PFW`, you may want to check on some things and make sure you're following along with the data and filtering steps. As such, we've also included two "helper" functions in this package. The first, `pfw_attr`, can be used to print a list of all filters you've applied to your data. This is the same set of attributes used during zerofilling to make sure the zerofilled sample matches yours. It can be called like this:
+
+```{r attr, eval= FALSE}
+pfw_attr(data)
+```
+
+The other helper function included is `pfw_dictionary`. This function allows you to call upon the Project FeederWatch Data Dictionary, which is downloaded as part of `PFW`. You can call the Data Dictionary with:
+
+```
+pfw_dictionary()
+```
+
+to print a list of all variables in your dataset, alongside a definition and description. Alternatively, it can be called with a certain variable name selected, such as
+
+```
+pfw_dictionary("LOC_ID")
+```
+
+Doing this will print the definition and description only for the variable you entered.
+
+## Acknowledgements
+
+`PFW` was built from code originally developed for Project FeederWatch data preparation in Maron et al. (2025). While the function scripts in this package were created specifically for PFW, the code they are based on benefited greatly from examples and code snippets provided by Emma Greig, who passed away prior to the package's creation. 
+
+## References
+
+```
+Bonter, D. N and E. I. Greig (2020). “Project FeederWatch Raw Data”. Mendeley Data, V1.
+
+Bonter, D. N. and E. I. Greig (2021). Over 30 Years of Standardized Bird Counts at Supplementary Feeding Stations in North America: A Citizen Science Data Report for Project FeederWatch. Front. Ecol. Evol. 9:619682.
+
+Clements, J. F., P. C. Rasmussen, T. S. Schulenberg, M. J. Iliff, T. A. Fredericks, J. A. Gerbracht, D. Lepage, A. Spencer, S. M. Billerman, B. L. Sullivan, M. Smith, and C. L. Wood (2024). The eBird/Clements checklist of Birds of the World.
+
+Maron, M. W., E. I. Greig, and J. Boersma (2025). Climate and Landscape Modification Facilitate Range Expansion in *Spinus psaltria* (Lesser Goldfinch) across the Pacific Northwest. Ornithology (In Press).
+
+Project FeederWatch. Project Overview. FeederWatch.org. https://feederwatch.org/about/project-overview/.
+
+```

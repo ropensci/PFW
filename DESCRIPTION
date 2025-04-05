@@ -1,6 +1,6 @@
 Package: PFW
 Title: Tools for Filtering and Processing Data from Project FeederWatch
-Version: 0.3.1
+Version: 0.4.0
 Authors@R: 
     person("Mason", "Maron", , "mmaron101@gmail.com", role = c("aut", "cre"))
 Description: Provides tools to import, clean, filter, and prepare Project
@@ -20,8 +20,11 @@ Imports:
 Suggests: 
     testthat (>= 3.0.0),
     purrr,
-    withr
+    withr,
+    knitr,
+    rmarkdown
 Config/testthat/edition: 3
 Depends: R (>= 4.1.0)
 URL: https://github.com/Visorbearer/PFW
 BugReports: https://github.com/Visorbearer/PFW/issues
+VignetteBuilder: knitr
