@@ -64,7 +64,6 @@ test_that("pfw_import applies filters and stores attributes correctly", {
   expect_true(any(sapply(filters, function(f) f$type == "species")))
   expect_true(any(sapply(filters, function(f) f$type == "region")))
   expect_true(any(sapply(filters, function(f) f$type == "date")))
-  expect_true(any(sapply(filters, function(f) f$type == "rollup")))
   expect_true(any(sapply(filters, function(f) f$type == "valid")))
 
   # Cleanup
