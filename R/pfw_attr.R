@@ -1,4 +1,4 @@
-#' View Project FeederWatch Filter Attributes on Manipulated Project FeederWatch Data
+#' View Filter Attributes on Manipulated Project FeederWatch Data
 #'
 #' This function allows users to view all filters they've applied to a filtered Project FeederWatch
 #' dataset by printing its recorded filter attributes in a readable format.

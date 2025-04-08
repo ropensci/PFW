@@ -1,4 +1,4 @@
-#' Zerofill species not detected in each survey instance for analysis
+#' Zerofill Species not Detected in each Survey Instance for Analysis
 #'
 #' This function adds zeros for checklists where selected species were absent,
 #' setting HOW_MANY = 0 for presence/absence-based analyses.

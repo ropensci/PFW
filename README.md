@@ -15,8 +15,8 @@ v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/
 and management of data from [Project FeederWatch](https://feederwatch.org/). 
 Project FeederWatch is a community-driven project initiated in the 1980s
 and run by the [Cornell Lab of Ornithology](https://www.birds.cornell.edu/) and [Birds Canada](https://www.birdscanada.org/)
-that compiles bird observations from thousands of backyards, nature centers, 
-community areas, and other locales across North America. Included in `PFW`
+that compiles bird observations from thousands of "backyards, nature centers, 
+community areas, and other locales" across North America. Included in `PFW`
 are tools for taxonomic rollup, filtering by survey characteristics 
 (species, state, etc.), merging in site metadata, and zerofilling for presence/absence modeling.
 

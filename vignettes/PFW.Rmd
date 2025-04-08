@@ -23,7 +23,7 @@ suppressPackageStartupMessages(library(PFW))
 
 ## Background
 
-[Project FeederWatch](https://feederwatch.org/) is a community-driven survey of backyard birds across North America. As a collaborative effort between the Cornell Lab of Ornithology and Birds Canada, FeederWatch contributors survey in backyards, nature centers, community areas, and other locales from November - April. Thousands of contributors submit data on species counts, habitat information, feeder type, and more. Despite the name, no feeders are required! Project FeederWatch's consistent, site-based data structure spanning multiple decades makes it a valuable resource for modeling changes to distribution and abundance for over 100 bird species throughout North America. 
+[Project FeederWatch](https://feederwatch.org/) is a community-driven survey of backyard birds across North America. As a collaborative effort between the Cornell Lab of Ornithology and Birds Canada, FeederWatch contributors survey in "backyards, nature centers, community areas, and other locales" from November - April. Thousands of contributors submit data on species counts, habitat information, feeder type, and more. Despite the name, no feeders are required! Project FeederWatch's consistent, site-based data structure spanning multiple decades makes it a valuable resource for modeling changes to distribution and abundance for over 100 bird species throughout North America. 
 
 This vignette serves to download and prepare the [Project FeederWatch Dataset](https://data.mendeley.com/datasets/cptx336tt5/1) for statistical analysis and modeling. The workflow is broken down into three primary sections: the first section focuses on downloading and importing Project FeederWatch data. The second section outlines `PFW` functions for filtering and preparing the data, with the output being a "final" dataset ready for any analyses. The third section outlines peripheral `PFW` functions established to support usability and efficiency.
 
@@ -53,7 +53,7 @@ If you chose a different file path for `pfw_download`, you'll want to enter it w
 data <- pfw_example()
 ```
 
-Doing so will download the data from the [GitHub repository](https://github.com/Visorbearer/PFW/blob/main/inst/extdata/pfw_example.csv) the first time you use it, and call upon the existing file in following uses.
+Doing so will download the data from the [GitHub repository](https://github.com/Visorbearer/PFW/blob/main/inst/extdata/pfw_example.csv) the first time you use it and call upon the existing file in following uses.
 
 Because Project FeederWatch uses [eBird/Clements Taxonomy](https://www.birds.cornell.edu/clementschecklist/download/), the species translation table and species codes in the raw data are regularly updated. As such, some situations may arise where the translation table included in the package is out of date compared to the raw data you've downloaded. This can be easily fixed by running
 
