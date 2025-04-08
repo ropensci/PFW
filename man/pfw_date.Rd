@@ -7,7 +7,7 @@
 pfw_date(data, year = NULL, month = NULL)
 }
 \arguments{
-\item{data}{A Project FeederWatch dataset (from pfw_import or a previously filtered version).}
+\item{data}{A Project FeederWatch dataset.}
 
 \item{year}{Optional. Integer or vector of years (e.g., 2010 or 2010:2015).}
 

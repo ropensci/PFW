@@ -10,7 +10,7 @@ pfw_dictionary(variable = NULL)
 \item{variable}{(Optional) A variable name (e.g., "LOC_ID") to look up. If NULL, prints the full dictionary.}
 }
 \value{
-A printed description (for a variable) or a data.frame of the full dictionary.
+A printed description (for a variable) or the full dictionary.
 }
 \description{
 This function helps users explore the FeederWatch dataset by viewing the full data dictionary

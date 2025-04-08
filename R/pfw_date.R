@@ -2,7 +2,7 @@
 #'
 #' Filters Project FeederWatch data by year and/or month, allowing range-based filtering and wrapping months around new years.
 #'
-#' @param data A Project FeederWatch dataset (from pfw_import or a previously filtered version).
+#' @param data A Project FeederWatch dataset.
 #' @param year Optional. Integer or vector of years (e.g., 2010 or 2010:2015).
 #' @param month Optional. Integer or vector of months (1–12). Supports wrapping (e.g., c(11, 2) = Nov–Feb).
 #'

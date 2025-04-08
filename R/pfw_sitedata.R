@@ -4,7 +4,7 @@
 #' If the site metadata file is not found, it will be downloaded automatically to the designated path or "data-raw"
 #' if no path is selected.
 #'
-#' @param data A Project FeederWatch dataset (data.frame or data.table).
+#' @param data A Project FeederWatch dataset.
 #' @param path File path to the site description .csv from https://feederwatch.org/explore/raw-dataset-requests/. If not specified, defaults to "data-raw/site_data.csv".
 #'
 #' @return The original dataset with site metadata merged in.

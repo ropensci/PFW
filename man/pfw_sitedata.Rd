@@ -7,7 +7,7 @@
 pfw_sitedata(data, path)
 }
 \arguments{
-\item{data}{A Project FeederWatch dataset (data.frame or data.table).}
+\item{data}{A Project FeederWatch dataset.}
 
 \item{path}{File path to the site description .csv from https://feederwatch.org/explore/raw-dataset-requests/. If not specified, defaults to "data-raw/site_data.csv".}
 }

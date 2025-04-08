@@ -5,7 +5,7 @@
 #'
 #' @param variable (Optional) A variable name (e.g., "LOC_ID") to look up. If NULL, prints the full dictionary.
 #'
-#' @return A printed description (for a variable) or a data.frame of the full dictionary.
+#' @return A printed description (for a variable) or the full dictionary.
 #' @examples
 #' # View the whole data dictionary
 #' pfw_dictionary()

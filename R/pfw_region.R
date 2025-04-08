@@ -2,7 +2,7 @@
 #'
 #' This function filters Project FeederWatch data to include only specified states, provinces, or countries.
 #'
-#' @param data A Project FeederWatch dataset (a data.table or data.frame).
+#' @param data A Project FeederWatch dataset.
 #' @param regions A character vector of regions (e.g., "Washington", "United States").
 #'
 #' @return A filtered dataset containing only the selected regions.

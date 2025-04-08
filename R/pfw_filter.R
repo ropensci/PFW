@@ -2,7 +2,7 @@
 #'
 #' This function filters Project FeederWatch data by species, region, and data validity.
 #'
-#' @param data The Project FeederWatch dataset (a data.table or data.frame).
+#' @param data A Project FeederWatch dataset.
 #' @param species (Optional) A character vector of species names (common or scientific).
 #' @param region (Optional) A character vector of region names (e.g., "Washington", "British Columbia").
 #' @param year (Optional) Integer or vector of years (e.g., 2010 or 2010:2015).

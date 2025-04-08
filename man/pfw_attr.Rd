@@ -7,10 +7,10 @@
 pfw_attr(data)
 }
 \arguments{
-\item{data}{A filtered Project FeederWatch dataset (a data.table or data.frame) with filter attributes.}
+\item{data}{A filtered Project FeederWatch dataset with filter attributes.}
 }
 \value{
-A named list of applied filters (invisibly).
+A named list of applied filters.
 }
 \description{
 This function allows users to view all filters they've applied to a filtered Project FeederWatch

@@ -7,7 +7,7 @@
 pfw_region(data, regions)
 }
 \arguments{
-\item{data}{A Project FeederWatch dataset (a data.table or data.frame).}
+\item{data}{A Project FeederWatch dataset.}
 
 \item{regions}{A character vector of regions (e.g., "Washington", "United States").}
 }

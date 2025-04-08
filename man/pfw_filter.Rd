@@ -16,7 +16,7 @@ pfw_filter(
 )
 }
 \arguments{
-\item{data}{The Project FeederWatch dataset (a data.table or data.frame).}
+\item{data}{A Project FeederWatch dataset.}
 
 \item{species}{(Optional) A character vector of species names (common or scientific).}
 

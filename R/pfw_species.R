@@ -3,7 +3,7 @@
 #' This function filters Project FeederWatch data to include only selected species, with common names
 #' or scientific names via the species translation table.
 #'
-#' @param data The Project FeederWatch dataset (a data.table or data.frame).
+#' @param data The Project FeederWatch dataset.
 #' @param species A character vector of species names (common, scientific, or six-letter species code).
 #' @param suppress_ambiguous (Optional, default = FALSE) TRUE/FALSE on including missing subspecies in the warning. This is just a silencer for the pfw_filter function.
 #'

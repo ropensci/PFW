@@ -10,7 +10,7 @@ pfw_zerofill(data)
 \item{data}{A Project FeederWatch dataset, optionally filtered for species.}
 }
 \value{
-A data.table with zerofilled values included for each species.
+A dataset with zerofilled values included for each species.
 }
 \description{
 This function adds zeros for checklists where selected species were absent,

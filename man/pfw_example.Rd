@@ -7,7 +7,7 @@
 pfw_example()
 }
 \value{
-A data.frame of example Project FeederWatch data.
+A dataset of example Project FeederWatch data.
 }
 \description{
 Provides a sample dataset for demonstration and testing purposes.

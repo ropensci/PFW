@@ -7,7 +7,7 @@
 #' @param filter Logical. If TRUE, applies filters using pfw_filter(). Default is FALSE.
 #' @param ... Additional arguments passed to pfw_filter() for filtering (e.g., region, species, year).
 #'
-#' @return A combined and optionally filtered data.table containing all Project FeederWatch data.
+#' @return A combined and optionally filtered dataset containing all Project FeederWatch data.
 #' @examples
 #' \dontrun{
 #' # Import all downloaded data from the default folder ("data-raw")

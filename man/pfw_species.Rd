@@ -7,7 +7,7 @@
 pfw_species(data, species, suppress_ambiguous = FALSE)
 }
 \arguments{
-\item{data}{The Project FeederWatch dataset (a data.table or data.frame).}
+\item{data}{The Project FeederWatch dataset.}
 
 \item{species}{A character vector of species names (common, scientific, or six-letter species code).}
 

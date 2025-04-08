@@ -3,9 +3,9 @@
 #' This function allows users to view all filters they've applied to a filtered Project FeederWatch
 #' dataset by printing its recorded filter attributes in a readable format.
 #'
-#' @param data A filtered Project FeederWatch dataset (a data.table or data.frame) with filter attributes.
+#' @param data A filtered Project FeederWatch dataset with filter attributes.
 #'
-#' @return A named list of applied filters (invisibly).
+#' @return A named list of applied filters.
 #' @export
 pfw_attr <- function(data) {
   filters <- attr(data, "pfw_filters")
