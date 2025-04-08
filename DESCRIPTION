@@ -25,6 +25,6 @@ Suggests:
     rmarkdown
 Config/testthat/edition: 3
 Depends: R (>= 4.1.0)
-URL: https://github.com/Visorbearer/PFW
+URL: https://github.com/Visorbearer/PFW, https://visorbearer.github.io/PFW/
 BugReports: https://github.com/Visorbearer/PFW/issues
 VignetteBuilder: knitr
