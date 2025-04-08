@@ -2,7 +2,7 @@
 % Please edit documentation in R/pfw_attr.R
 \name{pfw_attr}
 \alias{pfw_attr}
-\title{View Project FeederWatch Filter Attributes on Manipulated Project FeederWatch Data}
+\title{View Filter Attributes on Manipulated Project FeederWatch Data}
 \usage{
 pfw_attr(data)
 }

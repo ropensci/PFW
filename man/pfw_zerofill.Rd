@@ -2,7 +2,7 @@
 % Please edit documentation in R/pfw_zerofill.R
 \name{pfw_zerofill}
 \alias{pfw_zerofill}
-\title{Zerofill species not detected in each survey instance for analysis}
+\title{Zerofill Species not Detected in each Survey Instance for Analysis}
 \usage{
 pfw_zerofill(data)
 }
