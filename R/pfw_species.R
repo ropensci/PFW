@@ -79,7 +79,7 @@ pfw_species <- function(data, species, suppress_ambiguous = FALSE) {
   # Filter for selected species
   species_filtered_data <- data[data$SPECIES_CODE %in% expanded_codes, ]
 
-  # Identify species actually missing from the dataset
+  # Identify species missing from the dataset
   present_species <- unique(data$SPECIES_CODE)
   missing_from_data <- expanded_codes[!expanded_codes %in% present_species]
 
