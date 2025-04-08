@@ -3,7 +3,7 @@
 #' This function allows users to view all filters they've applied to a filtered Project FeederWatch
 #' dataset by printing its recorded filter attributes in a readable format.
 #'
-#' @param data A filtered Project FeederWatch dataset with filter attributes.
+#' @param data A filtered Project FeederWatch dataset.
 #'
 #' @return A named list of applied filters.
 #' @export

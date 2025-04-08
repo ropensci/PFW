@@ -7,7 +7,7 @@
 pfw_attr(data)
 }
 \arguments{
-\item{data}{A filtered Project FeederWatch dataset with filter attributes.}
+\item{data}{A filtered Project FeederWatch dataset.}
 }
 \value{
 A named list of applied filters.
