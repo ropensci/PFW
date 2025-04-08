@@ -3,6 +3,7 @@
 #' This function loads the region lookup table, which maps SUBNATIONAL1_CODE values to region "common" names.
 #' This function mostly exists to be part of the pfw_region function.
 #'
+#' @keywords internal
 #' @return A data frame containing columns `Code` (SUBNATIONAL1_CODE) and `Area` (region name).
 #' @export
 load_region_lookup <- function() {

@@ -4,6 +4,7 @@
 #' This is required for use of the pfw_species and pfw_filter functions.
 #' If no file exists, it prompts the user to download it using `update_taxonomy()`, or place a manually downloaded file there.
 #'
+#' @keywords internal
 #' @return Logical (`TRUE` if a file exists, `FALSE` if not, with a message).
 #' @export
 check_taxonomy <- function() {

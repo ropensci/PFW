@@ -33,13 +33,13 @@ devtools::install_github("Visorbearer/PFW")
 
 ## Vignette
 
-Background and details on using `PFW` to filter and process Project FeederWatch data are outlined in the [vignette](https://github.com/Visorbearer/PFW/blob/main/vignettes/PFW.Rmd). <!-- Replace this link after running pkgdown -->
+Background and details on using `PFW` to filter and process Project FeederWatch data are outlined in the [vignette](https://Visorbearer.github.io/PFW/articles/PFW.html).
 
 ## Citation
 
 To cite `PFW` in publications, use:
 
-> Maron, M. (2025). PFW: Tools for Filtering and Processing Data from Project FeederWatch.  
+> Maron, M. W. (2025). PFW: Tools for Filtering and Processing Data from Project FeederWatch.  
 > R package version 0.0.1. https://github.com/Visorbearer/PFW
 
 You can also run

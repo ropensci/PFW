@@ -3,6 +3,7 @@
 #' This function is just if you want to celebrate finishing some particularly difficult code.
 #' Have a little fun with it-- I used it to celebrate finishing this R package!
 #'
+#' @keywords internal
 #' @param name (Optional) Your name, if you want!
 #' @return A celebration!
 #' @export

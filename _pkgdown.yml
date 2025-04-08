@@ -1,0 +1,42 @@
+url: https://Visorbearer.github.io/PFW
+
+navbar:
+  structure:
+    left: [home, reference, articles]
+    right: [search, github, lightswitch]
+  components:
+    articles:
+      text: "Get Started"
+      menu:
+        - text: "Introduction to PFW"
+          href: articles/PFW.html
+
+authors:
+  Mason Maron:
+    href: https://github.com/Visorbearer
+    orcid: 0000-0001-7170-9373
+
+reference:
+  - title: "Downloading and Importing"
+    contents:
+      - pfw_download
+      - pfw_import
+      - pfw_example
+      - update_taxonomy
+      - pfw_sitedata
+
+  - title: "Filtering and Zerofilling"
+    contents:
+      - pfw_filter
+      - pfw_region
+      - pfw_species
+      - pfw_date
+      - pfw_rollup
+      - pfw_truncate
+      - pfw_zerofill
+
+  - title: "Helper Functions"
+    contents:
+      - pfw_attr
+      - pfw_dictionary
+
