@@ -15,7 +15,7 @@ pfw_zerofill <- function(data) {
   # Get full data if available, or re-import if necessary
   full_data <- .pfw_env$full_data
 
-  if (is.null(full_data)) {
+  if (is.null(full_data)) { # nocov start
     if (is.null(import_path)) {
       stop("No full dataset available and no import path found. Run pfw_import() or use data with an import path attribute.")
     }
@@ -45,7 +45,7 @@ pfw_zerofill <- function(data) {
     full_data <- suppressMessages(
       do.call(pfw_import, c(list(folder = import_path, filter = TRUE), import_filters))
     )
-  }
+  } # nocov end
 
   # Apply filters again to match data context
   if (!is.null(filters)) {

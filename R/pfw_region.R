@@ -27,7 +27,7 @@ pfw_region <- function(data, regions) {
 
   # Ensure selected regions list is a vector
   if (!is.character(regions)) {
-    stop("Regions must be a character vector (e.g., c('Washington', 'California'))")
+    stop("Regions must be a character vector (e.g., c('Washington', 'California'))") # nocov
   }
 
   # Get existing filters

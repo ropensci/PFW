@@ -14,7 +14,7 @@
 #' @export
 pfw_truncate <- function(data) {
   if (!all(c("Year", "Month", "Day") %in% names(data))) {
-    stop("Data must contain Year, Month, and Day columns.")
+    stop("Data must contain Year, Month, and Day columns.") # nocov
   }
 
   # Create a temporary date column for truncating

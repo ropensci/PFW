@@ -19,3 +19,4 @@ test_that("pfw_dictionary prints all variables when run without argument", {
   expect_output(pfw_dictionary(), regexp = "Definition:")
   expect_output(pfw_dictionary(), regexp = "Description:")
 })
+

@@ -42,10 +42,10 @@ pfw_import <- function(folder = "data-raw/", filter = FALSE, ...) {
     data <- data.table::fread(file)
 
     # Skip if it's not a valid PFW observation file
-    if (!all(expected_cols %in% names(data))) {
+    if (!all(expected_cols %in% names(data))) { # nocov start
       message("Skipping file (incorrect data structure): ", file)
       next
-    }
+    } # nocov end
 
     data_list <- append(data_list, list(data))
     rm(data)

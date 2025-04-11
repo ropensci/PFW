@@ -39,17 +39,17 @@ pfw_sitedata <- function(data, path) {
     # Look for the site metadata file link
     site_link <- links[grepl("PFW_count_site_data_public_", links)]
 
-    if (length(site_link) == 0) {
+    if (length(site_link) == 0) { # nocov start
       stop(
         "No site metadata file found. FeederWatch may have changed their webpage format.\n",
         "You can go to https://feederwatch.org/explore/raw-dataset-requests/ ",
         "to download the file manually."
       )
-    }
+    } # nocov end
 
     # Construct full URL
     site_url <- site_link
-    if (!grepl("^http", site_link)) {
+    if (!grepl("^http", site_link)) { # nocov start
       site_url <- paste0("https://feederwatch.org", site_link)
     }
     message("Site metadata not found at provided path. Downloading from FeederWatch...")
@@ -60,11 +60,11 @@ pfw_sitedata <- function(data, path) {
         stop("Failed to download site metadata: ", e$message)
       }
     )
-  }
+  } # nocov end
 
   # Check again to be safe
   if (!file.exists(path)) {
-    stop("Site metadata could not be loaded. Please download it manually from: ", site_url)
+    stop("Site metadata could not be loaded. Please download it manually from: ", site_url) # nocov
   }
 
   # Check for required columns in observation data

@@ -25,3 +25,21 @@ test_that("pfw_attr returns filter attributes correctly", {
   expect_true(any(vapply(result, function(x) x$type == "species", logical(1))))
   expect_true(any(vapply(result, function(x) x$type == "date", logical(1))))
 })
+
+test_that("pfw_attr handles no filters correctly", {
+  test_data <- data.table::data.table(
+    SPECIES_CODE = character(),
+    SUBNATIONAL1_CODE = character(),
+    Year = integer(),
+    Month = integer(),
+    Day = integer(),
+    VALID = integer(),
+    REVIEWED = integer()
+  )
+
+  # No filters attribute
+  expect_message(
+    expect_invisible(pfw_attr(test_data)),
+    "No filters found on this dataset."
+  )
+})

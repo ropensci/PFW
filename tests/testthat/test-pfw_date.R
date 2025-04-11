@@ -49,3 +49,8 @@ test_that("pfw_date attaches correct filter attribute", {
   expect_equal(date_filter$value$year, 2022)
   expect_equal(date_filter$value$month, c(11, 2))
 })
+
+test_that("pfw_date errors if data is missing or NULL", {
+  expect_error(pfw_date(), "No dataset provided.")
+  expect_error(pfw_date(NULL), "No dataset provided.")
+})

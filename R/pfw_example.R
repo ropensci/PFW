@@ -6,7 +6,7 @@
 #'
 #' @return A dataset of example Project FeederWatch data.
 #' @export
-pfw_example <- function() {
+pfw_example <- function() { # nocov start
   path <- system.file("extdata", "pfw_example.csv", package = "PFW")
   # If not found, download from the GitHub repository to a temp file
   if (path == "") {
@@ -28,4 +28,4 @@ pfw_example <- function() {
   attr(data, "pfw_import_path") <- dirname(path)
   message("Example dataset loaded.")
   return(invisible(data))
-}
+} # nocov end

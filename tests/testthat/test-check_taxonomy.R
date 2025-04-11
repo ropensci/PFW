@@ -1,16 +1,29 @@
 test_that("check_taxonomy detects missing and existing files correctly", {
-  # Make sure it returns FALSE when no taxonomy file exists
-  expect_false(check_taxonomy())
+  # No directory exists
+  withr::with_envvar(
+    list(PFW_TRANSLATION_DIR = tempfile()),
+    {
+      expect_message(expect_false(check_taxonomy()),
+                     "No species translation table detected")
+    }
+  )
 
-  # Create a temporary folder to mimic the SpeciesTranslationTable location
+  # Directory exists but no csv
   test_folder <- tempfile()
   dir.create(test_folder, recursive = TRUE)
 
-  # Create a dummy species translation table file
+  withr::with_envvar(
+    list(PFW_TRANSLATION_DIR = test_folder),
+    {
+      expect_message(expect_false(check_taxonomy()),
+                     "No species translation table detected")
+    }
+  )
+
+  # Now add a dummy .csv
   fake_file <- file.path(test_folder, "test_species_translation.csv")
   write.csv(data.frame(Species = "Jonathan's Grouse"), fake_file, row.names = FALSE)
 
-  # Override the translation directory so check_taxonomy() looks in our test folder
   withr::with_envvar(
     list(PFW_TRANSLATION_DIR = test_folder),
     {
@@ -18,6 +31,5 @@ test_that("check_taxonomy detects missing and existing files correctly", {
     }
   )
 
-  # Cleanup: Remove the test file
   unlink(test_folder, recursive = TRUE)
 })

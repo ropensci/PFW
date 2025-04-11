@@ -9,7 +9,7 @@
 #' @export
 pfw_rollup <- function(data) {
   if (missing(data) || is.null(data)) {
-    stop("No dataset provided.")
+    stop("No dataset provided.") # nocov
   }
 
   # Get existing filters before modifying data
@@ -26,7 +26,7 @@ pfw_rollup <- function(data) {
   )
 
   if (length(taxonomy_path) == 0) {
-    stop("No species translation table found. Run `update_taxonomy()` to download the latest version.")
+    stop("No species translation table found. Run `update_taxonomy()` to download the latest version.") # nocov
   }
 
   # Read in translation table

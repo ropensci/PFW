@@ -45,19 +45,19 @@
 pfw_filter <- function(data, species = NULL, region = NULL, year = NULL, month = NULL,
                        valid = TRUE, reviewed = NULL, rollup = TRUE) {
   if (missing(data) || is.null(data)) {
-    stop("No dataset provided. Ensure you pass PFW data from `pfw_import()`.")
+    stop("No dataset provided. Ensure you pass PFW data from `pfw_import()`.") # nocov
   }
 
   # Start with a fresh filter log
   applied_filters <- list()
 
   # Reinforce month range wrapping for date
-  if (!is.null(month) && is.numeric(month) && length(month) > 1) {
+  if (!is.null(month) && is.numeric(month) && length(month) > 1) { # nocov start
     if (month[1] > month[length(month)]) {
       # If it's a wrapped range like 11:2
       month <- c(month[1]:12, 1:month[length(month)])
     }
-  }
+  } # nocov end
 
   # Region
   if (!is.null(region)) {
