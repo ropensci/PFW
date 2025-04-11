@@ -9,6 +9,7 @@
 #' @param years Integer or vector of years (e.g., 2001, 2001:2023, c(1997, 2001, 2023)).
 #' @param folder The folder where Project FeederWatch data is stored. Default is "data-raw/".
 #'
+#' @return Invisibly returns the downloaded files.
 #' @examples
 #' \dontrun{
 #' # Download data from 2001-2023 into the default folder ("data-raw")

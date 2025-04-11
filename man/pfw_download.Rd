@@ -11,6 +11,9 @@ pfw_download(years, folder = "data-raw/")
 
 \item{folder}{The folder where Project FeederWatch data is stored. Default is "data-raw/".}
 }
+\value{
+Invisibly returns the downloaded files.
+}
 \description{
 This function downloads raw data for selected years from
 the Project FeederWatch website. It unzips the downloaded data

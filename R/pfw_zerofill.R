@@ -7,6 +7,12 @@
 #' @param data A Project FeederWatch dataset, optionally filtered for species.
 #'
 #' @return A dataset with zerofilled values included for each species.
+#' @examples
+#' \dontrun{
+#' # Zerofill an active PFW dataset
+#' data_zf <- pfw_zerofill(data)
+#' }
+#'
 #' @export
 pfw_zerofill <- function(data) {
   filters <- attr(data, "pfw_filters")

@@ -21,3 +21,10 @@ This function filters data to include only observations within
 the typical FeederWatch season:
 after November 8 and before April 3.
 }
+\examples{
+\dontrun{
+# Truncate an active PFW dataset to November 8 - April 3
+truncated_data <- pfw_truncate(data)
+}
+
+}

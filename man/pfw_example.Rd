@@ -14,3 +14,8 @@ Provides a sample dataset for demonstration and testing purposes.
 This dataset includes data from 2021 - May 2024 from
 Washington, Oregon, and California.
 }
+\examples{
+# Install and load the example dataset
+example_data <- pfw_example()
+
+}

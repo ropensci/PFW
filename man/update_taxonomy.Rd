@@ -18,3 +18,10 @@ confirmation before overwriting it. This ensures taxonomy can
 readily be kept up to date annually, since it will only be
 manually updated on the PFW website otherwise.
 }
+\examples{
+\dontrun{
+# Prompt a species translation table taxonomy update
+update_taxonomy()
+}
+
+}

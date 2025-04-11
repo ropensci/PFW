@@ -17,3 +17,10 @@ This function allows users to view all filters they've applied
 to a filtered Project FeederWatch dataset by printing its
 recorded filter attributes in a readable format.
 }
+\examples{
+\dontrun{
+# View filters applied to your active data
+pfw_attr(filtered_data)
+}
+
+}

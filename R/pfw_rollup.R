@@ -6,6 +6,12 @@
 #' @param data A Project FeederWatch dataset.
 #'
 #' @return A cleaned dataset with only species-level codes and a rollup attribute.
+#' @examples
+#' # Apply taxonomic rollup to an active PFW dataset
+#' \dontrun{
+#' rolled_data <- pfw_rollup(data)
+#' }
+#'
 #' @export
 pfw_rollup <- function(data) {
   if (missing(data) || is.null(data)) {

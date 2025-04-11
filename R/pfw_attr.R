@@ -7,6 +7,12 @@
 #' @param data A filtered Project FeederWatch dataset.
 #'
 #' @return A named list of applied filters.
+#' @examples
+#' \dontrun{
+#' # View filters applied to your active data
+#' pfw_attr(filtered_data)
+#' }
+#'
 #' @export
 pfw_attr <- function(data) {
   filters <- attr(data, "pfw_filters")

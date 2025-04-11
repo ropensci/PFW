@@ -17,3 +17,10 @@ This function adds zeros for checklists where selected species were absent,
 setting HOW_MANY = 0 for presence/absence-based analyses.
 Note that zerofilling entire, unfiltered datasets from Project FeederWatch will take a long time!
 }
+\examples{
+\dontrun{
+# Zerofill an active PFW dataset
+data_zf <- pfw_zerofill(data)
+}
+
+}

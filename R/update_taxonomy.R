@@ -9,6 +9,12 @@
 #' manually updated on the PFW website otherwise.
 #'
 #' @return A message confirming whether the update was successful.
+#' @examples
+#' \dontrun{
+#' # Prompt a species translation table taxonomy update
+#' update_taxonomy()
+#' }
+#'
 #' @export
 update_taxonomy <- function() {
 

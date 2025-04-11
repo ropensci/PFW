@@ -16,3 +16,10 @@ A cleaned dataset with only species-level codes and a rollup attribute.
 This function removes spuhs, hybrids, and slashes and
 "demotes" subspecies/subspecies intergrades to their parent species.
 }
+\examples{
+# Apply taxonomic rollup to an active PFW dataset
+\dontrun{
+rolled_data <- pfw_rollup(data)
+}
+
+}

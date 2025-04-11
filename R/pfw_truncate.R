@@ -11,6 +11,12 @@
 #' @param data A Project FeederWatch dataset with Year, Month, and Day columns.
 #'
 #' @return A filtered dataset limited to Nov 8 – Apr 3 across years.
+#' @examples
+#' \dontrun{
+#' # Truncate an active PFW dataset to November 8 - April 3
+#' truncated_data <- pfw_truncate(data)
+#' }
+#'
 #' @export
 pfw_truncate <- function(data) {
   if (!all(c("Year", "Month", "Day") %in% names(data))) {

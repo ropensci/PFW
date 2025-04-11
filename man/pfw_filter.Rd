@@ -49,7 +49,8 @@ data_masonsyard <- pfw_filter(
   year = 2023
 )
 
-# Filter for all data from Washington, Oregon, or California from November through February for 2001 through 2023
+# Filter for all data from Washington, Oregon, or California from November
+# through February for 2001 through 2023
 data_westcoastwinter <- pfw_filter(
   data,
   region = c("Washington", "Oregon", "California"),
@@ -57,7 +58,8 @@ data_westcoastwinter <- pfw_filter(
   month = 11:2
 )
 
-# Filter for Greater Roadrunner in California, keeping only reviewed records and disabling taxonomic rollup
+# Filter for Greater Roadrunner in California, keeping only reviewed
+# records and disabling taxonomic rollup
 data_GRRO_CA <- pfw_filter(
   data,
   species = "Greater Roadrunner",

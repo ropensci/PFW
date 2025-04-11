@@ -5,6 +5,10 @@
 #' Washington, Oregon, and California.
 #'
 #' @return A dataset of example Project FeederWatch data.
+#' @examples
+#' # Install and load the example dataset
+#' example_data <- pfw_example()
+#'
 #' @export
 pfw_example <- function() { # nocov start
   path <- system.file("extdata", "pfw_example.csv", package = "PFW")
