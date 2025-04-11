@@ -129,7 +129,7 @@ a brief list of the package's functions and use:
 Have feedback? Please submit any bugs, typos, or improvements you find as an [issue](https://github.com/Visorbearer/PFW/issues) or by submitting a pull request!
 Your insights help improve `PFW`. 
 
-Please note that the PFW project is released with a [Contributor Code of Conduct](https://Visorbearer.github.io/PFW/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+Please note that `PFW` is released with a [Contributor Code of Conduct](https://Visorbearer.github.io/PFW/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 
 ## Acknowledgements
 
