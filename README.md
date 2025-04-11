@@ -7,7 +7,6 @@ Badge](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 [![R-CMD-check](https://github.com/Visorbearer/PFW/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Visorbearer/PFW/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/Visorbearer/PFW/graph/badge.svg)](https://app.codecov.io/gh/Visorbearer/PFW)
 <!-- badges: end -->
 
 ## Overview
