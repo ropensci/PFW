@@ -1,6 +1,7 @@
 #' Load the region lookup table
 #'
-#' This function loads the region lookup table, which maps SUBNATIONAL1_CODE values to region "common" names.
+#' This function loads the region lookup table, which maps
+#' SUBNATIONAL1_CODE values to region "common" names.
 #' This function mostly exists to be part of the pfw_region function.
 #'
 #' @keywords internal

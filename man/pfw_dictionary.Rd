@@ -13,8 +13,9 @@ pfw_dictionary(variable = NULL)
 A printed description (for a variable) or the full dictionary.
 }
 \description{
-This function helps users explore the FeederWatch dataset by viewing the full data dictionary
-or searching for definitions for specific variables.
+This function helps users explore the FeederWatch dataset by
+viewing the full data dictionary or searching for
+definitions for specific variables.
 }
 \examples{
 # View the whole data dictionary

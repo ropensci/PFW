@@ -71,7 +71,7 @@ test_that("pfw_region adds correct filter attributes", {
   filters <- attr(region_filtered, "pfw_filters")
 
   expect_false(is.null(filters))
-  expect_true(any(sapply(filters, function(f) f$type == "region")))
+  expect_true(any(vapply(filters, function(f) f$type == "region", logical(1))))
 
   region_filter <- Filter(function(f) f$type == "region", filters)[[1]]
   expect_equal(sort(region_filter$value), sort(c("Washington", "Oregon")))

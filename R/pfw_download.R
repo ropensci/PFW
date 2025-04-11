@@ -1,9 +1,10 @@
 #' Download Raw Project FeederWatch Data by Year
 #'
-#' This function downloads raw data for selected years from the Project FeederWatch website.
-#' It unzips the downloaded data and saves the .csv files into a local folder
-#' (default: "data-raw/"), removing the zip files afterward. It will download all files
-#' required to cover the user-selected years.
+#' This function downloads raw data for selected years from
+#' the Project FeederWatch website. It unzips the downloaded data
+#' and saves the .csv files into a local folder
+#' (default: "data-raw/"), removing the zip files afterward.
+#' It will download all files required to cover the user-selected years.
 #'
 #' @param years Integer or vector of years (e.g., 2001, 2001:2023, c(1997, 2001, 2023)).
 #' @param folder The folder where Project FeederWatch data is stored. Default is "data-raw/".

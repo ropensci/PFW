@@ -10,8 +10,11 @@ update_taxonomy()
 A message confirming whether the update was successful.
 }
 \description{
-This function downloads the latest species translation table from the Project FeederWatch website
-and saves it to \verb{inst/extdata/SpeciesTranslationTable/}. If a previous version exists, the user will be asked
-for confirmation before overwriting it. This ensures taxonomy can readily be kept up to date annually,
-since it will only be manually updated on the PFW website otherwise.
+This function downloads the latest species translation
+table from the Project FeederWatch website and saves it to
+\verb{inst/extdata/SpeciesTranslationTable/}.
+If a previous version exists, the user will be asked for
+confirmation before overwriting it. This ensures taxonomy can
+readily be kept up to date annually, since it will only be
+manually updated on the PFW website otherwise.
 }

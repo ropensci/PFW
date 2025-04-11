@@ -1,8 +1,9 @@
 #' Merge Site Metadata into Project FeederWatch Data
 #'
-#' This function joins habitat and site metadata into Project FeederWatch observation data using the site description file.
-#' If the site metadata file is not found, it will be downloaded automatically to the designated path or "data-raw"
-#' if no path is selected.
+#' This function joins habitat and site metadata into Project FeederWatch
+#' observation data using the site description file.If the site metadata
+#' file is not found, it will be downloaded automatically to
+#' the designated path or "data-raw" if no path is selected.
 #'
 #' @param data A Project FeederWatch dataset.
 #' @param path File path to the site description .csv from https://feederwatch.org/explore/raw-dataset-requests/. If not specified, defaults to "data-raw/site_data.csv".

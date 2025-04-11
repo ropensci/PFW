@@ -1,6 +1,7 @@
 #' Apply Multiple Filters to Project FeederWatch Data
 #'
-#' This function filters Project FeederWatch data by species, region, and data validity.
+#' This function filters Project FeederWatch data by
+#' species, region, and data validity.
 #'
 #' @param data A Project FeederWatch dataset.
 #' @param species (Optional) A character vector of species names (common or scientific).

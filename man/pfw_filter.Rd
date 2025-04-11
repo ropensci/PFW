@@ -36,7 +36,8 @@ pfw_filter(
 A filtered dataset.
 }
 \description{
-This function filters Project FeederWatch data by species, region, and data validity.
+This function filters Project FeederWatch data by
+species, region, and data validity.
 }
 \examples{
 \dontrun{

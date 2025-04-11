@@ -111,10 +111,10 @@ test_that("pfw_filter correctly stores attributes for all filters", {
   filter_attrs <- attr(filtered_data, "pfw_filters")
 
   # Check each filter type is present
-  expect_true(any(sapply(filter_attrs, function(f) f$type == "species")))
-  expect_true(any(sapply(filter_attrs, function(f) f$type == "region")))
-  expect_true(any(sapply(filter_attrs, function(f) f$type == "date")))
-  expect_true(any(sapply(filter_attrs, function(f) f$type == "reviewed")))
-  expect_true(any(sapply(filter_attrs, function(f) f$type == "valid"))) # Default is TRUE
-  expect_true(any(sapply(filter_attrs, function(f) f$type == "rollup"))) # Default is TRUE
+  expect_true(any(vapply(filter_attrs, function(f) f$type == "species", logical(1))))
+  expect_true(any(vapply(filter_attrs, function(f) f$type == "region", logical(1))))
+  expect_true(any(vapply(filter_attrs, function(f) f$type == "date", logical(1))))
+  expect_true(any(vapply(filter_attrs, function(f) f$type == "reviewed", logical(1))))
+  expect_true(any(vapply(filter_attrs, function(f) f$type == "valid", logical(1)))) # Default is TRUE
+  expect_true(any(vapply(filter_attrs, function(f) f$type == "rollup", logical(1)))) # Default is TRUE
 })

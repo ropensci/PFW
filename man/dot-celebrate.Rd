@@ -13,7 +13,8 @@
 A celebration!
 }
 \description{
-This function is just if you want to celebrate finishing some particularly difficult code.
-Have a little fun with it-- I used it to celebrate finishing this R package!
+This function is just if you want to celebrate finishing some
+particularly difficult code. Have a little fun with it--
+I used it to celebrate finishing this R package!
 }
 \keyword{internal}

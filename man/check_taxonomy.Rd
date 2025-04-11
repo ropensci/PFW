@@ -10,8 +10,10 @@ check_taxonomy()
 Logical (\code{TRUE} if a file exists, \code{FALSE} if not, with a message).
 }
 \description{
-This function checks if at least one .csv file is present in \verb{inst/extdata/SpeciesTranslationTable/}.
-This is required for use of the pfw_species and pfw_filter functions.
-If no file exists, it prompts the user to download it using \code{update_taxonomy()}, or place a manually downloaded file there.
+This function checks if at least one .csv file is present in
+\verb{inst/extdata/SpeciesTranslationTable/}. This is required for
+use of the pfw_species and pfw_filter functions.
+If no file exists, it prompts the user to download it using
+\code{update_taxonomy()}, or place a manually downloaded file there.
 }
 \keyword{internal}

@@ -1,7 +1,8 @@
 #' Look Up Definitions from the Project FeederWatch Data Dictionary
 #'
-#' This function helps users explore the FeederWatch dataset by viewing the full data dictionary
-#' or searching for definitions for specific variables.
+#' This function helps users explore the FeederWatch dataset by
+#' viewing the full data dictionary or searching for
+#' definitions for specific variables.
 #'
 #' @param variable (Optional) A variable name (e.g., "LOC_ID") to look up. If NULL, prints the full dictionary.
 #'

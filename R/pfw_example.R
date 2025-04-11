@@ -1,7 +1,8 @@
 #' Download and Load Example Project FeederWatch Dataset
 #'
 #' Provides a sample dataset for demonstration and testing purposes.
-#' This dataset includes data from 2021 - May 2024 from Washington, Oregon, and California.
+#' This dataset includes data from 2021 - May 2024 from
+#' Washington, Oregon, and California.
 #'
 #' @return A dataset of example Project FeederWatch data.
 #' @export

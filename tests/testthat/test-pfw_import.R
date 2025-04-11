@@ -61,10 +61,10 @@ test_that("pfw_import applies filters and stores attributes correctly", {
 
   # Check filter attributes
   filters <- attr(imported, "pfw_filters")
-  expect_true(any(sapply(filters, function(f) f$type == "species")))
-  expect_true(any(sapply(filters, function(f) f$type == "region")))
-  expect_true(any(sapply(filters, function(f) f$type == "date")))
-  expect_true(any(sapply(filters, function(f) f$type == "valid")))
+  expect_true(any(vapply(filters, function(f) f$type == "species", logical(1))))
+  expect_true(any(vapply(filters, function(f) f$type == "region", logical(1))))
+  expect_true(any(vapply(filters, function(f) f$type == "date", logical(1))))
+  expect_true(any(vapply(filters, function(f) f$type == "valid", logical(1))))
 
   # Cleanup
   unlink(test_folder, recursive = TRUE)

@@ -10,7 +10,8 @@ load_region_lookup()
 A data frame containing columns \code{Code} (SUBNATIONAL1_CODE) and \code{Area} (region name).
 }
 \description{
-This function loads the region lookup table, which maps SUBNATIONAL1_CODE values to region "common" names.
+This function loads the region lookup table, which maps
+SUBNATIONAL1_CODE values to region "common" names.
 This function mostly exists to be part of the pfw_region function.
 }
 \keyword{internal}

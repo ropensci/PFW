@@ -17,7 +17,8 @@ pfw_date(data, year = NULL, month = NULL)
 A filtered dataset with date filter attributes.
 }
 \description{
-Filters Project FeederWatch data by year and/or month, allowing range-based filtering and wrapping months around new years.
+This function filters Project FeederWatch data by year and/or month,
+allowing range-based filtering and wrapping months around new years.
 }
 \examples{
 \dontrun{

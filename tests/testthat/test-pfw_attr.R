@@ -21,7 +21,7 @@ test_that("pfw_attr returns filter attributes correctly", {
 
   # Check result is a list and has expected structure
   expect_type(result, "list")
-  expect_true(all(sapply(result, function(x) all(c("type", "value") %in% names(x)))))
-  expect_true(any(sapply(result, function(x) x$type == "species")))
-  expect_true(any(sapply(result, function(x) x$type == "date")))
+  expect_true(all(vapply(result, function(x) all(c("type", "value") %in% names(x)), logical(1))))
+  expect_true(any(vapply(result, function(x) x$type == "species", logical(1))))
+  expect_true(any(vapply(result, function(x) x$type == "date", logical(1))))
 })

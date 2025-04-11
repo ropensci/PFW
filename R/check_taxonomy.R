@@ -1,8 +1,10 @@
 #' Check if a species translation table exists
 #'
-#' This function checks if at least one .csv file is present in `inst/extdata/SpeciesTranslationTable/`.
-#' This is required for use of the pfw_species and pfw_filter functions.
-#' If no file exists, it prompts the user to download it using `update_taxonomy()`, or place a manually downloaded file there.
+#' This function checks if at least one .csv file is present in
+#' `inst/extdata/SpeciesTranslationTable/`. This is required for
+#'  use of the pfw_species and pfw_filter functions.
+#' If no file exists, it prompts the user to download it using
+#' `update_taxonomy()`, or place a manually downloaded file there.
 #'
 #' @keywords internal
 #' @return Logical (`TRUE` if a file exists, `FALSE` if not, with a message).
@@ -41,4 +43,4 @@ check_taxonomy <- function() {
   return(TRUE) # A CSV file exists, so proceed
 }
 
-# Hey, Mason here. Thanks for looking at my code! I hope you are enjoying this R package.
+# Mason here. Thanks for looking at my code! I hope you are enjoying this R package.

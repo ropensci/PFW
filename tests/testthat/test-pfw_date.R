@@ -43,7 +43,7 @@ test_that("pfw_date attaches correct filter attribute", {
 
   filters <- attr(filtered, "pfw_filters")
   expect_false(is.null(filters))
-  expect_true(any(sapply(filters, function(f) f$type == "date")))
+  expect_true(any(vapply(filters, function(f) f$type == "date", logical(1))))
 
   date_filter <- Filter(function(f) f$type == "date", filters)[[1]]
   expect_equal(date_filter$value$year, 2022)

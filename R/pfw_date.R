@@ -1,6 +1,7 @@
 #' Filter Project FeederWatch Data by Month and/or Year
 #'
-#' Filters Project FeederWatch data by year and/or month, allowing range-based filtering and wrapping months around new years.
+#' This function filters Project FeederWatch data by year and/or month,
+#' allowing range-based filtering and wrapping months around new years.
 #'
 #' @param data A Project FeederWatch dataset.
 #' @param year Optional. Integer or vector of years (e.g., 2010 or 2010:2015).

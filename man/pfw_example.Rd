@@ -11,5 +11,6 @@ A dataset of example Project FeederWatch data.
 }
 \description{
 Provides a sample dataset for demonstration and testing purposes.
-This dataset includes data from 2021 - May 2024 from Washington, Oregon, and California.
+This dataset includes data from 2021 - May 2024 from
+Washington, Oregon, and California.
 }

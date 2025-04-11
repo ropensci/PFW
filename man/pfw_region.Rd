@@ -15,7 +15,8 @@ pfw_region(data, regions)
 A filtered dataset containing only the selected regions.
 }
 \description{
-This function filters Project FeederWatch data to include only specified states, provinces, or countries.
+This function filters Project FeederWatch data to
+include only specified states, provinces, or countries.
 }
 \examples{
 \dontrun{
@@ -25,7 +26,8 @@ data_WA <- pfw_region(data, "Washington")
 # Filter for data only from Washington using the state code
 data_WA <- pfw_region(data, "US-WA")
 
-# Filter for data from Washington, Oregon, and California using the state name
+# Filter for data from Washington, Oregon,
+# and California using the state name
 data_westcoastbestcoast <- pfw_region(data, c("Washington", "Oregon", "California"))
 }
 

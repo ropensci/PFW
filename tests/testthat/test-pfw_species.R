@@ -85,7 +85,7 @@ test_that("pfw_species adds correct filter attribute", {
       filters <- attr(filtered_data, "pfw_filters")
 
       expect_false(is.null(filters))
-      expect_true(any(sapply(filters, function(f) f$type == "species")))
+      expect_true(any(vapply(filters, function(f) f$type == "species", logical(1))))
 
       species_filter <- Filter(function(f) f$type == "species", filters)[[1]]
       expect_equal(tolower(sort(species_filter$value)), tolower(sort(c("American Robin", "Bald Eagle"))))
