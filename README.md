@@ -124,6 +124,13 @@ a brief list of the package's functions and use:
 - `pfw_attr()`: lists all filters applied to your data.
 - `pfw_dictionary()`: calls variable definitions and descriptions from the data dictionary.
 
+## Feedback
+
+Have feedback? Please submit any bugs, typos, or improvements you find as an [issue](https://github.com/Visorbearer/PFW/issues) or by submitting a pull request!
+Your insights help improve `PFW`. 
+
+Please note that the PFW project is released with a [Contributor Code of Conduct](https://Visorbearer.github.io/PFW/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+
 ## Acknowledgements
 
 `PFW` was built from code originally developed for Project FeederWatch data preparation in Maron et al. (2025). 
