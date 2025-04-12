@@ -28,7 +28,7 @@ pfw_zerofill <- function(data) {
 
     message("Full dataset not found in memory. Re-importing...")
 
-    # Reconstruct filter args for import (excluding species)
+    # Reconstruct filter arguments for import (excluding species)
     import_filters <- list()
     if (!is.null(filters)) {
       for (f in filters) {
