@@ -16,6 +16,11 @@ pfw_example <- function() { # nocov start
   if (path == "") {
     message("Local example dataset not found. Downloading from GitHub...")
 
+    # Check for internet connection
+    if (!curl::has_internet()) {
+      stop("Unable to download example dataset; no internet connection found. Please reconnect to the internet and try again.")
+    }
+
     url <- "https://raw.githubusercontent.com/Visorbearer/PFW/main/inst/extdata/pfw_example.csv"
     path <- tempfile(fileext = ".csv")
 

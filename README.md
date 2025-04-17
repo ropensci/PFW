@@ -17,8 +17,9 @@ and management of data from [Project FeederWatch](https://feederwatch.org/).
 Project FeederWatch is a community-driven project initiated in the 1980s
 and run by the [Cornell Lab of Ornithology](https://www.birds.cornell.edu/) and [Birds Canada](https://www.birdscanada.org/)
 that compiles bird observations from thousands of "backyards, nature centers, 
-community areas, and other locales" across North America. Included in `PFW`
-are tools for taxonomic rollup, filtering by survey characteristics 
+community areas, and other locales" across North America. Project FeederWatch data is easy to access, 
+but can often be tricky to work with; `PFW` serves to simplify and streamline the use of this data. 
+Included in `PFW` are tools for taxonomic rollup, filtering by survey characteristics 
 (species, state, etc.), merging in site metadata, and zerofilling for presence/absence modeling.
 
 ## Installation
@@ -81,8 +82,34 @@ data_filtered <- pfw_filter(data,
   rollup = TRUE # TRUE by default
 )
 
+# Output:
+# 2 regions successfully filtered.
+# Date filtering complete.
+# Species roll-up complete. 36 ambiguous records removed.
+# 3 species successfully filtered.
+# Filtering complete. 23538 records remaining.
+
 # View the filters that were applied
 pfw_attr(data_filtered)
+
+# Output:
+# Filters applied to this dataset:
+#
+# - Filter type: region 
+#  Values: Washington, Oregon 
+#
+# - Filter type: date 
+#   year : 2022, 2023, 2024 
+#   month : 11, 12, 1, 2 
+#
+# - Filter type: rollup 
+#  Values: TRUE 
+#
+# - Filter type: valid 
+#  Values: TRUE 
+#
+# - Filter type: species 
+#  Values: song sparrow, dark-eyed junco, spotted towhee 
 
 # Zerofill missing species/survey instance combos
 data_zf <- pfw_zerofill(data_filtered)
@@ -95,35 +122,6 @@ data_full <- pfw_sitedata(data_zf, path = "path/sitedata.csv")
 # Alternatively, you can manually download the site description file from:
 # https://feederwatch.org/explore/raw-dataset-requests/
 ```
-## Usage
-
-As a quick and easy-to-reference guide to a standard `PFW` workflow, here's
-a brief list of the package's functions and use:
-
-### Downloading and Importing
-
-- `pfw_download()`: download raw Project FeederWatch data from the website.
-- `pfw_import()`: import downloaded raw data into the R project, optionally filtering it.
-- `pfw_example()`: download and/or load the example raw Project FeederWatch dataset.
-- `update_taxonomy()`: updates the taxonomy in the species translation table.
-- `pfw_sitedata()`: imports site metadata and attaches it to your selected dataset.
-
-### Filtering and Zerofilling
-
-- `pfw_filter()`: filters your data by region, species, date, and reviewed/valid status. Also applies taxonomic rollup.
-  Nested within `pfw_filter()` are several functions which can be run independently:
-  - `pfw_region()`: filters your data by region (state/province or whole country).
-  - `pfw_species()`: filters your data by species.
-  - `pfw_date()`: filters your data by year and month.
-  - `pfw_rollup()`: applies taxonomic rollup to your data.
-
-- `pfw_truncate()`: optionally limits your data only to days all Project FeederWatch years have run.
-- `pfw_zerofill()`: zerofills your data for all species in it.
-
-### Helper functions
-
-- `pfw_attr()`: lists all filters applied to your data.
-- `pfw_dictionary()`: calls variable definitions and descriptions from the data dictionary.
 
 ## Feedback
 

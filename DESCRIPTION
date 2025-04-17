@@ -16,7 +16,8 @@ Imports:
     lubridate,
     rvest,
     stats,
-    utils
+    utils,
+    curl
 Suggests: 
     testthat (>= 3.0.0),
     purrr,

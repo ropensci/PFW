@@ -21,7 +21,12 @@ pfw_download <- function(years, folder = "data-raw/") {
   if (missing(years) || is.null(years)) stop("You must specify at least one year.")
   years <- as.integer(years)
 
+  # Check for internet connection
+  if (!curl::has_internet()) {
+    stop("Unable to download data; no internet connection found. Please reconnect to the internet and try again.")
+  }
   # Ensure folder exists or create it
+  # nocov start
   if (!dir.exists(folder)) {
     dir.create(folder, recursive = TRUE)
     message("Created folder ", folder, " in working directory.")
@@ -83,7 +88,7 @@ pfw_download <- function(years, folder = "data-raw/") {
     unlink(zip_path)
     message("Downloaded and extracted: ", zip_name)
   }
-
+  # nocov end
   message("Download complete. You can now use pfw_import to import your data into the active R session.")
   invisible(TRUE)
 }

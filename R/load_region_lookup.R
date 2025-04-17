@@ -11,7 +11,7 @@ load_region_lookup <- function() {
   lookup_path <- system.file("extdata", "Region_Lookup.csv", package = "PFW")
 
   if (lookup_path == "") { # nocov start
-    stop("Region lookup table not found. Please reinstall the package to ensure 'Region_Lookup.csv' is in 'inst/extdata/'.")
+    stop("Region lookup table not found. Please reinstall/update the package to ensure 'Region_Lookup.csv' is in 'inst/extdata/'.")
   } # nocov end
 
   read.csv(lookup_path, stringsAsFactors = FALSE)

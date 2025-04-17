@@ -15,6 +15,7 @@ test_that("pfw_download creates folder if it doesn't exist", {
 })
 
 test_that("pfw_download downloads multiple files if years spanning multiple are called", {
+  skip_on_cran()
   temp_folder <- file.path(tempdir(), "pfw-test-dir2")
   if (dir.exists(temp_folder)) unlink(temp_folder, recursive = TRUE)
   withr::defer(unlink(temp_folder, recursive = TRUE))
@@ -25,6 +26,7 @@ test_that("pfw_download downloads multiple files if years spanning multiple are 
 })
 
 test_that("pfw_download handles no matching data for selected year(s)", {
+  skip_on_cran()
   temp_folder <- tempfile()
   withr::defer(unlink(temp_folder, recursive = TRUE))
 
@@ -35,6 +37,7 @@ test_that("pfw_download handles no matching data for selected year(s)", {
 })
 
 test_that("pfw_download cancels if user declines overwrite", {
+  skip_on_cran()
   temp_folder <- tempfile()
   dir.create(temp_folder)
   file.create(file.path(temp_folder, "existing.csv"))

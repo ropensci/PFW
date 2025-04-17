@@ -1,4 +1,5 @@
 test_that("update_taxonomy downloads and saves a file", {
+  skip_on_cran()
   # Create a temporary directory to mimic inst/extdata/SpeciesTranslationTable/
   test_taxonomy_folder <- tempfile()
   dir.create(test_taxonomy_folder, recursive = TRUE)

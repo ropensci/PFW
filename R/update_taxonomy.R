@@ -20,9 +20,14 @@ update_taxonomy <- function() {
 
   # Ensure the SpeciesTranslationTable directory exists
   translation_folder <- Sys.getenv("PFW_TRANSLATION_DIR", unset = file.path("inst", "extdata", "SpeciesTranslationTable"))
-  if (!dir.exists(translation_folder)) { # nocov start
+  if (!dir.exists(translation_folder)) {
     dir.create(translation_folder, recursive = TRUE) # Create directories if missing
     message("Created 'inst/extdata/SpeciesTranslationTable/' directory.")
+  } # nocov start
+
+  # Check for internet connection
+  if (!curl::has_internet()) {
+    stop("Unable to update taxonomy; no internet connection found. Please reconnect to the internet and try again.")
   } # nocov end
 
   # Read the PFW raw dataset request page
@@ -37,7 +42,8 @@ update_taxonomy <- function() {
   taxonomy_link <- links[grepl("PFW_spp_translation_table_", links)]
 
   # If no link is found, stop with an error message
-  if (length(taxonomy_link) == 0) { # nocov start
+  # nocov start
+  if (length(taxonomy_link) == 0) {
     stop(
       "No species translation table found. FeederWatch may have changed their webpage format.\n",
       "You can go to https://feederwatch.org/explore/raw-dataset-requests/ ",

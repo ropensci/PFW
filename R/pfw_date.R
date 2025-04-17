@@ -78,6 +78,6 @@ pfw_date <- function(data, year = NULL, month = NULL) {
   # Attach updated filters
   attr(filtered_data, "pfw_filters") <- updated_filters
 
-  message("Date filtering complete. ", nrow(filtered_data), " records remaining.")
+  message("Date filtering complete.")
   return(invisible(filtered_data))
 }
