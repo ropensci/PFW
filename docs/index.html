@@ -89,7 +89,7 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p><code>PFW</code> is an R package designed for easy filtering, preparation, and management of data from <a href="https://feederwatch.org/" class="external-link">Project FeederWatch</a>. Project FeederWatch is a community-driven project initiated in the 1980s and run by the <a href="https://www.birds.cornell.edu/" class="external-link">Cornell Lab of Ornithology</a> and <a href="https://www.birdscanada.org/" class="external-link">Birds Canada</a> that compiles bird observations from thousands of “backyards, nature centers, community areas, and other locales” across North America. Included in <code>PFW</code> are tools for taxonomic rollup, filtering by survey characteristics (species, state, etc.), merging in site metadata, and zerofilling for presence/absence modeling.</p>
+<p><code>PFW</code> is an R package designed for easy filtering, preparation, and management of data from <a href="https://feederwatch.org/" class="external-link">Project FeederWatch</a>. Project FeederWatch is a community-driven project initiated in the 1980s and run by the <a href="https://www.birds.cornell.edu/" class="external-link">Cornell Lab of Ornithology</a> and <a href="https://www.birdscanada.org/" class="external-link">Birds Canada</a> that compiles bird observations from thousands of “backyards, nature centers, community areas, and other locales” across North America. Project FeederWatch data is easy to access, but can often be tricky to work with; <code>PFW</code> serves to simplify and streamline the use of this data. Included in <code>PFW</code> are tools for taxonomic rollup, filtering by survey characteristics (species, state, etc.), merging in site metadata, and zerofilling for presence/absence modeling.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -142,13 +142,39 @@ R package version 0.0.1. <a href="https://github.com/Visorbearer/PFW" class="ext
 <span>  species <span class="op">=</span> <span class="va">species_list</span>,</span>
 <span>  year <span class="op">=</span> <span class="fl">2022</span><span class="op">:</span><span class="fl">2024</span>,</span>
 <span>  month <span class="op">=</span> <span class="fl">11</span><span class="op">:</span><span class="fl">2</span>, <span class="co"># pfw_date(), which is called within pfw_filter(), </span></span>
-<span>                <span class="co">#will appropriately wrap this around the end of the year.</span></span>
+<span>                <span class="co"># will appropriately wrap this around the end of the year.</span></span>
 <span>  valid <span class="op">=</span> <span class="cn">TRUE</span>, <span class="co"># TRUE by default</span></span>
 <span>  rollup <span class="op">=</span> <span class="cn">TRUE</span> <span class="co"># TRUE by default</span></span>
 <span><span class="op">)</span></span>
 <span></span>
+<span><span class="co"># Output:</span></span>
+<span><span class="co"># 2 regions successfully filtered.</span></span>
+<span><span class="co"># Date filtering complete.</span></span>
+<span><span class="co"># Species roll-up complete. 36 ambiguous records removed.</span></span>
+<span><span class="co"># 3 species successfully filtered.</span></span>
+<span><span class="co"># Filtering complete. 23538 records remaining.</span></span>
+<span></span>
 <span><span class="co"># View the filters that were applied</span></span>
 <span><span class="fu"><a href="reference/pfw_attr.html">pfw_attr</a></span><span class="op">(</span><span class="va">data_filtered</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Output:</span></span>
+<span><span class="co"># Filters applied to this dataset:</span></span>
+<span><span class="co">#</span></span>
+<span><span class="co"># - Filter type: region </span></span>
+<span><span class="co">#  Values: Washington, Oregon </span></span>
+<span><span class="co">#</span></span>
+<span><span class="co"># - Filter type: date </span></span>
+<span><span class="co">#   year : 2022, 2023, 2024 </span></span>
+<span><span class="co">#   month : 11, 12, 1, 2 </span></span>
+<span><span class="co">#</span></span>
+<span><span class="co"># - Filter type: rollup </span></span>
+<span><span class="co">#  Values: TRUE </span></span>
+<span><span class="co">#</span></span>
+<span><span class="co"># - Filter type: valid </span></span>
+<span><span class="co">#  Values: TRUE </span></span>
+<span><span class="co">#</span></span>
+<span><span class="co"># - Filter type: species </span></span>
+<span><span class="co">#  Values: song sparrow, dark-eyed junco, spotted towhee </span></span>
 <span></span>
 <span><span class="co"># Zerofill missing species/survey instance combos</span></span>
 <span><span class="va">data_zf</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/pfw_zerofill.html">pfw_zerofill</a></span><span class="op">(</span><span class="va">data_filtered</span><span class="op">)</span></span>
@@ -160,60 +186,6 @@ R package version 0.0.1. <a href="https://github.com/Visorbearer/PFW" class="ext
 <span><span class="co"># download it there from the Project FeederWatch website.</span></span>
 <span><span class="co"># Alternatively, you can manually download the site description file from:</span></span>
 <span><span class="co"># https://feederwatch.org/explore/raw-dataset-requests/</span></span></code></pre></div>
-</div>
-<div class="section level2">
-<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
-</h2>
-<p>As a quick and easy-to-reference guide to a standard <code>PFW</code> workflow, here’s a brief list of the package’s functions and use:</p>
-<div class="section level3">
-<h3 id="downloading-and-importing">Downloading and Importing<a class="anchor" aria-label="anchor" href="#downloading-and-importing"></a>
-</h3>
-<ul>
-<li>
-<code><a href="reference/pfw_download.html">pfw_download()</a></code>: download raw Project FeederWatch data from the website.</li>
-<li>
-<code><a href="reference/pfw_import.html">pfw_import()</a></code>: import downloaded raw data into the R project, optionally filtering it.</li>
-<li>
-<code><a href="reference/pfw_example.html">pfw_example()</a></code>: download and/or load the example raw Project FeederWatch dataset.</li>
-<li>
-<code><a href="reference/update_taxonomy.html">update_taxonomy()</a></code>: updates the taxonomy in the species translation table.</li>
-<li>
-<code><a href="reference/pfw_sitedata.html">pfw_sitedata()</a></code>: imports site metadata and attaches it to your selected dataset.</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="filtering-and-zerofilling">Filtering and Zerofilling<a class="anchor" aria-label="anchor" href="#filtering-and-zerofilling"></a>
-</h3>
-<ul>
-<li>
-<code><a href="reference/pfw_filter.html">pfw_filter()</a></code>: filters your data by region, species, date, and reviewed/valid status. Also applies taxonomic rollup. Nested within <code><a href="reference/pfw_filter.html">pfw_filter()</a></code> are several functions which can be run independently:
-<ul>
-<li>
-<code><a href="reference/pfw_region.html">pfw_region()</a></code>: filters your data by region (state/province or whole country).</li>
-<li>
-<code><a href="reference/pfw_species.html">pfw_species()</a></code>: filters your data by species.</li>
-<li>
-<code><a href="reference/pfw_date.html">pfw_date()</a></code>: filters your data by year and month.</li>
-<li>
-<code><a href="reference/pfw_rollup.html">pfw_rollup()</a></code>: applies taxonomic rollup to your data.</li>
-</ul>
-</li>
-<li>
-<code><a href="reference/pfw_truncate.html">pfw_truncate()</a></code>: optionally limits your data only to days all Project FeederWatch years have run.</li>
-<li>
-<code><a href="reference/pfw_zerofill.html">pfw_zerofill()</a></code>: zerofills your data for all species in it.</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="helper-functions">Helper functions<a class="anchor" aria-label="anchor" href="#helper-functions"></a>
-</h3>
-<ul>
-<li>
-<code><a href="reference/pfw_attr.html">pfw_attr()</a></code>: lists all filters applied to your data.</li>
-<li>
-<code><a href="reference/pfw_dictionary.html">pfw_dictionary()</a></code>: calls variable definitions and descriptions from the data dictionary.</li>
-</ul>
-</div>
 </div>
 <div class="section level2">
 <h2 id="feedback">Feedback<a class="anchor" aria-label="anchor" href="#feedback"></a>
