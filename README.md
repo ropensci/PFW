@@ -77,7 +77,7 @@ data_filtered <- pfw_filter(data,
   species = species_list,
   year = 2022:2024,
   month = 11:2, # pfw_date(), which is called within pfw_filter(), 
-                #will appropriately wrap this around the end of the year.
+                # will appropriately wrap this around the end of the year.
   valid = TRUE, # TRUE by default
   rollup = TRUE # TRUE by default
 )
