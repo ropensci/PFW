@@ -125,7 +125,7 @@ data_full <- pfw_sitedata(data_zf, path = "path/sitedata.csv")
 
 ## Feedback
 
-Have feedback? Please submit any bugs, typos, or improvements you find as an [issue](https://github.com/Visorbearer/PFW/issues) or by submitting a pull request!
+Have feedback? Please submit any bugs, typos, or improvements as an [issue](https://github.com/Visorbearer/PFW/issues) or as a [pull request](https://github.com/Visorbearer/PFW/pulls)!
 Your insights help improve `PFW`. 
 
 Please note that `PFW` is released with a [Contributor Code of Conduct](https://Visorbearer.github.io/PFW/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
