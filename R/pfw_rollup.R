@@ -66,6 +66,6 @@ pfw_rollup <- function(data) {
   updated_filters <- append(existing_filters, list(rollup_filter))
   attr(cleaned_data, "pfw_filters") <- updated_filters
 
-  message("Species roll-up complete. ", nrow(data) - nrow(cleaned_data), " ambiguous records removed.")
+  message("Taxonomic rollup complete. ", nrow(data) - nrow(cleaned_data), " ambiguous records removed.")
   return(invisible(cleaned_data))
 }
