@@ -4,10 +4,7 @@
 \alias{pfw_download}
 \title{Download Raw Project FeederWatch Data by Year}
 \usage{
-pfw_download(
-  years,
-  folder = file.path(tools::R_user_dir("PFW", "data"), "data-raw")
-)
+pfw_download(years, folder = NULL)
 }
 \arguments{
 \item{years}{Integer or vector of years (e.g., 2001, 2001:2023, c(1997, 2001, 2023)).}

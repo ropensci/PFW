@@ -40,6 +40,7 @@ This function filters Project FeederWatch data by
 species, region, and data validity.
 }
 \examples{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 # Download/load example dataset
 data <- pfw_example()
 
@@ -69,5 +70,5 @@ data_GRRO_CA <- pfw_filter(
   reviewed = TRUE,
   rollup = FALSE
 )
-
+\dontshow{\}) # examplesIf}
 }

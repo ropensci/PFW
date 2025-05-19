@@ -8,7 +8,7 @@
 #' @param month Optional. Integer or vector of months (1–12). Supports wrapping (e.g., c(11, 2) = Nov–Feb).
 #'
 #' @return A filtered dataset with date filter attributes.
-#' @examples
+#' @examplesIf interactive()
 #' # Download/load example dataset
 #' data <- pfw_example()
 #'

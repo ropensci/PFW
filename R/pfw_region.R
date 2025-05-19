@@ -7,7 +7,7 @@
 #' @param regions A character vector of regions (e.g., "Washington", "United States").
 #'
 #' @return A filtered dataset containing only the selected regions.
-#' @examples
+#' @examplesIf interactive()
 #' # Download/load example dataset
 #' data <- pfw_example()
 #'

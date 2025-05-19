@@ -7,7 +7,7 @@
 #' @param data A filtered Project FeederWatch dataset.
 #'
 #' @return A named list of applied filters.
-#' @examples
+#' @examplesIf interactive()
 #' # Download/load example dataset
 #' data <- pfw_example()
 #'

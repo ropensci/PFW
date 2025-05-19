@@ -15,9 +15,13 @@
 #' pfw_download(years = 2001:2006)
 #'
 #' @export
-pfw_download <- function(years, folder = file.path(tools::R_user_dir("PFW", "data"), "data-raw")) {
+pfw_download <- function(years, folder = NULL) {
   if (missing(years) || is.null(years)) stop("You must specify at least one year.")
   years <- as.integer(years)
+
+  if (is.null(folder)) {
+    folder <- file.path(tools::R_user_dir("PFW", "data"), "data-raw")
+  }
 
   # Check for internet connection
   if (!curl::has_internet()) {
@@ -85,9 +89,9 @@ pfw_download <- function(years, folder = file.path(tools::R_user_dir("PFW", "dat
 
     utils::unzip(zip_path, exdir = folder)
     unlink(zip_path)
-    message("Downloaded and extracted: ", zip_name)
+    message("Downloaded and extracted: ", zip_name, " into ", folder)
   }
   # nocov end
   message("Download complete. You can now use pfw_import to import your data into the active R session.")
-  invisible(TRUE)
+  invisible(folder)
 }

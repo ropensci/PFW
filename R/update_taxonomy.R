@@ -56,20 +56,40 @@ update_taxonomy <- function() { # nocov start
 
   # Define the save location
   taxonomy_path <- file.path(translation_folder, "PFW_spp_translation_table.csv")
+  timestamp_path <- file.path(translation_folder, ".last_modified")
+
+  # nocov start
+
+  # HEAD request to get Last-Modified date
+  head_resp <- httr2::request(full_url) |>
+    httr2::req_user_agent("PFW R package") |>
+    httr2::req_method("HEAD") |>
+    httr2::req_perform()
+
+  last_modified <- httr2::resp_header(head_resp, "last-modified")
 
   # If any .csv file exists in the folder, ask before overwriting
   existing_files <- list.files(translation_folder, pattern = "\\.csv$", full.names = TRUE)
   if (length(existing_files) > 0) {
     message("A species translation table file already exists.")
-    response <- Sys.getenv("PFW_TEST_RESPONSE", unset = "ask")
 
-    if (response == "ask") {
-      response <- readline(prompt = "Overwrite existing files? (y/n): ")
+    local_modified <- if (file.exists(timestamp_path)) {
+      readLines(timestamp_path, warn = FALSE)
+    } else {
+      NA_character_
     }
-  # nocov start
-    if (tolower(response) != "y") {
-      message("Update canceled.")
-      return(invisible(NULL))
+
+    if (identical(last_modified, local_modified)) {
+      response <- Sys.getenv("PFW_TEST_RESPONSE", unset = "ask")
+      if (response == "ask") {
+        response <- readline(prompt = "The downloaded species translation table is up to date. Overwrite anyway? (y/n):")
+      }
+      if (tolower(response) != "y") {
+        message("Update canceled.")
+        return(invisible(NULL))
+      }
+    } else {
+      message("A new species translation table version is available. Updating...")
     }
   }
   # nocov end
@@ -79,6 +99,9 @@ update_taxonomy <- function() { # nocov start
   httr2::request(full_url) |>
     httr2::req_user_agent("PFW R package") |>
     httr2::req_perform(path = taxonomy_path)
+
+  # Save Last-Modified timestamp
+  writeLines(last_modified, timestamp_path)
 
   message(
     "Species translation table updated successfully!\n",

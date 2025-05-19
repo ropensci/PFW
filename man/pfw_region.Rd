@@ -19,6 +19,7 @@ This function filters Project FeederWatch data to
 include only specified states, provinces, or countries.
 }
 \examples{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 # Download/load example dataset
 data <- pfw_example()
 
@@ -31,5 +32,5 @@ data_WA <- pfw_region(data, "US-WA")
 # Filter for data from Washington, Oregon,
 # and California using the state name
 data_westcoastbestcoast <- pfw_region(data, c("Washington", "Oregon", "California"))
-
+\dontshow{\}) # examplesIf}
 }

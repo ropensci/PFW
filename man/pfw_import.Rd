@@ -4,7 +4,7 @@
 \alias{pfw_import}
 \title{Import Project FeederWatch Data}
 \usage{
-pfw_import(folder = "data-raw/", filter = FALSE, ...)
+pfw_import(folder = NULL, filter = FALSE, ...)
 }
 \arguments{
 \item{folder}{The folder where Project FeederWatch data is stored. Default is "data-raw/".}

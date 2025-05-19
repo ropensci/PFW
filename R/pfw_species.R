@@ -8,7 +8,7 @@
 #' @param suppress_ambiguous (Optional, default = FALSE) TRUE/FALSE on including missing subspecies in the warning. This is just a silencer for the pfw_filter function.
 #'
 #' @return A filtered dataset containing only the selected species.
-#' @examples
+#' @examplesIf interactive()
 #' # Download/load example dataset
 #' data <- pfw_example()
 #'

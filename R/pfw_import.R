@@ -20,7 +20,10 @@
 #' }
 #'
 #' @export
-pfw_import <- function(folder = "data-raw/", filter = FALSE, ...) {
+pfw_import <- function(folder = NULL, filter = FALSE, ...) {
+  if (is.null(folder)) {
+    folder <- file.path(tools::R_user_dir("PFW", "data"), "data-raw")
+  }
   # Ensure the folder exists
   if (!dir.exists(folder)) {
     stop("The folder '", folder, "' does not exist. Please create it and download Project FeederWatch CSV files into it.")

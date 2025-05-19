@@ -21,6 +21,7 @@ This function filters Project FeederWatch data to include only selected species,
 or scientific names via the species translation table.
 }
 \examples{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 # Download/load example dataset
 data <- pfw_example()
 
@@ -36,5 +37,5 @@ data_masonsyard <- pfw_species(data, c("daejun", "sonspa", "spotow"))
 # Filter with a pre-existing species list
 species_list <- c("daejun", "sonspa", "spotow")
 data_masonsyard <- pfw_species(data, species_list)
-
+\dontshow{\}) # examplesIf}
 }

@@ -13,7 +13,7 @@
 #' @param rollup (Optional, default = TRUE) Automatically roll up subspecies to species level and remove spuhs, slashes, and hybrids.
 #'
 #' @return A filtered dataset.
-#' @examples
+#' @examplesIf interactive()
 #' # Download/load example dataset
 #' data <- pfw_example()
 #'

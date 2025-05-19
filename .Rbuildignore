@@ -5,6 +5,7 @@
 ^inst/extdata/pfw_example.csv$
 ^R/celebrate\\.R$
 ^man/celebrate\\.Rd$
+^inst/extdata/SpeciesTranslationTable\.last_modified$
 ^doc$
 ^Meta$
 ^\.github$
