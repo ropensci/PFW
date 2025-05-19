@@ -6,7 +6,7 @@
 #' the designated path or "data-raw" if no path is selected.
 #'
 #' @param data A Project FeederWatch dataset.
-#' @param path File path to the site description .csv from https://feederwatch.org/explore/raw-dataset-requests/. If not specified, defaults to "data-raw/site_data.csv".
+#' @param path File path to the site description .csv from https://feederwatch.org/explore/raw-dataset-requests/. If not specified, defaults to "data-raw/sitedata.csv".
 #'
 #' @return The original dataset with site metadata merged in.
 #'
@@ -20,7 +20,7 @@
 #' @export
 pfw_sitedata <- function(data, path) {
   if (missing(path) || is.null(path)) {
-    path <- file.path(tools::R_user_dir("PFW", "data"), "data-raw", "site_data.csv")
+    path <- file.path(tools::R_user_dir("PFW", "data"), "data-raw", "sitedata.csv")
   }
 
   # Download site data if path doesn't exist
@@ -47,9 +47,11 @@ pfw_sitedata <- function(data, path) {
 
     # Construct full URL
     site_url <- hrefs[[1]]
+    filename <- basename(site_url)
     if (!grepl("^http", site_url)) {
       site_url <- paste0("https://feederwatch.org", site_url)
     }
+    path <- file.path(dirname(path), filename)
     message("Site metadata not found at provided path. Downloading from FeederWatch...")
 
     tryCatch(
