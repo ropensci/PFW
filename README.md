@@ -28,7 +28,7 @@ taxonomic rollup, filtering by survey characteristics (species, state,
 etc.), merging in site metadata, and zerofilling for presence/absence
 modeling.
 
-[FeederWatch locations from 1989-2020.](man/figures/feederwatch_map.jpg)
+![FeederWatch locations from 1989-2020.](man/figures/feederwatch_map.jpg)
 
 *Figure from Bonter & Greig (2021), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
 
