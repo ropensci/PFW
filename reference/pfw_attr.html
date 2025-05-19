@@ -63,24 +63,16 @@ recorded filter attributes in a readable format.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Download/load example dataset</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># interactive()</span></span></span>
+<span class="r-in"><span><span class="co"># Download/load example dataset</span></span></span>
 <span class="r-in"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="pfw_example.html">pfw_example</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Local example dataset not found. Downloading from GitHub...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Example dataset loaded.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Filter for Dark-eyed Junco</span></span></span>
 <span class="r-in"><span><span class="va">filtered_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="pfw_species.html">pfw_species</a></span><span class="op">(</span><span class="va">data</span>, <span class="st">"Dark-eyed Junco"</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Species selected in filter but absent from input data: Dark-eyed Junco (Oregon x Gray-headed), Dark-eyed Junco (Pink-sided x Gray-headed)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 2 species successfully filtered.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># View filters applied to your active data</span></span></span>
 <span class="r-in"><span><span class="fu">pfw_attr</span><span class="op">(</span><span class="va">filtered_data</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Filters applied to this dataset:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> - Filter type: species </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Values: dark-eyed junco </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

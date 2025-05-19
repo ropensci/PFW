@@ -68,30 +68,23 @@ or scientific names via the species translation table.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Download/load example dataset</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># interactive()</span></span></span>
+<span class="r-in"><span><span class="co"># Download/load example dataset</span></span></span>
 <span class="r-in"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="pfw_example.html">pfw_example</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Local example dataset not found. Downloading from GitHub...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Example dataset loaded.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Filter for only Greater Roadrunner using the common name</span></span></span>
 <span class="r-in"><span><span class="va">data_GRRO</span> <span class="op">&lt;-</span> <span class="fu">pfw_species</span><span class="op">(</span><span class="va">data</span>, <span class="st">"Greater Roadrunner"</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 1 species successfully filtered.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Filter for Lesser Goldfinch and American Goldfinch using scientific names</span></span></span>
 <span class="r-in"><span><span class="va">data_goldfinches</span> <span class="op">&lt;-</span> <span class="fu">pfw_species</span><span class="op">(</span><span class="va">data</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Spinus psaltria"</span>, <span class="st">"Spinus tristis"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 2 species successfully filtered.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Filter for Dark-eyed Junco, Song Sparrow, and Spotted Towhee using species codes</span></span></span>
 <span class="r-in"><span><span class="va">data_masonsyard</span> <span class="op">&lt;-</span> <span class="fu">pfw_species</span><span class="op">(</span><span class="va">data</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"daejun"</span>, <span class="st">"sonspa"</span>, <span class="st">"spotow"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Species selected in filter but absent from input data: Dark-eyed Junco (Oregon x Gray-headed), Dark-eyed Junco (Pink-sided x Gray-headed), Song Sparrow (melodia/atlantica), Spotted Towhee (oregonus Group), Spotted Towhee (maculatus Group)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 4 species successfully filtered.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Filter with a pre-existing species list</span></span></span>
 <span class="r-in"><span><span class="va">species_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"daejun"</span>, <span class="st">"sonspa"</span>, <span class="st">"spotow"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">data_masonsyard</span> <span class="op">&lt;-</span> <span class="fu">pfw_species</span><span class="op">(</span><span class="va">data</span>, <span class="va">species_list</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Species selected in filter but absent from input data: Dark-eyed Junco (Oregon x Gray-headed), Dark-eyed Junco (Pink-sided x Gray-headed), Song Sparrow (melodia/atlantica), Spotted Towhee (oregonus Group), Spotted Towhee (maculatus Group)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 4 species successfully filtered.</span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

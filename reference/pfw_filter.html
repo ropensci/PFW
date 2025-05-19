@@ -97,10 +97,9 @@ species, region, and data validity.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Download/load example dataset</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># interactive()</span></span></span>
+<span class="r-in"><span><span class="co"># Download/load example dataset</span></span></span>
 <span class="r-in"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="pfw_example.html">pfw_example</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Local example dataset not found. Downloading from GitHub...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Example dataset loaded.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Filter for Dark-eyed Junco, Song Sparrow, and Spotted Towhee in Washington in 2023</span></span></span>
 <span class="r-in"><span><span class="va">data_masonsyard</span> <span class="op">&lt;-</span> <span class="fu">pfw_filter</span><span class="op">(</span></span></span>
@@ -109,11 +108,6 @@ species, region, and data validity.</p>
 <span class="r-in"><span>  region <span class="op">=</span> <span class="st">"US-WA"</span>,</span></span>
 <span class="r-in"><span>  year <span class="op">=</span> <span class="fl">2023</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 1 regions successfully filtered.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Date filtering complete.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Taxonomic rollup complete. 16 ambiguous records removed.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 3 species successfully filtered.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Filtering complete. 7652 records remaining.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Filter for all data from Washington, Oregon, or California from November</span></span></span>
 <span class="r-in"><span><span class="co"># through February for 2021 through 2023</span></span></span>
@@ -123,10 +117,6 @@ species, region, and data validity.</p>
 <span class="r-in"><span>  year <span class="op">=</span> <span class="fl">2021</span><span class="op">:</span><span class="fl">2023</span>,</span></span>
 <span class="r-in"><span>  month <span class="op">=</span> <span class="fl">11</span><span class="op">:</span><span class="fl">2</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 3 regions successfully filtered.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Date filtering complete.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Taxonomic rollup complete. 182 ambiguous records removed.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Filtering complete. 260928 records remaining.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Filter for Greater Roadrunner in California, keeping only reviewed</span></span></span>
 <span class="r-in"><span><span class="co"># records and disabling taxonomic rollup</span></span></span>
@@ -137,11 +127,7 @@ species, region, and data validity.</p>
 <span class="r-in"><span>  reviewed <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
 <span class="r-in"><span>  rollup <span class="op">=</span> <span class="cn">FALSE</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 1 regions successfully filtered.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Species selected in filter but absent from input data: Greater Roadrunner</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 0 species successfully filtered.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Filtering complete. 0 records remaining.</span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

@@ -64,24 +64,20 @@ include only specified states, provinces, or countries.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Download/load example dataset</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># interactive()</span></span></span>
+<span class="r-in"><span><span class="co"># Download/load example dataset</span></span></span>
 <span class="r-in"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="pfw_example.html">pfw_example</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Local example dataset not found. Downloading from GitHub...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Example dataset loaded.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Filter for data only from Washington using the state name</span></span></span>
 <span class="r-in"><span><span class="va">data_WA</span> <span class="op">&lt;-</span> <span class="fu">pfw_region</span><span class="op">(</span><span class="va">data</span>, <span class="st">"Washington"</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 1 regions successfully filtered.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Filter for data only from Washington using the state code</span></span></span>
 <span class="r-in"><span><span class="va">data_WA</span> <span class="op">&lt;-</span> <span class="fu">pfw_region</span><span class="op">(</span><span class="va">data</span>, <span class="st">"US-WA"</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 1 regions successfully filtered.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Filter for data from Washington, Oregon,</span></span></span>
 <span class="r-in"><span><span class="co"># and California using the state name</span></span></span>
 <span class="r-in"><span><span class="va">data_westcoastbestcoast</span> <span class="op">&lt;-</span> <span class="fu">pfw_region</span><span class="op">(</span><span class="va">data</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Washington"</span>, <span class="st">"Oregon"</span>, <span class="st">"California"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 3 regions successfully filtered.</span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
