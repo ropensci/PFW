@@ -1,5 +1,5 @@
 test_that("pfw_attr returns filter attributes correctly", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SPECIES_CODE = c("amerob", "norcar"),
     SUBNATIONAL1_CODE = c("US-WA", "US-CA"),
     Year = c(2022, 2023),
@@ -27,7 +27,7 @@ test_that("pfw_attr returns filter attributes correctly", {
 })
 
 test_that("pfw_attr handles no filters correctly", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SPECIES_CODE = character(),
     SUBNATIONAL1_CODE = character(),
     Year = integer(),

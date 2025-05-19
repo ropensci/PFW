@@ -8,7 +8,9 @@
 #'
 #' @return A filtered dataset containing only the selected regions.
 #' @examples
-#' \dontrun{
+#' # Download/load example dataset
+#' data <- pfw_example()
+#'
 #' # Filter for data only from Washington using the state name
 #' data_WA <- pfw_region(data, "Washington")
 #'
@@ -18,7 +20,6 @@
 #' # Filter for data from Washington, Oregon,
 #' # and California using the state name
 #' data_westcoastbestcoast <- pfw_region(data, c("Washington", "Oregon", "California"))
-#' }
 #'
 #' @export
 pfw_region <- function(data, regions) {
@@ -27,7 +28,7 @@ pfw_region <- function(data, regions) {
 
   # Ensure selected regions list is a vector
   if (!is.character(regions)) {
-    stop("Regions must be a character vector (e.g., c('Washington', 'California'))") # nocov
+    stop("Regions must be a character vector (e.g., c('Washington', 'California'))")
   }
 
   # Get existing filters
@@ -37,7 +38,10 @@ pfw_region <- function(data, regions) {
   }
 
   # Find matching SUBNATIONAL1_CODE values
-  matching_codes <- region_lookup$Code[region_lookup$Area %in% regions]
+  matching_codes <- unique(c(
+    region_lookup$Code[region_lookup$Area %in% regions],
+    regions[regions %in% region_lookup$Code]
+  ))
 
   # Handle country-level filtering
   if ("United States" %in% regions) {

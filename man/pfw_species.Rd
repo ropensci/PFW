@@ -21,7 +21,9 @@ This function filters Project FeederWatch data to include only selected species,
 or scientific names via the species translation table.
 }
 \examples{
-\dontrun{
+# Download/load example dataset
+data <- pfw_example()
+
 # Filter for only Greater Roadrunner using the common name
 data_GRRO <- pfw_species(data, "Greater Roadrunner")
 
@@ -34,6 +36,5 @@ data_masonsyard <- pfw_species(data, c("daejun", "sonspa", "spotow"))
 # Filter with a pre-existing species list
 species_list <- c("daejun", "sonspa", "spotow")
 data_masonsyard <- pfw_species(data, species_list)
-}
 
 }

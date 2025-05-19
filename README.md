@@ -2,51 +2,65 @@
 # PFW: Tools for Filtering and Processing Data from Project FeederWatch <img src="man/figures/logo.png" align="right" width=140 alt="Hexagonal PFW logo, featuring a Dark-eyed Junco with a seed in its beak."/>
 
 <!-- badges: start -->
+
 [![Static
 Badge](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 [![R-CMD-check](https://github.com/Visorbearer/PFW/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Visorbearer/PFW/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/Visorbearer/PFW/graph/badge.svg)](https://app.codecov.io/gh/Visorbearer/PFW)
+[![Codecov test
+coverage](https://codecov.io/gh/Visorbearer/PFW/graph/badge.svg)](https://app.codecov.io/gh/Visorbearer/PFW)
 <!-- badges: end -->
 
 ## Overview
 
-`PFW` is an R package designed for easy filtering, preparation, 
-and management of data from [Project FeederWatch](https://feederwatch.org/). 
+`PFW` is an R package designed for easy filtering, preparation, and
+management of data from [Project FeederWatch](https://feederwatch.org/).
 Project FeederWatch is a community-driven project initiated in the 1980s
-and run by the [Cornell Lab of Ornithology](https://www.birds.cornell.edu/) and [Birds Canada](https://www.birdscanada.org/)
-that compiles bird observations from thousands of "backyards, nature centers, 
-community areas, and other locales" across North America. Project FeederWatch data is easy to access, 
-but can often be tricky to work with; `PFW` serves to simplify and streamline the use of this data. 
-Included in `PFW` are tools for taxonomic rollup, filtering by survey characteristics 
-(species, state, etc.), merging in site metadata, and zerofilling for presence/absence modeling.
+and run by the [Cornell Lab of
+Ornithology](https://www.birds.cornell.edu/) and [Birds
+Canada](https://www.birdscanada.org/) that compiles bird observations
+from thousands of “backyards, nature centers, community areas, and other
+locales” across North America. Project FeederWatch data is easy to
+access, but can often be tricky to work with; `PFW` serves to simplify
+and streamline the use of this data. Included in `PFW` are tools for
+taxonomic rollup, filtering by survey characteristics (species, state,
+etc.), merging in site metadata, and zerofilling for presence/absence
+modeling.
+
+![FeederWatch locations from 1989-2020.](man/figures/feederwatch_map.jpg)
+
+*Figure from Bonter & Greig (2021), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
 
 ## Installation
 
-`PFW` is still in development, but the development version can be installed from GitHub using:
+`PFW` is still in development, but the development version can be
+installed from GitHub using:
 
 ``` r
-install.packages("devtools")
+install.packages("pak")
 
 # Install this package
-devtools::install_github("Visorbearer/PFW")
+pak::pak("Visorbearer/PFW")
 ```
 
 ## Vignette
 
-Background and details on using `PFW` to filter and process Project FeederWatch data are outlined in the [vignette](https://Visorbearer.github.io/PFW/articles/PFW.html).
+Background and details on using `PFW` to filter and process Project
+FeederWatch data are outlined in the
+[vignette](https://Visorbearer.github.io/PFW/articles/PFW.html).
 
 ## Citation
 
 To cite `PFW` in publications, use:
 
-> Maron, M. W. (2025). PFW: Tools for Filtering and Processing Data from Project FeederWatch.  
-> R package version 0.0.1. https://github.com/Visorbearer/PFW
+> Maron, M. W. (2025). PFW: Tools for Filtering and Processing Data from
+> Project FeederWatch.  
+> R package version 0.0.1. <https://github.com/Visorbearer/PFW>
 
 You can also run
 
-```r
+``` r
 citation("PFW")
 ```
 
@@ -54,15 +68,19 @@ in R when `PFW` is loaded.
 
 ## Quick Start
 
-This is a simple example which shows you how to do basic Project FeederWatch importing, filtering, zerofilling, and site data attachment.
-Here, we'll load the example dataset and filter it for Song Sparrow, Dark-eyed Junco, and Spotted Towhee from Washington
-and Oregon between 2022 and 2024 in November-February. Then, we'll zerofill that data and attach our site metadata:
+This is a simple example which shows you how to do basic Project
+FeederWatch importing, filtering, zerofilling, and site data attachment.
+Here, we’ll load the example dataset and filter it for Song Sparrow,
+Dark-eyed Junco, and Spotted Towhee from Washington and Oregon between
+2022 and 2024 in November-February. Then, we’ll zerofill that data and
+attach our site metadata:
 
 ``` r
 library(PFW)
 
 # Load in the included example dataset
-data <- pfw_example() # If you were using your own data, this would be pfw_import() instead.
+data <- pfw_example() # If you were using your own selection of PFW data, 
+                      # this would be pfw_import() instead.
 # pfw_import() defaults to the built-in filepath "/data-raw", but will accept a different filepath.
 
 # Create a list of study species
@@ -125,14 +143,19 @@ data_full <- pfw_sitedata(data_zf, path = "path/sitedata.csv")
 
 ## Feedback
 
-Have feedback? Please submit any bugs, typos, or improvements as an [issue](https://github.com/Visorbearer/PFW/issues) or as a [pull request](https://github.com/Visorbearer/PFW/pulls)!
-Your insights help improve `PFW`. 
+Have feedback? Please submit any bugs, typos, or improvements as an
+[issue](https://github.com/Visorbearer/PFW/issues) or as a [pull
+request](https://github.com/Visorbearer/PFW/pulls)! Your insights help
+improve `PFW`.
 
-Please note that `PFW` is released with a [Contributor Code of Conduct](https://Visorbearer.github.io/PFW/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+Please note that `PFW` is released with a [Contributor Code of
+Conduct](https://Visorbearer.github.io/PFW/CODE_OF_CONDUCT.html). By
+contributing to this project, you agree to abide by its terms.
 
 ## Acknowledgements
 
-`PFW` was built from code originally developed for Project FeederWatch data preparation in Maron et al. (2025). 
-While the function scripts in this package were created specifically for PFW, the code they are based on 
-benefited greatly from examples and code snippets provided by Emma Greig, who passed away prior to the 
-package's creation.
+`PFW` was built from code originally developed for Project FeederWatch
+data preparation in Maron et al. (2025). While the function scripts in
+this package were created specifically for PFW, the code they are based
+on benefited greatly from examples and code snippets provided by Emma
+Greig, who passed away prior to the package’s creation.

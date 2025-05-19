@@ -6,7 +6,7 @@
 #'
 #' @keywords internal
 #' @return A data frame containing columns `Code` (SUBNATIONAL1_CODE) and `Area` (region name).
-#' @export
+#' @noRd
 load_region_lookup <- function() {
   lookup_path <- system.file("extdata", "Region_Lookup.csv", package = "PFW")
 
@@ -14,5 +14,5 @@ load_region_lookup <- function() {
     stop("Region lookup table not found. Please reinstall/update the package to ensure 'Region_Lookup.csv' is in 'inst/extdata/'.")
   } # nocov end
 
-  read.csv(lookup_path, stringsAsFactors = FALSE)
+  read.csv(lookup_path)
 }

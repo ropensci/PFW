@@ -4,7 +4,10 @@
 \alias{pfw_download}
 \title{Download Raw Project FeederWatch Data by Year}
 \usage{
-pfw_download(years, folder = "data-raw/")
+pfw_download(
+  years,
+  folder = file.path(tools::R_user_dir("PFW", "data"), "data-raw")
+)
 }
 \arguments{
 \item{years}{Integer or vector of years (e.g., 2001, 2001:2023, c(1997, 2001, 2023)).}
@@ -22,9 +25,8 @@ and saves the .csv files into a local folder
 It will download all files required to cover the user-selected years.
 }
 \examples{
-\dontrun{
-# Download data from 2001-2023 into the default folder ("data-raw")
-pfw_download(years = 2001:2023)
-}
-
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+# Download data from 2001-2006 into the default folder
+pfw_download(years = 2001:2006)
+\dontshow{\}) # examplesIf}
 }

@@ -9,7 +9,9 @@
 #'
 #' @return A filtered dataset containing only the selected species.
 #' @examples
-#' \dontrun{
+#' # Download/load example dataset
+#' data <- pfw_example()
+#'
 #' # Filter for only Greater Roadrunner using the common name
 #' data_GRRO <- pfw_species(data, "Greater Roadrunner")
 #'
@@ -22,7 +24,6 @@
 #' # Filter with a pre-existing species list
 #' species_list <- c("daejun", "sonspa", "spotow")
 #' data_masonsyard <- pfw_species(data, species_list)
-#' }
 #'
 #' @export
 pfw_species <- function(data, species, suppress_ambiguous = FALSE) {
@@ -40,7 +41,7 @@ pfw_species <- function(data, species, suppress_ambiguous = FALSE) {
     stop("No species translation table found. Run `update_taxonomy()` to download the latest version.")
   }
 
-  species_table <- read.csv(taxonomy_path[1], stringsAsFactors = FALSE)
+  species_table <- read.csv(taxonomy_path[1])
 
   if (!all(c("species_code", "american_english_name", "scientific_name") %in% colnames(species_table))) {
     stop("Species translation table is missing required columns. Try updating it with `update_taxonomy()`.")

@@ -22,3 +22,8 @@ test_that("pfw_truncate filters correctly and preserves structure", {
   expect_false(".PFW_DOY" %in% names(truncated))
   expect_false(".PFW_DATE_TEMP" %in% names(truncated))
 })
+
+test_that("pfw_truncate throws error if date columns are missing", {
+  incomplete_data <- data.frame(Month = 1:3, Day = 1:3)
+  expect_error(pfw_truncate(incomplete_data), "must contain Year, Month, and Day columns.")
+})

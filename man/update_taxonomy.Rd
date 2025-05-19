@@ -19,9 +19,8 @@ readily be kept up to date annually, since it will only be
 manually updated on the PFW website otherwise.
 }
 \examples{
-\dontrun{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 # Prompt a species translation table taxonomy update
 update_taxonomy()
-}
-
+\dontshow{\}) # examplesIf}
 }

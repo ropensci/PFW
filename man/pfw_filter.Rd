@@ -40,7 +40,9 @@ This function filters Project FeederWatch data by
 species, region, and data validity.
 }
 \examples{
-\dontrun{
+# Download/load example dataset
+data <- pfw_example()
+
 # Filter for Dark-eyed Junco, Song Sparrow, and Spotted Towhee in Washington in 2023
 data_masonsyard <- pfw_filter(
   data,
@@ -50,11 +52,11 @@ data_masonsyard <- pfw_filter(
 )
 
 # Filter for all data from Washington, Oregon, or California from November
-# through February for 2001 through 2023
+# through February for 2021 through 2023
 data_westcoastwinter <- pfw_filter(
   data,
   region = c("Washington", "Oregon", "California"),
-  year = 2001:2023,
+  year = 2021:2023,
   month = 11:2
 )
 
@@ -67,6 +69,5 @@ data_GRRO_CA <- pfw_filter(
   reviewed = TRUE,
   rollup = FALSE
 )
-}
 
 }

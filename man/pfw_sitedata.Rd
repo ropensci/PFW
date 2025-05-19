@@ -21,9 +21,11 @@ file is not found, it will be downloaded automatically to
 the designated path or "data-raw" if no path is selected.
 }
 \examples{
-\dontrun{
-# Merge site metadata into  observation data
-data_sites <- pfw_sitedata(data, "data-raw/site_data.csv")
-}
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+# Download/loads the example dataset
+data <- pfw_example()
 
+# Merge site metadata into example observation data
+data_sites <- pfw_sitedata(data, "data-raw/site_data.csv")
+\dontshow{\}) # examplesIf}
 }

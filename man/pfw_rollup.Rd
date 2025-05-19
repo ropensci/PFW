@@ -17,9 +17,10 @@ This function removes spuhs, hybrids, and slashes and
 "demotes" subspecies/subspecies intergrades to their parent species.
 }
 \examples{
+# Download/load example dataset
+data <- pfw_example()
+
 # Apply taxonomic rollup to an active PFW dataset
-\dontrun{
 rolled_data <- pfw_rollup(data)
-}
 
 }

@@ -1,5 +1,5 @@
 test_that("pfw_date filters by year correctly", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     Year = c(2020, 2021, 2022, 2023),
     Month = c(11, 12, 1, 2),
     Day = c(1, 1, 1, 1),
@@ -11,7 +11,7 @@ test_that("pfw_date filters by year correctly", {
 })
 
 test_that("pfw_date filters by normal month range correctly", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     Year = rep(2023, 12),
     Month = 1:12,
     Day = rep(1, 12)
@@ -22,7 +22,7 @@ test_that("pfw_date filters by normal month range correctly", {
 })
 
 test_that("pfw_date filters by wrapped month range (e.g. 11 to 2)", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     Year = rep(2023, 12),
     Month = 1:12,
     Day = rep(1, 12)
@@ -33,7 +33,7 @@ test_that("pfw_date filters by wrapped month range (e.g. 11 to 2)", {
 })
 
 test_that("pfw_date attaches correct filter attribute", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     Year = c(2021, 2022),
     Month = c(11, 2),
     Day = c(1, 1)
@@ -51,6 +51,6 @@ test_that("pfw_date attaches correct filter attribute", {
 })
 
 test_that("pfw_date errors if data is missing or NULL", {
-  expect_error(pfw_date(), "No dataset provided.")
-  expect_error(pfw_date(NULL), "No dataset provided.")
+  expect_error(pfw_date())
+  expect_error(pfw_date(NULL))
 })

@@ -1,6 +1,6 @@
 test_that("pfw_species filters data correctly by common name", {
   # Create a test dataset
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR", "CA-BC", "US-TX"),
     SPECIES_CODE = c("amerob", "norcar", "baleag", "amerob", "norcar"),
     COUNT = c(5, 3, 2, 8, 6)
@@ -18,7 +18,7 @@ test_that("pfw_species filters data correctly by common name", {
 })
 
 test_that("pfw_species filters data correctly by scientific name", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR", "CA-BC", "US-TX"),
     SPECIES_CODE = c("amerob", "norcar", "baleag", "amerob", "norcar"),
     COUNT = c(5, 3, 2, 8, 6)
@@ -36,7 +36,7 @@ test_that("pfw_species filters data correctly by scientific name", {
 })
 
 test_that("pfw_species filters multiple species correctly", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR", "CA-BC", "US-TX"),
     SPECIES_CODE = c("amerob", "norcar", "baleag", "amerob", "norcar"),
     COUNT = c(5, 3, 2, 8, 6)
@@ -54,7 +54,7 @@ test_that("pfw_species filters multiple species correctly", {
 })
 
 test_that("pfw_species warns for invalid species", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR", "CA-BC", "US-TX"),
     SPECIES_CODE = c("amerob", "norcar", "baleag", "amerob", "norcar"),
     COUNT = c(5, 3, 2, 8, 6)
@@ -71,7 +71,7 @@ test_that("pfw_species warns for invalid species", {
   )
 })
 test_that("pfw_species adds correct filter attribute", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR", "CA-BC", "US-TX"),
     SPECIES_CODE = c("amerob", "norcar", "baleag", "amerob", "norcar"),
     COUNT = c(5, 3, 2, 8, 6)

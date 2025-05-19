@@ -1,7 +1,6 @@
 test_that("pfw_import reads CSV files correctly", {
   # Create a temporary test folder
-  test_folder <- tempfile()
-  dir.create(test_folder)
+  test_folder <- withr::local_tempdir()
 
   # Create two valid dummy PFW-style CSVs
   write.csv(data.frame(
@@ -22,14 +21,29 @@ test_that("pfw_import reads CSV files correctly", {
   # Assert success
   expect_equal(nrow(imported_data), 2)
   expect_true(all(c("SPECIES_CODE", "HOW_MANY", "SUB_ID") %in% names(imported_data)))
+})
 
-  unlink(test_folder, recursive = TRUE)
+test_that("pfw_import skips files with incorrect structure", {
+  test_folder <- withr::local_tempdir()
+
+  # Valid file
+  write.csv(data.frame(
+    SPECIES_CODE = "amerob", HOW_MANY = 1, SUB_ID = "S1"
+  ), file.path(test_folder, "valid.csv"), row.names = FALSE)
+
+  # Invalid file
+  write.csv(data.frame(SPECIES_CODE = "aaaah!"),
+            file.path(test_folder, "invalid.csv"), row.names = FALSE)
+
+  imported <- pfw_import(folder = test_folder)
+
+  expect_equal(nrow(imported), 1)
+  expect_equal(imported$SPECIES_CODE, "amerob")
 })
 
 test_that("pfw_import applies filters and stores attributes correctly", {
   # Create a temporary folder with a fake PFW-style file
-  test_folder <- tempfile()
-  dir.create(test_folder)
+  test_folder <- withr::local_tempdir()
 
   test_data <- data.frame(
     SUB_ID = c("S1", "S2", "S3"),
@@ -65,7 +79,4 @@ test_that("pfw_import applies filters and stores attributes correctly", {
   expect_true(any(vapply(filters, function(f) f$type == "region", logical(1))))
   expect_true(any(vapply(filters, function(f) f$type == "date", logical(1))))
   expect_true(any(vapply(filters, function(f) f$type == "valid", logical(1))))
-
-  # Cleanup
-  unlink(test_folder, recursive = TRUE)
 })

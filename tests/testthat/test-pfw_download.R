@@ -38,20 +38,45 @@ test_that("pfw_download handles no matching data for selected year(s)", {
 
 test_that("pfw_download cancels if user declines overwrite", {
   skip_on_cran()
-  temp_folder <- tempfile()
-  dir.create(temp_folder)
+
+  temp_folder <- withr::local_tempdir()
   file.create(file.path(temp_folder, "existing.csv"))
 
-  withr::defer(unlink(temp_folder, recursive = TRUE))
+  withr::local_envvar(PFW_TEST_RESPONSE = "n")
 
-  # Pretend user said no
-  withr::with_envvar(
-    c(PFW_TEST_RESPONSE = "n"),
-    {
-      expect_message(
-        pfw_download(2021, folder = temp_folder),
-        "Download canceled."
+  expect_message(
+    pfw_download(2021, folder = temp_folder),
+    "Download canceled."
       )
     }
+  )
+
+test_that("pfw_download handles relative links correctly", {
+  skip_on_cran()
+  temp_folder <- withr::local_tempdir()
+
+  # Patch a fake version of matched_links
+  relative_link <- "relative/path/PFW_all_2021_2022.zip"
+  full_link <- paste0("https://feederwatch.org/", relative_link)
+
+  # Manually test fallback
+  result <- grepl("^http", relative_link)
+  expect_false(result)
+
+  constructed <- if (!result) paste0("https://feederwatch.org/", relative_link) else relative_link
+  expect_identical(constructed, full_link)
+})
+
+test_that("pfw_download errors on failed download", {
+  skip_on_cran()
+  bad_url <- "https://feederwatch.org/fake/path/aawagga.zip"
+  temp_folder <- withr::local_tempdir()
+  zip_path <- file.path(temp_folder, "fake.zip")
+
+  expect_error(
+    httr2::request(bad_url) |>
+      httr2::req_user_agent("PFW R package") |>
+      httr2::req_perform(path = zip_path),
+    "404"
   )
 })

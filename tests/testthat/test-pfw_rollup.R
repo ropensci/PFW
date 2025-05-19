@@ -1,5 +1,5 @@
 test_that("pfw_rollup demotes subspecies correctly", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SPECIES_CODE = c("cacgoo2", "frsgro1", "greprc1", "amerob", "cangoo"),
     HOW_MANY = c(5, 3, 2, 8, 6)
   )
@@ -11,7 +11,7 @@ test_that("pfw_rollup demotes subspecies correctly", {
 })
 
 test_that("pfw_rollup removes spuhs", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SPECIES_CODE = c("cacgoo2", "frsgro1", "greprc1", "sapsuc", "amerob"),
     HOW_MANY = c(5, 3, 2, 10, 6)
   )
@@ -23,7 +23,7 @@ test_that("pfw_rollup removes spuhs", {
 })
 
 test_that("pfw_rollup removes hybrids and slashes", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SPECIES_CODE = c("cacgoo2", "frsgro1", "greprc1", "x00712", "y00019", "amerob"),
     HOW_MANY = c(5, 3, 2, 8, 9, 6)
   )
@@ -35,7 +35,7 @@ test_that("pfw_rollup removes hybrids and slashes", {
 })
 
 test_that("pfw_rollup correctly attaches rollup attribute", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SPECIES_CODE = c("amerob", "cacgoo2"),
     HOW_MANY = c(5, 3)
   )

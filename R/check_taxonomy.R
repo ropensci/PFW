@@ -8,7 +8,7 @@
 #'
 #' @keywords internal
 #' @return Logical (`TRUE` if a file exists, `FALSE` if not, with a message).
-#' @export
+#' @noRd
 check_taxonomy <- function() {
   # Determine the directory to check, allowing override for testing
   translation_folder <- Sys.getenv("PFW_TRANSLATION_DIR", unset = file.path("inst", "extdata", "SpeciesTranslationTable"))

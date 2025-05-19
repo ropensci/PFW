@@ -7,17 +7,14 @@
 #'
 #' @return A cleaned dataset with only species-level codes and a rollup attribute.
 #' @examples
+#' # Download/load example dataset
+#' data <- pfw_example()
+#'
 #' # Apply taxonomic rollup to an active PFW dataset
-#' \dontrun{
 #' rolled_data <- pfw_rollup(data)
-#' }
 #'
 #' @export
 pfw_rollup <- function(data) {
-  if (missing(data) || is.null(data)) {
-    stop("No dataset provided.") # nocov
-  }
-
   # Get existing filters before modifying data
   existing_filters <- attr(data, "pfw_filters")
   if (is.null(existing_filters)) {
@@ -36,7 +33,7 @@ pfw_rollup <- function(data) {
   }
 
   # Read in translation table
-  species_table <- read.csv(taxonomy_path[1], stringsAsFactors = FALSE)
+  species_table <- read.csv(taxonomy_path[1])
 
   # Create a lookup for demoting subspecies/intergrades
   subspecies_lookup <- setNames(species_table$alt_full_spp_code, species_table$species_code)

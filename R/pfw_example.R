@@ -25,15 +25,15 @@ pfw_example <- function() { # nocov start
     path <- tempfile(fileext = ".csv")
 
     tryCatch(
-      {
-        utils::download.file(url, path, mode = "wb")
-      },
+      httr2::request(url) |>
+        httr2::req_user_agent("PFW R package") |>
+        httr2::req_perform(path = path),
       error = function(e) {
         stop("Failed to download example dataset: ", e$message)
       }
     )
   }
-  data <- read.csv(path, stringsAsFactors = FALSE)
+  data <- read.csv(path)
   attr(data, "pfw_import_path") <- dirname(path)
   message("Example dataset loaded.")
   return(invisible(data))

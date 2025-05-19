@@ -28,7 +28,7 @@ pfw_dictionary <- function(variable = NULL) {
   }
 
   # Load the dictionary
-  dictionary <- read.csv(dict_path[1], stringsAsFactors = FALSE)
+  dictionary <- read.csv(dict_path[1])
 
   if (is.null(variable)) {
     for (i in seq_len(nrow(dictionary))) {

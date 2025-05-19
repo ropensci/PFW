@@ -9,21 +9,19 @@
 #' manually updated on the PFW website otherwise.
 #'
 #' @return A message confirming whether the update was successful.
-#' @examples
-#' \dontrun{
+#' @examplesIf interactive()
 #' # Prompt a species translation table taxonomy update
 #' update_taxonomy()
-#' }
 #'
 #' @export
-update_taxonomy <- function() {
+update_taxonomy <- function() { # nocov start
 
   # Ensure the SpeciesTranslationTable directory exists
   translation_folder <- Sys.getenv("PFW_TRANSLATION_DIR", unset = file.path("inst", "extdata", "SpeciesTranslationTable"))
   if (!dir.exists(translation_folder)) {
     dir.create(translation_folder, recursive = TRUE) # Create directories if missing
     message("Created 'inst/extdata/SpeciesTranslationTable/' directory.")
-  } # nocov start
+  }
 
   # Check for internet connection
   if (!curl::has_internet()) {
@@ -31,19 +29,18 @@ update_taxonomy <- function() {
   } # nocov end
 
   # Read the PFW raw dataset request page
-  page <- rvest::read_html("https://feederwatch.org/explore/raw-dataset-requests/")
+  # nocov start
+  page <- httr2::request("https://feederwatch.org/explore/raw-dataset-requests/") |>
+    httr2::req_user_agent("PFW R package") |>
+    httr2::req_perform() |>
+    httr2::resp_body_html()
 
   # Extract all links from the page
-  links <- page |>
-    rvest::html_nodes("a") |>
-    rvest::html_attr("href")
-
-  # Find the link that contains "PFW_spp_translation_table"
-  taxonomy_link <- links[grepl("PFW_spp_translation_table_", links)]
+  links <- xml2::xml_find_all(page, ".//a[contains(@href, 'PFW_spp_translation_table_')]")
+  hrefs <- xml2::xml_attr(links, "href")
 
   # If no link is found, stop with an error message
-  # nocov start
-  if (length(taxonomy_link) == 0) {
+  if (length(hrefs) == 0) {
     stop(
       "No species translation table found. FeederWatch may have changed their webpage format.\n",
       "You can go to https://feederwatch.org/explore/raw-dataset-requests/ ",
@@ -52,9 +49,9 @@ update_taxonomy <- function() {
   } # nocov end
 
   # Construct the full URL of the species translation table, since it updates every year
-  full_url <- taxonomy_link
-  if (!grepl("^http", taxonomy_link)) {
-    full_url <- paste0("https://feederwatch.org", taxonomy_link) # nocov
+  full_url <- hrefs[[1]]
+  if (!grepl("^http", full_url)) {
+    full_url <- paste0("https://feederwatch.org", full_url)
   }
 
   # Define the save location
@@ -69,16 +66,19 @@ update_taxonomy <- function() {
     if (response == "ask") {
       response <- readline(prompt = "Overwrite existing files? (y/n): ")
     }
-
+  # nocov start
     if (tolower(response) != "y") {
       message("Update canceled.")
-      return()
+      return(invisible(NULL))
     }
   }
-
+  # nocov end
 
   # Download and save the file
-  utils::download.file(full_url, taxonomy_path, mode = "wb") # nocov start
+  # nocov start
+  httr2::request(full_url) |>
+    httr2::req_user_agent("PFW R package") |>
+    httr2::req_perform(path = taxonomy_path)
 
   message(
     "Species translation table updated successfully!\n",

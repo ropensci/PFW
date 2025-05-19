@@ -9,12 +9,14 @@
 #'
 #' @return A filtered dataset with date filter attributes.
 #' @examples
-#' \dontrun{
+#' # Download/load example dataset
+#' data <- pfw_example()
+#'
 #' # Filter by a single year
-#' data_2001 <- pfw_date(data, year = 2001)
+#' data_2021 <- pfw_date(data, year = 2021)
 #'
 #' # Filter by multiple years
-#' data_0123 <- pfw_date(data, year = 2001:2023)
+#' data_2123 <- pfw_date(data, year = 2021:2023)
 #'
 #' # Filter by a single month
 #' data_feb <- pfw_date(data, month = 2)
@@ -23,15 +25,10 @@
 #' data_winter <- pfw_date(data, month = 11:2)
 #'
 #' # Filter by both year and month
-#' data_filtered <- pfw_date(data, year = 2001:2023, month = 11:2)
-#'}
+#' data_filtered <- pfw_date(data, year = 2021:2023, month = 11:2)
 #'
 #' @export
 pfw_date <- function(data, year = NULL, month = NULL) {
-  if (missing(data) || is.null(data)) {
-    stop("No dataset provided.")
-  }
-
   # Create date column (does not overwrite original columns)
   if (!"PFW_DATE" %in% names(data) && nrow(data) > 0) {
     data$PFW_DATE <- lubridate::make_date(year = data$Year, month = data$Month, day = data$Day)

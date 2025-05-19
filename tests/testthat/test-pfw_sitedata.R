@@ -3,17 +3,15 @@ test_that("pfw_sitedata correctly merges site metadata", {
   obs_data <- data.frame(
     LOC_ID = c("L001", "L002"),
     PROJ_PERIOD_ID = c(1001, 1002),
-    SPECIES_CODE = c("amerob", "bkcchi"),
-    stringsAsFactors = FALSE
+    SPECIES_CODE = c("amerob", "bkcchi")
   )
 
   # Sample site metadata
   site_data <- data.frame(
     loc_id = c("L001", "L002"),
     proj_period_id = c(1001, 1002),
-    habitat_type = c("urban", "rural"),
-    feeder_count = c(2, 1),
-    stringsAsFactors = FALSE
+    habitat_type = c("forest", "not... forest"),
+    feeder_count = c(2, 1)
   )
 
   # Save temp CSV
@@ -26,7 +24,7 @@ test_that("pfw_sitedata correctly merges site metadata", {
   # Test merged output
   expect_equal(nrow(merged), 2)
   expect_true(all(c("habitat_type", "feeder_count") %in% colnames(merged)))
-  expect_equal(merged$habitat_type[1], "urban")
+  expect_equal(merged$habitat_type[1], "forest")
   expect_equal(merged$feeder_count[2], 1)
 })
 

@@ -1,6 +1,6 @@
 test_that("pfw_zerofill adds zeros for undetected species on existing checklists", {
   # Simulated full dataset (like from pfw_import)
-  full_data <- data.table::data.table(
+  full_data <- data.frame(
     SUB_ID = c("S1", "S1", "S2", "S3"),
     SPECIES_CODE = c("amerob", "baleag", "amerob", "norcar"),
     HOW_MANY = c(2, 1, 3, 1),
@@ -36,7 +36,7 @@ test_that("pfw_zerofill adds zeros for undetected species on existing checklists
 })
 
 test_that("pfw_zerofill works with unfiltered data", {
-  unfiltered <- data.table::data.table(
+  unfiltered <- data.frame(
     SUB_ID = c("S1", "S2"),
     SPECIES_CODE = c("amerob", "norcar"),
     HOW_MANY = c(3, 2)

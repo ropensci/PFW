@@ -1,5 +1,5 @@
 test_that("pfw_filter correctly filters by species", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR", "CA-BC", "US-TX"),
     SPECIES_CODE = c("amerob", "norcar", "baleag", "amerob", "norcar"),
     VALID = c(1, 1, 1, 1, 1),
@@ -13,7 +13,7 @@ test_that("pfw_filter correctly filters by species", {
 })
 
 test_that("pfw_filter correctly filters by region", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR", "CA-BC", "US-TX"),
     SPECIES_CODE = c("amerob", "norcar", "baleag", "amerob", "norcar"),
     VALID = c(1, 1, 1, 1, 1),
@@ -27,7 +27,7 @@ test_that("pfw_filter correctly filters by region", {
 })
 
 test_that("pfw_filter correctly filters by species and region together", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR", "CA-BC", "US-TX"),
     SPECIES_CODE = c("amerob", "norcar", "baleag", "amerob", "norcar"),
     VALID = c(1, 1, 1, 1, 1),
@@ -41,8 +41,23 @@ test_that("pfw_filter correctly filters by species and region together", {
   expect_true(all(filtered_data$SPECIES_CODE == "amerob"))
 })
 
+test_that("pfw_filter handles wrapped month ranges", {
+  test_data <- data.frame(
+    SUBNATIONAL1_CODE = rep("US-WA", 4),
+    SPECIES_CODE = rep("amerob", 4),
+    VALID = rep(1, 4),
+    REVIEWED = rep(1, 4),
+    Year = c(2023, 2023, 2023, 2023),
+    Month = c(11, 12, 1, 2),
+    Day = rep(15, 4)
+  )
+
+  filtered <- pfw_filter(test_data, month = 11:2)
+  expect_equal(nrow(filtered), 4)
+})
+
 test_that("pfw_filter correctly applies valid and reviewed filters (default TRUE)", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR", "CA-BC", "US-TX"),
     SPECIES_CODE = c("amerob", "norcar", "baleag", "amerob", "norcar"),
     VALID = c(1, 1, 1, 1, 1),
@@ -57,7 +72,7 @@ test_that("pfw_filter correctly applies valid and reviewed filters (default TRUE
 })
 
 test_that("pfw_filter allows unreviewed and invalid data when explicitly set", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR", "CA-BC", "US-TX"),
     SPECIES_CODE = c("amerob", "norcar", "baleag", "amerob", "norcar"),
     VALID = c(1, 0, 1, 0, 1), # Some rows invalid
@@ -73,7 +88,7 @@ test_that("pfw_filter allows unreviewed and invalid data when explicitly set", {
 })
 
 test_that("pfw_filter returns an empty dataset when no matches are found", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR", "CA-BC", "US-TX"),
     SPECIES_CODE = c("amerob", "norcar", "baleag", "amerob", "norcar"),
     VALID = c(1, 1, 1, 1, 1),
@@ -88,7 +103,7 @@ test_that("pfw_filter returns an empty dataset when no matches are found", {
 })
 
 test_that("pfw_filter correctly stores attributes for all filters", {
-  test_data <- data.table::data.table(
+  test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-WA", "US-OR", "CA-BC", "US-WA"),
     SPECIES_CODE = c("amerob", "baleag", "baleag", "amerob", "amerob"),
     VALID = c(1, 1, 1, 1, 1),

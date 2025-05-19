@@ -23,14 +23,14 @@
 pfw_import <- function(folder = "data-raw/", filter = FALSE, ...) {
   # Ensure the folder exists
   if (!dir.exists(folder)) {
-    stop("The folder '", folder, "' does not exist. Please create it and download ONLY Project FeederWatch CSV files into it.")
+    stop("The folder '", folder, "' does not exist. Please create it and download Project FeederWatch CSV files into it.")
   }
 
   # List all CSV files in the folder
   files <- list.files(path = folder, pattern = "\\.csv$", full.names = TRUE)
 
   if (length(files) == 0) {
-    stop("No CSV files found in '", folder, "'. Please download ONLY Project FeederWatch data into this folder or specify the correct path.")
+    stop("No CSV files found in '", folder, "'. Please download Project FeederWatch data into this folder or specify the correct path.")
   }
 
   # Load valid PFW files one at a time
@@ -39,28 +39,24 @@ pfw_import <- function(folder = "data-raw/", filter = FALSE, ...) {
 
   for (file in files) {
     message("Reading: ", file)
-    data <- data.table::fread(file)
+    data <- read.csv(file)
 
     # Skip if it's not a valid PFW observation file
-    if (!all(expected_cols %in% names(data))) { # nocov start
+    if (!all(expected_cols %in% names(data))) {
       message("Skipping file (incorrect data structure): ", file)
       next
-    } # nocov end
+    }
 
     data_list <- append(data_list, list(data))
-    rm(data)
-    gc()
   }
 
   if (length(data_list) == 0) {
     stop("No valid Project FeederWatch data files were found in the folder.")
   }
 
-  # Combine all loaded data
-  combined_data <- data.table::rbindlist(data_list, fill = TRUE)
-
-  # Remove NAs in species counts
-  combined_data <- dplyr::filter(combined_data, !is.na(HOW_MANY))
+  # Combine all loaded data and remove NAs in species counts
+  combined_data <- dplyr::bind_rows(data_list) |>
+    dplyr::filter(!is.na(HOW_MANY))
 
   # Save import path as an attribute, even if it's the default, so it can be called after a restart
   attr(combined_data, "pfw_import_path") <- folder

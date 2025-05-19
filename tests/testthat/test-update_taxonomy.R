@@ -1,8 +1,7 @@
 test_that("update_taxonomy downloads and saves a file", {
   skip_on_cran()
   # Create a temporary directory to mimic inst/extdata/SpeciesTranslationTable/
-  test_taxonomy_folder <- tempfile()
-  dir.create(test_taxonomy_folder, recursive = TRUE)
+  test_taxonomy_folder <- withr::local_tempdir()
 
   # Manually set the path where the file should be saved
   taxonomy_path <- file.path(test_taxonomy_folder, "PFW_spp_translation_table.csv")
@@ -13,16 +12,12 @@ test_that("update_taxonomy downloads and saves a file", {
 
   # Check that the file now exists
   expect_true(file.exists(taxonomy_path))
-
-  # Cleanup: Remove the test folder after testing
-  unlink(test_taxonomy_folder, recursive = TRUE)
 })
 
 test_that("update_taxonomy warns when an existing file is present", {
-  test_folder <- tempfile()
-  dir.create(test_folder, recursive = TRUE)
+  test_folder <- withr::local_tempdir()
 
-  # Create a dummy existing file
+  # Create a fake file
   existing_file <- file.path(test_folder, "PFW_spp_translation_table.csv")
   write.csv(data.frame(Species = "Song Sparrow"), existing_file, row.names = FALSE)
 
@@ -33,9 +28,4 @@ test_that("update_taxonomy warns when an existing file is present", {
       expect_message(update_taxonomy(), "A species translation table file already exists.")
     }
   )
-
-  # Cleanup
-  unlink(test_folder, recursive = TRUE)
 })
-
-

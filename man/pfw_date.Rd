@@ -21,12 +21,14 @@ This function filters Project FeederWatch data by year and/or month,
 allowing range-based filtering and wrapping months around new years.
 }
 \examples{
-\dontrun{
+# Download/load example dataset
+data <- pfw_example()
+
 # Filter by a single year
-data_2001 <- pfw_date(data, year = 2001)
+data_2021 <- pfw_date(data, year = 2021)
 
 # Filter by multiple years
-data_0123 <- pfw_date(data, year = 2001:2023)
+data_2123 <- pfw_date(data, year = 2021:2023)
 
 # Filter by a single month
 data_feb <- pfw_date(data, month = 2)
@@ -35,7 +37,6 @@ data_feb <- pfw_date(data, month = 2)
 data_winter <- pfw_date(data, month = 11:2)
 
 # Filter by both year and month
-data_filtered <- pfw_date(data, year = 2001:2023, month = 11:2)
-}
+data_filtered <- pfw_date(data, year = 2021:2023, month = 11:2)
 
 }

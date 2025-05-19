@@ -10,20 +10,17 @@
 #'
 #' @return The original dataset with site metadata merged in.
 #'
-#' @examples
-#' \dontrun{
-#' # Merge site metadata into  observation data
+#' @examplesIf interactive()
+#' # Download/loads the example dataset
+#' data <- pfw_example()
+#'
+#' # Merge site metadata into example observation data
 #' data_sites <- pfw_sitedata(data, "data-raw/site_data.csv")
-#' }
 #'
 #' @export
 pfw_sitedata <- function(data, path) {
-  if (missing(data) || is.null(data)) {
-    stop("No observation dataset provided.")
-  }
-
   if (missing(path) || is.null(path)) {
-    path <- file.path("data-raw", "site_data.csv")
+    path <- file.path(tools::R_user_dir("PFW", "data"), "data-raw", "site_data.csv")
   }
 
   # Download site data if path doesn't exist
@@ -31,15 +28,16 @@ pfw_sitedata <- function(data, path) {
     dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
 
     # Scrape the FeederWatch raw dataset request page
-    page <- rvest::read_html("https://feederwatch.org/explore/raw-dataset-requests/")
-    links <- page |>
-      rvest::html_nodes("a") |>
-      rvest::html_attr("href")
+    page <- httr2::request("https://feederwatch.org/explore/raw-dataset-requests/") |>
+      httr2::req_user_agent("PFW R package") |>
+      httr2::req_perform() |>
+      httr2::resp_body_html()
 
     # Look for the site metadata file link
-    site_link <- links[grepl("PFW_count_site_data_public_", links)]
+    links <- xml2::xml_find_all(page, ".//a[contains(@href, 'PFW_count_site_data_public_')]")
+    hrefs <- xml2::xml_attr(links, "href")
 
-    if (length(site_link) == 0) { # nocov start
+    if (length(hrefs) == 0) { # nocov start
       stop(
         "No site metadata file found. FeederWatch may have changed their webpage format.\n",
         "You can go to https://feederwatch.org/explore/raw-dataset-requests/ ",
@@ -48,19 +46,21 @@ pfw_sitedata <- function(data, path) {
     } # nocov end
 
     # Construct full URL
-    site_url <- site_link
-    if (!grepl("^http", site_link)) { # nocov start
-      site_url <- paste0("https://feederwatch.org", site_link)
+    site_url <- hrefs[[1]]
+    if (!grepl("^http", site_url)) {
+      site_url <- paste0("https://feederwatch.org", site_url)
     }
     message("Site metadata not found at provided path. Downloading from FeederWatch...")
 
     tryCatch(
-      utils::download.file(site_url, destfile = path, mode = "wb"),
+      httr2::request(site_url) |>
+        httr2::req_user_agent("PFW R package") |>
+        httr2::req_perform(path = path),
       error = function(e) {
         stop("Failed to download site metadata: ", e$message)
       }
     )
-  } # nocov end
+  }
 
   # Check again to be safe
   if (!file.exists(path)) {
@@ -73,13 +73,14 @@ pfw_sitedata <- function(data, path) {
   }
 
   # Load site metadata
-  site_data <- read.csv(path, stringsAsFactors = FALSE)
+  site_data <- read.csv(path)
 
   # Normalize column names for joining
   names(site_data) <- tolower(names(site_data))
 
   # Perform join
-  merged <- dplyr::left_join(data, site_data, by = c("LOC_ID" = "loc_id", "PROJ_PERIOD_ID" = "proj_period_id"))
+  merged <- dplyr::left_join(data, site_data, by = c("LOC_ID" = "loc_id",
+                                                     "PROJ_PERIOD_ID" = "proj_period_id"))
 
   message("Site metadata successfully merged.")
   return(invisible(merged))

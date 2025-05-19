@@ -10,14 +10,12 @@
 #' @param folder The folder where Project FeederWatch data is stored. Default is "data-raw/".
 #'
 #' @return Invisibly returns the downloaded files.
-#' @examples
-#' \dontrun{
-#' # Download data from 2001-2023 into the default folder ("data-raw")
-#' pfw_download(years = 2001:2023)
-#' }
+#' @examplesIf interactive()
+#' # Download data from 2001-2006 into the default folder
+#' pfw_download(years = 2001:2006)
 #'
 #' @export
-pfw_download <- function(years, folder = "data-raw/") {
+pfw_download <- function(years, folder = file.path(tools::R_user_dir("PFW", "data"), "data-raw")) {
   if (missing(years) || is.null(years)) stop("You must specify at least one year.")
   years <- as.integer(years)
 
@@ -26,20 +24,22 @@ pfw_download <- function(years, folder = "data-raw/") {
     stop("Unable to download data; no internet connection found. Please reconnect to the internet and try again.")
   }
   # Ensure folder exists or create it
-  # nocov start
   if (!dir.exists(folder)) {
     dir.create(folder, recursive = TRUE)
-    message("Created folder ", folder, " in working directory.")
+    message("Created folder ", folder)
   }
 
   # Read webpage
-  page <- rvest::read_html("https://feederwatch.org/explore/raw-dataset-requests/")
-  links <- page |>
-    rvest::html_nodes("a") |>
-    rvest::html_attr("href")
+  # nocov start
+  page <- httr2::request("https://feederwatch.org/explore/raw-dataset-requests/") |>
+    httr2::req_user_agent("PFW R package") |>
+    httr2::req_perform() |>
+    httr2::resp_body_html()
 
-  # Filter for .zip folder links containing year ranges
-  zip_links <- links[grepl("PFW_all_\\d{4}_\\d{4}.*\\.zip$", links)]
+  # Filter for .zip folder links containing selected years
+  links <- xml2::xml_find_all(page, ".//a[contains(@href, '.zip')]")
+  hrefs <- xml2::xml_attr(links, "href")
+  zip_links <- hrefs[grepl("PFW_all_\\d{4}_\\d{4}.*\\.zip$", hrefs)]
 
   # Parse year ranges and filter links that overlap with input years
   # Using this matching method will prevent issues as new years are added to the webpage's data
@@ -48,14 +48,11 @@ pfw_download <- function(years, folder = "data-raw/") {
     if (length(match) == 3) {
       range_years <- as.integer(match[2]):as.integer(match[3])
       overlap <- any(years %in% range_years)
-      list(link = link, range = range_years, overlap = overlap)
-    } else {
-      NULL
-    }
+      list(link = link, overlap = overlap)
+    } else NULL
   })
 
   matched_links <- Filter(function(x) !is.null(x) && x$overlap, matches)
-
   if (length(matched_links) == 0) {
     message("No available data matched your specified years.")
     return(invisible(NULL))
@@ -73,17 +70,19 @@ pfw_download <- function(years, folder = "data-raw/") {
       return(invisible(NULL))
     }
   }
-
   # Download, unzip, and clean up
   for (entry in matched_links) {
     link <- entry$link
-    zip_name <- basename(link)
     if (!grepl("^http", link)) {
       link <- paste0("https://feederwatch.org", link)
     }
-
+    zip_name <- basename(link)
     zip_path <- file.path(folder, zip_name)
-    utils::download.file(link, zip_path, mode = "wb")
+
+    httr2::request(link) |>
+      httr2::req_user_agent("PFW R package") |>
+      httr2::req_perform(path = zip_path)
+
     utils::unzip(zip_path, exdir = folder)
     unlink(zip_path)
     message("Downloaded and extracted: ", zip_name)

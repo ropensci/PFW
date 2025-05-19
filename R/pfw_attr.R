@@ -8,10 +8,14 @@
 #'
 #' @return A named list of applied filters.
 #' @examples
-#' \dontrun{
+#' # Download/load example dataset
+#' data <- pfw_example()
+#'
+#' # Filter for Dark-eyed Junco
+#' filtered_data <- pfw_species(data, "Dark-eyed Junco")
+#'
 #' # View filters applied to your active data
 #' pfw_attr(filtered_data)
-#' }
 #'
 #' @export
 pfw_attr <- function(data) {
