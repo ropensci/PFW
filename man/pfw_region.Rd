@@ -21,7 +21,7 @@ include only specified states, provinces, or countries.
 \examples{
 \dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 # Download/load example dataset
-data <- pfw_example()
+data <- pfw_example
 
 # Filter for data only from Washington using the state name
 data_WA <- pfw_region(data, "Washington")

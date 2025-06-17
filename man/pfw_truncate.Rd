@@ -23,7 +23,7 @@ after November 8 and before April 3.
 }
 \examples{
 # Download/load example dataset
-data <- pfw_example()
+data <- pfw_example
 
 # Truncate an active PFW dataset to November 8 - April 3
 truncated_data <- pfw_truncate(data)

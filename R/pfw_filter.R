@@ -15,7 +15,7 @@
 #' @return A filtered dataset.
 #' @examplesIf interactive()
 #' # Download/load example dataset
-#' data <- pfw_example()
+#' data <- pfw_example
 #'
 #' # Filter for Dark-eyed Junco, Song Sparrow, and Spotted Towhee in Washington in 2023
 #' data_masonsyard <- pfw_filter(
@@ -44,11 +44,27 @@
 #'   rollup = FALSE
 #' )
 #'
+#' # Filter for Fox Sparrow with rollup
+#' rollFOSP <- pfw_filter(pfw_example, species = "Fox Sparrow", rollup = TRUE)
+#' # Taxonomic rollup complete. 116 ambiguous records removed.
+#' # 1 species successfully filtered.
+#' # Filtering complete. 8070 records remaining.
+#'
+#' # Filter for Fox Sparrow without rollup
+#' norollFOSP <- pfw_filter(pfw_example, species = "Fox Sparrow", rollup = FALSE)
+#' # 1 species successfully filtered.
+#' # Filtering complete. 7745 records remaining.
+#'
+#' # 116 records were identified to subspecies (e.g. "Fox Sparrow (Sooty)", listed as 'foxsp2' in SPECIES_CODE)
+#' # These records are merged into the parent "Fox Sparrow" total with rollup,
+#' # but excluded in favor of records only identified exactly as
+#' # "Fox Sparrow" (no subspecies, only SPECIES_CODE = 'foxspa') if rollup = FALSE.
+#'
 #' @export
 pfw_filter <- function(data, species = NULL, region = NULL, year = NULL, month = NULL,
                        valid = TRUE, reviewed = NULL, rollup = TRUE) {
   if (missing(data) || is.null(data)) {
-    stop("No dataset provided. Ensure you pass PFW data from `pfw_import()`.")
+    stop("No dataset provided. Ensure you pass PFW data from `pfw_import()`.", call. = FALSE)
   }
 
   # Start with a fresh filter log

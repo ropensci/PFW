@@ -24,7 +24,7 @@ pfw_dictionary <- function(variable = NULL) {
   )
 
   if (length(dict_path) == 0) {
-    stop("Data dictionary not found. Please update the package to reinstall it.")
+    stop("Data dictionary not found. Please update the package to reinstall it.", call. = FALSE)
   }
 
   # Load the dictionary

@@ -23,7 +23,8 @@ pfw_zerofill <- function(data) {
 
   if (is.null(full_data)) { # nocov start
     if (is.null(import_path)) {
-      stop("No full dataset available and no import path found. Run pfw_import() or use data with an import path attribute.")
+      stop("No full dataset available and no import path found. Run pfw_import() or use data
+           with an import path attribute.", call. = FALSE)
     }
 
     message("Full dataset not found in memory. Re-importing...")

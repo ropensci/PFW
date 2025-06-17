@@ -17,8 +17,8 @@ test_that("pfw_date filters by normal month range correctly", {
     Day = rep(1, 12)
   )
 
-  filtered <- pfw_date(test_data, month = 3:5)
-  expect_equal(sort(unique(filtered$Month)), 3:5)
+  filtered <- pfw_date(test_data, month = 2:4)
+  expect_equal(sort(unique(filtered$Month)), 2:4)
 })
 
 test_that("pfw_date filters by wrapped month range (e.g. 11 to 2)", {

@@ -12,7 +12,7 @@
 #'
 #' @examplesIf interactive()
 #' # Download/loads the example dataset
-#' data <- pfw_example()
+#' data <- pfw_example
 #'
 #' # Merge site metadata into example observation data
 #' data_sites <- pfw_sitedata(data, "data-raw/site_data.csv")
@@ -41,8 +41,7 @@ pfw_sitedata <- function(data, path) {
       stop(
         "No site metadata file found. FeederWatch may have changed their webpage format.\n",
         "You can go to https://feederwatch.org/explore/raw-dataset-requests/ ",
-        "to download the file manually."
-      )
+        "to download the file manually.", call. = FALSE)
     } # nocov end
 
     # Construct full URL
@@ -59,19 +58,19 @@ pfw_sitedata <- function(data, path) {
         httr2::req_user_agent("PFW R package") |>
         httr2::req_perform(path = path),
       error = function(e) {
-        stop("Failed to download site metadata: ", e$message)
+        stop("Failed to download site metadata: ", e$message, call. = FALSE)
       }
     )
   }
 
   # Check again to be safe
   if (!file.exists(path)) {
-    stop("Site metadata could not be loaded. Please download it manually from: ", site_url) # nocov
+    stop("Site metadata could not be loaded. Please download it manually from: ", site_url, call. = FALSE) # nocov
   }
 
   # Check for required columns in observation data
   if (!all(c("LOC_ID", "PROJ_PERIOD_ID") %in% names(data))) {
-    stop("Observation data must include LOC_ID and PROJ_PERIOD_ID columns.")
+    stop("Observation data must include LOC_ID and PROJ_PERIOD_ID columns.", call. = FALSE)
   }
 
   # Load site metadata

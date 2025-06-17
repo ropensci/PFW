@@ -79,7 +79,7 @@ attach our site metadata:
 library(PFW)
 
 # Load in the included example dataset
-data <- pfw_example() # If you were using your own selection of PFW data, 
+data <- pfw_example # If you were using your own selection of PFW data, 
                       # this would be pfw_import() instead.
 # pfw_import() creates and defaults to "/data-raw" in your working directory, 
 # but will accept a different filepath.

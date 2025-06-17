@@ -8,7 +8,7 @@
 #' @return A cleaned dataset with only species-level codes and a rollup attribute.
 #' @examples
 #' # Download/load example dataset
-#' data <- pfw_example()
+#' data <- pfw_example
 #'
 #' # Apply taxonomic rollup to an active PFW dataset
 #' rolled_data <- pfw_rollup(data)
@@ -29,7 +29,8 @@ pfw_rollup <- function(data) {
   )
 
   if (length(taxonomy_path) == 0) {
-    stop("No species translation table found. Run `update_taxonomy()` to download the latest version.") # nocov
+    stop("No species translation table found. Run `update_taxonomy()` to download the latest version.",
+         call. = FALSE) # nocov
   }
 
   # Read in translation table

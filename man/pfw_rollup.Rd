@@ -18,7 +18,7 @@ This function removes spuhs, hybrids, and slashes and
 }
 \examples{
 # Download/load example dataset
-data <- pfw_example()
+data <- pfw_example
 
 # Apply taxonomic rollup to an active PFW dataset
 rolled_data <- pfw_rollup(data)

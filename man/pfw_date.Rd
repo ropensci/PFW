@@ -23,7 +23,7 @@ allowing range-based filtering and wrapping months around new years.
 \examples{
 \dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 # Download/load example dataset
-data <- pfw_example()
+data <- pfw_example
 
 # Filter by a single year
 data_2021 <- pfw_date(data, year = 2021)

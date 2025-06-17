@@ -25,7 +25,8 @@ update_taxonomy <- function() { # nocov start
 
   # Check for internet connection
   if (!curl::has_internet()) {
-    stop("Unable to update taxonomy; no internet connection found. Please reconnect to the internet and try again.")
+    stop("Unable to update taxonomy; no internet connection found. Please reconnect to the internet
+         and try again.", call. = FALSE)
   } # nocov end
 
   # Read the PFW raw dataset request page
@@ -44,8 +45,7 @@ update_taxonomy <- function() { # nocov start
     stop(
       "No species translation table found. FeederWatch may have changed their webpage format.\n",
       "You can go to https://feederwatch.org/explore/raw-dataset-requests/ ",
-      "to download this file manually."
-    )
+      "to download this file manually.", call. = FALSE)
   } # nocov end
 
   # Construct the full URL of the species translation table, since it updates every year

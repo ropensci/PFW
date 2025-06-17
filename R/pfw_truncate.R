@@ -13,7 +13,7 @@
 #' @return A filtered dataset limited to Nov 8 – Apr 3 across years.
 #' @examples
 #' # Download/load example dataset
-#' data <- pfw_example()
+#' data <- pfw_example
 #'
 #' # Truncate an active PFW dataset to November 8 - April 3
 #' truncated_data <- pfw_truncate(data)
@@ -21,7 +21,7 @@
 #' @export
 pfw_truncate <- function(data) {
   if (!all(c("Year", "Month", "Day") %in% names(data))) {
-    stop("Data must contain Year, Month, and Day columns.")
+    stop("Data must contain Year, Month, and Day columns.", call. = FALSE)
   }
 
   # Create a temporary date column for truncating

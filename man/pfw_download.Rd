@@ -7,9 +7,9 @@
 pfw_download(years, folder = NULL)
 }
 \arguments{
-\item{years}{Integer or vector of years (e.g., 2001, 2001:2023, c(1997, 2001, 2023)).}
+\item{years}{Integer or vector of years (e.g., 2001, 2001:2023, c(1997, 2001, 2023)). Data is available from 1998 to present.}
 
-\item{folder}{The folder where Project FeederWatch data is stored. Default is "data-raw/".}
+\item{folder}{The folder where Project FeederWatch data is stored. Default is "data-raw/" in a local directory.}
 }
 \value{
 Invisibly returns the downloaded files.

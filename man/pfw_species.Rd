@@ -23,7 +23,7 @@ or scientific names via the species translation table.
 \examples{
 \dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 # Download/load example dataset
-data <- pfw_example()
+data <- pfw_example
 
 # Filter for only Greater Roadrunner using the common name
 data_GRRO <- pfw_species(data, "Greater Roadrunner")

@@ -40,7 +40,7 @@ test_that("pfw_download cancels if user declines overwrite", {
   skip_on_cran()
 
   temp_folder <- withr::local_tempdir()
-  file.create(file.path(temp_folder, "existing.csv"))
+  file.create(file.path(temp_folder, "PFW_all_2021_Public.csv"))
 
   withr::local_envvar(PFW_TEST_RESPONSE = "n")
 

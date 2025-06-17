@@ -6,8 +6,8 @@
 #' (default: "data-raw/"), removing the zip files afterward.
 #' It will download all files required to cover the user-selected years.
 #'
-#' @param years Integer or vector of years (e.g., 2001, 2001:2023, c(1997, 2001, 2023)).
-#' @param folder The folder where Project FeederWatch data is stored. Default is "data-raw/".
+#' @param years Integer or vector of years (e.g., 2001, 2001:2023, c(1997, 2001, 2023)). Data is available from 1998 to present.
+#' @param folder The folder where Project FeederWatch data is stored. Default is "data-raw/" in a local directory.
 #'
 #' @return Invisibly returns the downloaded files.
 #' @examplesIf interactive()
@@ -16,7 +16,7 @@
 #'
 #' @export
 pfw_download <- function(years, folder = NULL) {
-  if (missing(years) || is.null(years)) stop("You must specify at least one year.")
+  if (missing(years) || is.null(years)) stop("You must specify at least one year.", call. = FALSE)
   years <- as.integer(years)
 
   if (is.null(folder)) {
@@ -25,7 +25,8 @@ pfw_download <- function(years, folder = NULL) {
 
   # Check for internet connection
   if (!curl::has_internet()) {
-    stop("Unable to download data; no internet connection found. Please reconnect to the internet and try again.")
+    stop("Unable to download data; no internet connection found. Please reconnect to the internet and try again.",
+         call. = FALSE)
   }
   # Ensure folder exists or create it
   if (!dir.exists(folder)) {
@@ -62,18 +63,36 @@ pfw_download <- function(years, folder = NULL) {
     return(invisible(NULL))
   }
 
-  # Ask before overwriting existing .csv files
+  # Ask before overwriting existing .csv files of the same years
   existing_files <- list.files(folder, pattern = "\\.csv$", full.names = TRUE)
-  if (length(existing_files) > 0) {
+  csv_filenames <- basename(existing_files)
+
+  # Extract all years that will be downloaded
+  downloaded_years <- unlist(lapply(matched_links, function(x) {
+    m <- regmatches(x$link, regexec("PFW_all_(\\d{4})_(\\d{4})", x$link))[[1]]
+    if (length(m) == 3) seq(as.integer(m[2]), as.integer(m[3])) else integer(0)
+  }))
+
+  # Identify year matches between downloaded and downloading files
+  conflicting_files <- csv_filenames[grepl(paste(downloaded_years, collapse = "|"), csv_filenames)]
+
+  if (length(conflicting_files) > 0) {
     response <- Sys.getenv("PFW_TEST_RESPONSE", unset = "ask")
     if (response == "ask") {
-      response <- readline(prompt = "CSV files already exist. Overwrite? (y/n): ")
+      response <- readline(
+        prompt = paste0(
+          ".csv files for selected years already exist: ",
+          paste(conflicting_files, collapse = ", "),
+          "\nOverwrite? (y/n): "
+        )
+      )
     }
     if (tolower(response) != "y") {
       message("Download canceled.")
       return(invisible(NULL))
     }
   }
+
   # Download, unzip, and clean up
   for (entry in matched_links) {
     link <- entry$link

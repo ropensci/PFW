@@ -1,11 +1,13 @@
 #' Import Project FeederWatch Data
 #'
 #' This function reads all .csv files downloaded from the Project FeederWatch
-#' website, either from the default "data-raw/" folder
-#' or from a user-specified folder.
-#' Optionally, it can apply filters like region, species, year, etc.
+#' website, either from the default "data-raw/" folder created by pfw_download()
+#' or from a user-specified folder. Optionally, it can apply filters like region,
+#' species, year, etc.
+#' .csv files for import can be downloaded via pfw_download() or from
+#' the [Project Feederwatch website](https://feederwatch.org/explore/raw-dataset-requests/).
 #'
-#' @param folder The folder where Project FeederWatch data is stored. Default is "data-raw/".
+#' @param folder The folder where Project FeederWatch data is stored. Default is "data-raw/" in a local directory.
 #' @param filter Logical. If TRUE, applies filters using pfw_filter(). Default is FALSE.
 #' @param ... Additional arguments passed to pfw_filter() for filtering (e.g., region, species, year).
 #'
@@ -26,14 +28,18 @@ pfw_import <- function(folder = NULL, filter = FALSE, ...) {
   }
   # Ensure the folder exists
   if (!dir.exists(folder)) {
-    stop("The folder '", folder, "' does not exist. Please create it and download Project FeederWatch CSV files into it.")
+    stop("The folder '", folder, "' does not exist. Please create it and download Project FeederWatch CSV
+         files into it.",
+         call. = FALSE)
   }
 
   # List all CSV files in the folder
   files <- list.files(path = folder, pattern = "\\.csv$", full.names = TRUE)
 
   if (length(files) == 0) {
-    stop("No CSV files found in '", folder, "'. Please download Project FeederWatch data into this folder or specify the correct path.")
+    stop("No CSV files found in '", folder, "'. Please download Project FeederWatch data into this folder or
+         specify the correct path.",
+         call. = FALSE)
   }
 
   # Load valid PFW files one at a time
@@ -42,19 +48,21 @@ pfw_import <- function(folder = NULL, filter = FALSE, ...) {
 
   for (file in files) {
     message("Reading: ", file)
-    data <- read.csv(file)
+    header <- read.csv(file, nrows = 1)
 
-    # Skip if it's not a valid PFW observation file
-    if (!all(expected_cols %in% names(data))) {
+    if (!all(expected_cols %in% names(header))) {
       message("Skipping file (incorrect data structure): ", file)
       next
     }
 
+    # Read the full file
+    #"data" is just the raw data from Project FeederWatch
+    data <- read.csv(file)
     data_list <- append(data_list, list(data))
   }
 
   if (length(data_list) == 0) {
-    stop("No valid Project FeederWatch data files were found in the folder.")
+    stop("No valid Project FeederWatch data files were found in the folder.", call. = FALSE)
   }
 
   # Combine all loaded data and remove NAs in species counts

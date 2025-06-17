@@ -14,3 +14,4 @@
 ^pkgdown$
 ^CODE_OF_CONDUCT\.md$
 ^README\.Rmd$
+^data-raw$

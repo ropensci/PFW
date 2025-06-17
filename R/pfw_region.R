@@ -9,7 +9,7 @@
 #' @return A filtered dataset containing only the selected regions.
 #' @examplesIf interactive()
 #' # Download/load example dataset
-#' data <- pfw_example()
+#' data <- pfw_example
 #'
 #' # Filter for data only from Washington using the state name
 #' data_WA <- pfw_region(data, "Washington")
@@ -28,7 +28,7 @@ pfw_region <- function(data, regions) {
 
   # Ensure selected regions list is a vector
   if (!is.character(regions)) {
-    stop("Regions must be a character vector (e.g., c('Washington', 'California'))")
+    stop("Regions must be a character vector (e.g., c('Washington', 'California'))", call. = FALSE)
   }
 
   # Get existing filters
@@ -55,7 +55,8 @@ pfw_region <- function(data, regions) {
   }
 
   if (length(matching_codes) == 0) {
-    stop("No matching regions found. Check spelling or use 'load_region_lookup()' to see available names.")
+    stop("No matching regions found. Check spelling or use 'load_region_lookup()' to see available names.",
+         call. = FALSE)
   }
 
   # Filter the data

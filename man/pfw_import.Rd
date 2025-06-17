@@ -7,7 +7,7 @@
 pfw_import(folder = NULL, filter = FALSE, ...)
 }
 \arguments{
-\item{folder}{The folder where Project FeederWatch data is stored. Default is "data-raw/".}
+\item{folder}{The folder where Project FeederWatch data is stored. Default is "data-raw/" in a local directory.}
 
 \item{filter}{Logical. If TRUE, applies filters using pfw_filter(). Default is FALSE.}
 
@@ -18,9 +18,11 @@ A combined and optionally filtered dataset containing all Project FeederWatch da
 }
 \description{
 This function reads all .csv files downloaded from the Project FeederWatch
-website, either from the default "data-raw/" folder
-or from a user-specified folder.
-Optionally, it can apply filters like region, species, year, etc.
+website, either from the default "data-raw/" folder created by pfw_download()
+or from a user-specified folder. Optionally, it can apply filters like region,
+species, year, etc.
+.csv files for import can be downloaded via pfw_download() or from
+the \href{https://feederwatch.org/explore/raw-dataset-requests/}{Project Feederwatch website}.
 }
 \examples{
 \dontrun{

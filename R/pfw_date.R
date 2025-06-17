@@ -10,7 +10,7 @@
 #' @return A filtered dataset with date filter attributes.
 #' @examplesIf interactive()
 #' # Download/load example dataset
-#' data <- pfw_example()
+#' data <- pfw_example
 #'
 #' # Filter by a single year
 #' data_2021 <- pfw_date(data, year = 2021)
@@ -53,15 +53,30 @@ pfw_date <- function(data, year = NULL, month = NULL) {
 
   if (!is.null(month)) {
     month <- as.integer(month)
-    month <- month[month %in% 1:12] # Sanitize
+    month <- month[month %in% 1:12]
 
     # If descending and wraps, expand to wrapped form
     if (length(month) > 1 &&
-      month[1] > month[length(month)] &&
-      all(diff(month) == -1)) {
+        month[1] > month[length(month)] &&
+        all(diff(month) == -1)) {
       month <- c(month[1]:12, 1:month[length(month)])
     }
+ # nocov start
+    # Stop if the range includes summer months outside the FeederWatch season
+    invalid_months <- month[month %in% 6:9]
+    if (length(invalid_months) > 0) {
+        if (7 %in% month) {
+          stop("Month range appears to be reversed.\n",
+        "If you meant a wrapped winter range (e.g., January to April), use 1:4 instead of 4:1.",
+        call. = FALSE)
+        }
 
+      stop("Selected months ", paste(invalid_months, collapse = ", "),
+           " are outside the FeederWatch season.\n",
+           "Project FeederWatch does not collect data from May through October.",
+           call. = FALSE)
+    }
+ # nocov end
     filtered_data <- filtered_data[filtered_data$Month %in% month, ]
   }
 

@@ -20,7 +20,7 @@ recorded filter attributes in a readable format.
 \examples{
 \dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 # Download/load example dataset
-data <- pfw_example()
+data <- pfw_example
 
 # Filter for Dark-eyed Junco
 filtered_data <- pfw_species(data, "Dark-eyed Junco")
