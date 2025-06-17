@@ -108,8 +108,8 @@ you must select at least one year within this function. For example:</p>
 <p>will download two files: the file containing data from 1996-2000, and
 the file containing data from 2001-2005, because both year ranges
 overlap with the selected years. By default, this will create the
-directory “data-raw/” within your working directory and download the
-data there, but you can designate a different path if preferred.</p>
+directory “data-raw/” within a local directory and download the data
+there, but you can designate a different path if preferred.</p>
 <p>The next step is to run <code>pfw_import</code> to bring your
 download into your R session. While doing so, you can also apply some
 filters, including filtering by year. If no filter arguments are passed,
@@ -118,7 +118,7 @@ downloaded. You can always filter the data after import by calling
 <code>pfw_filter</code>– more on that later. Here’s an example where the
 data is imported only from Washington for 2001-2003:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">data_raw</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pfw_import.html">pfw_import</a></span><span class="op">(</span><span class="st">"data_raw/"</span>, year <span class="op">=</span> <span class="fl">2002</span><span class="op">:</span><span class="fl">2003</span>, region <span class="op">=</span> <span class="st">"Washington"</span><span class="op">)</span> <span class="co"># "data-raw" will be the default folder from pfw_download and does not need to be included if that is where your raw data is stored</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">data_raw</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pfw_import.html">pfw_import</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2002</span><span class="op">:</span><span class="fl">2003</span>, region <span class="op">=</span> <span class="st">"Washington"</span><span class="op">)</span></span></code></pre></div>
 <p>If you chose a different file path for <code>pfw_download</code>,
 you’ll want to enter it where “data_raw” is in that example.
 Alternatively, an example dataset is provided, pre-filtered to data from
@@ -315,7 +315,7 @@ Project FeederWatch. Project Overview. FeederWatch.org. https://feederwatch.org/
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
     </footer>

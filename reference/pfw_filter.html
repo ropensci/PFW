@@ -99,7 +99,7 @@ species, region, and data validity.</p>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># interactive()</span></span></span>
 <span class="r-in"><span><span class="co"># Download/load example dataset</span></span></span>
-<span class="r-in"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="pfw_example.html">pfw_example</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="va">pfw_example</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Filter for Dark-eyed Junco, Song Sparrow, and Spotted Towhee in Washington in 2023</span></span></span>
 <span class="r-in"><span><span class="va">data_masonsyard</span> <span class="op">&lt;-</span> <span class="fu">pfw_filter</span><span class="op">(</span></span></span>
@@ -127,6 +127,22 @@ species, region, and data validity.</p>
 <span class="r-in"><span>  reviewed <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
 <span class="r-in"><span>  rollup <span class="op">=</span> <span class="cn">FALSE</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Filter for Fox Sparrow with rollup</span></span></span>
+<span class="r-in"><span><span class="va">rollFOSP</span> <span class="op">&lt;-</span> <span class="fu">pfw_filter</span><span class="op">(</span><span class="va">pfw_example</span>, species <span class="op">=</span> <span class="st">"Fox Sparrow"</span>, rollup <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># Taxonomic rollup complete. 116 ambiguous records removed.</span></span></span>
+<span class="r-in"><span><span class="co"># 1 species successfully filtered.</span></span></span>
+<span class="r-in"><span><span class="co"># Filtering complete. 8070 records remaining.</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Filter for Fox Sparrow without rollup</span></span></span>
+<span class="r-in"><span><span class="va">norollFOSP</span> <span class="op">&lt;-</span> <span class="fu">pfw_filter</span><span class="op">(</span><span class="va">pfw_example</span>, species <span class="op">=</span> <span class="st">"Fox Sparrow"</span>, rollup <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># 1 species successfully filtered.</span></span></span>
+<span class="r-in"><span><span class="co"># Filtering complete. 7745 records remaining.</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># 116 records were identified to subspecies (e.g. "Fox Sparrow (Sooty)", listed as 'foxsp2' in SPECIES_CODE)</span></span></span>
+<span class="r-in"><span><span class="co"># These records are merged into the parent "Fox Sparrow" total with rollup,</span></span></span>
+<span class="r-in"><span><span class="co"># but excluded in favor of records only identified exactly as</span></span></span>
+<span class="r-in"><span><span class="co"># "Fox Sparrow" (no subspecies, only SPECIES_CODE = 'foxspa') if rollup = FALSE.</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
@@ -139,7 +155,7 @@ species, region, and data validity.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
     </footer></div>
