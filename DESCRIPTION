@@ -19,7 +19,8 @@ Imports:
     xml2,
     stats,
     utils,
-    curl
+    curl,
+    stringdist
 Suggests: 
     testthat (>= 3.0.0),
     purrr,

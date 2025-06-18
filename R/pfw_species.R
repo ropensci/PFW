@@ -76,8 +76,44 @@ pfw_species <- function(data, species, suppress_ambiguous = FALSE) {
   not_found <- species[!species %in% tolower(species_table$american_english_name) &
     !species %in% tolower(species_table$scientific_name) &
     !species %in% tolower(species_table$species_code)]
+
   if (length(not_found) > 0) {
-    warning("The following species were not found in the species table: ", paste(not_found, collapse = ", "))
+
+    # Make a valid names list
+    valid_names <- unique(c(
+      species_table$american_english_name,
+      species_table$scientific_name,
+      species_table$species_code
+    ))
+
+    # Add a lowercase version for searching, keep title case for calling
+    lower_valid <- tolower(valid_names)
+
+    suggestions <- character()
+
+    for (missing_sp in not_found) {
+      distances <- stringdist::stringdist(missing_sp, lower_valid, method = "lv")
+      min_dist <- min(distances)
+
+      # Find the correct species
+      if (min_dist <= 6) {
+        best_match <- valid_names[which.min(distances)]
+        suggestions <- c(suggestions, paste0("Did you mean: ", best_match, "?"))
+      }
+    }
+
+    # Suggest the correct species if found
+    if (length(suggestions) > 0) {
+      warning("The following species were not found in the species table: ",
+              paste(not_found, collapse = ", "), "\n",
+      paste(suggestions, collapse = "\n"), call. = FALSE)
+    }
+
+    # If no similar names were found, don't suggest anything but still warn
+    if (length(suggestions) == 0) {
+      warning("The following species were not found in the species table: ",
+              paste(not_found, collapse = ", "), call. = FALSE)
+    }
   }
 
   # Filter for selected species
@@ -117,5 +153,5 @@ pfw_species <- function(data, species, suppress_ambiguous = FALSE) {
   attr(species_filtered_data, "pfw_filters") <- updated_filters
 
   message(length(unique(species_filtered_data$SPECIES_CODE)), " species successfully filtered.")
-  return(species_filtered_data)
+  return(invisible(species_filtered_data))
 }

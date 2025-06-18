@@ -53,7 +53,8 @@ test_that("pfw_species filters multiple species correctly", {
   )
 })
 
-test_that("pfw_species warns for invalid species", {
+test_that("pfw_species suggests a species for incorrect spelling
+          and warns for invalid species", {
   test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR", "CA-BC", "US-TX"),
     SPECIES_CODE = c("amerob", "norcar", "baleag", "amerob", "norcar"),
@@ -64,12 +65,18 @@ test_that("pfw_species warns for invalid species", {
     list(PFW_TRANSLATION_DIR = file.path("inst/extdata/SpeciesTranslationTable")),
     {
       expect_warning(
+        pfw_species(test_data, c("Amercian Robni", "Northern Cardinal")),
+        "Did you mean"
+      )
+
+      expect_warning(
         pfw_species(test_data, c("Bubinga's Jiggety", "Northern Cardinal")),
         "The following species were not found"
       )
     }
   )
-})
+          })
+
 test_that("pfw_species adds correct filter attribute", {
   test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR", "CA-BC", "US-TX"),
