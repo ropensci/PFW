@@ -65,6 +65,17 @@ test_that("pfw_region returns an error for an invalid region", {
   # Expect an error when filtering by a non-existent region
   expect_error(pfw_region(test_data, "Your Mom's House"), "No matching regions found")
 })
+
+test_that("pfw_region returns a suggestion for a typo'd region", {
+  test_data <- data.frame(
+    SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR", "CA-BC", "CA-ON"),
+    Species = c("Pullman Sparrow", "Greater Roadrunner", "Jonathan's Grouse", "Great White Northern Mockingbird", "Zane's Camera-Warbler")
+  )
+
+  # Expect an error when filtering by a non-existent region
+  expect_error(pfw_region(test_data, "Warshington"), "Did you mean")
+})
+
 test_that("pfw_region adds correct filter attributes", {
   test_data <- data.frame(
     SUBNATIONAL1_CODE = c("US-WA", "US-CA", "US-OR"),

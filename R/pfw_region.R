@@ -54,9 +54,34 @@ pfw_region <- function(data, regions) {
     matching_codes <- c(matching_codes, region_lookup$Code[grepl("^MX-", region_lookup$Code)])
   }
 
-  if (length(matching_codes) == 0) {
-    stop("No matching regions found. Check spelling or use 'load_region_lookup()' to see available names.",
-         call. = FALSE)
+  # Stop if there is no match and suggest a correct one for typos
+  supported_countries <- c("United States", "Canada", "Mexico")
+  unmatched <- regions[!regions %in% region_lookup$Area &
+                         !regions %in% region_lookup$Code &
+                         !regions %in% supported_countries]
+
+  if (length(unmatched) > 0) {
+    suggestion <- character()
+
+    for (missing_loc in unmatched) {
+      distances <- stringdist::stringdist(missing_loc, region_lookup$Area, method = "lv")
+      min_dist <- min(distances)
+
+    # Find the correct region
+      if (min_dist <= 4) {
+        best_match <- region_lookup$Area[which.min(distances)]
+        suggestion <- c(suggestion, paste0("Did you mean: ", best_match, "?"))
+      }
+    }
+
+      if (length(suggestion) > 0) {
+    stop("One or more regions did not match the lookup table.
+Check spelling or use 'load_region_lookup()' to see available names. \n",
+         paste(suggestion, collapse = "\n"), call. = FALSE)
+      } else {
+        stop("No matching regions found. Check spelling or use 'load_region_lookup()' to see available names.",
+             call. = FALSE)
+        }
   }
 
   # Filter the data
