@@ -4,8 +4,8 @@
 #' allowing range-based filtering and wrapping months around new years.
 #'
 #' @param data A Project FeederWatch dataset.
-#' @param year Optional. Integer or vector of years (e.g., 2010 or 2010:2015).
-#' @param month Optional. Integer or vector of months (1–12). Supports wrapping (e.g., c(11, 2) = Nov–Feb).
+#' @param year Optional. Integer or vector of years (e.g. 2010 or 2010:2015).
+#' @param month Optional. Integer or vector of months (1–12). Supports wrapping (e.g. c(11:2) = Nov–Feb).
 #'
 #' @return A filtered dataset with date filter attributes.
 #' @examplesIf interactive()

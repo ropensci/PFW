@@ -9,9 +9,9 @@ pfw_date(data, year = NULL, month = NULL)
 \arguments{
 \item{data}{A Project FeederWatch dataset.}
 
-\item{year}{Optional. Integer or vector of years (e.g., 2010 or 2010:2015).}
+\item{year}{Optional. Integer or vector of years (e.g. 2010 or 2010:2015).}
 
-\item{month}{Optional. Integer or vector of months (1–12). Supports wrapping (e.g., c(11, 2) = Nov–Feb).}
+\item{month}{Optional. Integer or vector of months (1–12). Supports wrapping (e.g. c(11:2) = Nov–Feb).}
 }
 \value{
 A filtered dataset with date filter attributes.

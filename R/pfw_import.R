@@ -5,7 +5,7 @@
 #' or from a user-specified folder. Optionally, it can apply filters like region,
 #' species, year, etc.
 #' .csv files for import can be downloaded via pfw_download() or from
-#' the [Project Feederwatch website](https://feederwatch.org/explore/raw-dataset-requests/).
+#' the [Project FeederWatch website](https://feederwatch.org/explore/raw-dataset-requests/).
 #'
 #' @param folder The folder where Project FeederWatch data is stored. Default is "data-raw/" in a local directory.
 #' @param filter Logical. If TRUE, applies filters using pfw_filter(). Default is FALSE.

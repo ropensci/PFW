@@ -22,7 +22,7 @@ website, either from the default "data-raw/" folder created by pfw_download()
 or from a user-specified folder. Optionally, it can apply filters like region,
 species, year, etc.
 .csv files for import can be downloaded via pfw_download() or from
-the \href{https://feederwatch.org/explore/raw-dataset-requests/}{Project Feederwatch website}.
+the \href{https://feederwatch.org/explore/raw-dataset-requests/}{Project FeederWatch website}.
 }
 \examples{
 \dontrun{
