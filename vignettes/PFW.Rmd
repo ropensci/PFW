@@ -53,7 +53,7 @@ If you chose a different file path for `pfw_download`, you'll want to enter it w
 data <- pfw_example()
 ```
 
-Doing so will download the data from the [GitHub repository](https://github.com/Visorbearer/PFW/blob/main/inst/extdata/pfw_example.csv) the first time you use it and call upon the existing file in following uses.
+Doing so will download the data from the [GitHub repository](https://github.com/ropensci/PFW/blob/main/inst/extdata/pfw_example.csv) the first time you use it and call upon the existing file in following uses.
 
 Because Project FeederWatch uses [eBird/Clements Taxonomy](https://www.birds.cornell.edu/clementschecklist/download/), the species translation table and species codes in the raw data are regularly updated. As such, some situations may arise where the translation table included in the package is out of date compared to the raw data you've downloaded. This can be easily fixed by running
 

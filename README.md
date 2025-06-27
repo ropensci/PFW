@@ -4,12 +4,14 @@
 <!-- badges: start -->
 
 [![Static
-Badge](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+Badge](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
-[![R-CMD-check](https://github.com/Visorbearer/PFW/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Visorbearer/PFW/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/ropensci/PFW/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/PFW/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/Visorbearer/PFW/graph/badge.svg)](https://app.codecov.io/gh/Visorbearer/PFW)
+coverage](https://codecov.io/gh/ropensci/PFW/graph/badge.svg)](https://app.codecov.io/gh/ropensci/PFW)
+[![rOpenSci
+status](https://ropensci.org/badges/approved.svg)](https://github.com/ropensci/PFW)
 <!-- badges: end -->
 
 ## Overview
@@ -28,27 +30,29 @@ taxonomic rollup, filtering by survey characteristics (species, state,
 etc.), merging in site metadata, and zerofilling for presence/absence
 modeling.
 
-![FeederWatch locations from 1989-2020.](man/figures/feederwatch_map.jpg)
+<figure>
+<img src="man/figures/feederwatch_map.jpg"
+alt="FeederWatch locations from 1989-2020." />
+<figcaption aria-hidden="true">FeederWatch locations from
+1989-2020.</figcaption>
+</figure>
 
-*Figure from Bonter & Greig (2021), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
+*Figure from Bonter & Greig (2021), licensed under [CC BY
+4.0](https://creativecommons.org/licenses/by/4.0/).*
 
 ## Installation
 
-`PFW` is still in development, but the development version can be
-installed from GitHub using:
+`PFW` can be installed using:
 
 ``` r
-install.packages("pak")
-
-# Install this package
-pak::pak("Visorbearer/PFW")
+install.packages("PFW", repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
 ## Vignette
 
 Background and details on using `PFW` to filter and process Project
 FeederWatch data are outlined in the
-[vignette](https://Visorbearer.github.io/PFW/articles/PFW.html).
+[vignette](https://ropensci.github.io/PFW/articles/PFW.html).
 
 ## Citation
 
@@ -56,7 +60,7 @@ To cite `PFW` in publications, use:
 
 > Maron, M. W. (2025). PFW: Tools for Filtering and Processing Data from
 > Project FeederWatch.  
-> R package version 0.0.1. <https://github.com/Visorbearer/PFW>
+> R package version 0.1.0. <https://github.com/ropensci/PFW>
 
 You can also run
 
@@ -145,12 +149,12 @@ data_full <- pfw_sitedata(data_zf, path = "path/sitedata.csv")
 ## Feedback
 
 Have feedback? Please submit any bugs, typos, or improvements as an
-[issue](https://github.com/Visorbearer/PFW/issues) or as a [pull
-request](https://github.com/Visorbearer/PFW/pulls)! Your insights help
+[issue](https://github.com/ropensci/PFW/issues) or as a [pull
+request](https://github.com/ropensci/PFW/pulls)! Your insights help
 improve `PFW`.
 
 Please note that `PFW` is released with a [Contributor Code of
-Conduct](https://Visorbearer.github.io/PFW/CODE_OF_CONDUCT.html). By
+Conduct](https://ropensci.github.io/PFW/CODE_OF_CONDUCT.html). By
 contributing to this project, you agree to abide by its terms.
 
 ## Acknowledgements
