@@ -23,7 +23,7 @@
 
     <a class="navbar-brand me-2" href="index.html">PFW</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json">
 </form></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://github.com/Visorbearer/PFW/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/ropensci/PFW/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
@@ -59,25 +59,21 @@
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
 <p><code>PFW</code> is an R package designed for easy filtering, preparation, and management of data from <a href="https://feederwatch.org/" class="external-link">Project FeederWatch</a>. Project FeederWatch is a community-driven project initiated in the 1980s and run by the <a href="https://www.birds.cornell.edu/" class="external-link">Cornell Lab of Ornithology</a> and <a href="https://www.birdscanada.org/" class="external-link">Birds Canada</a> that compiles bird observations from thousands of “backyards, nature centers, community areas, and other locales” across North America. Project FeederWatch data is easy to access, but can often be tricky to work with; <code>PFW</code> serves to simplify and streamline the use of this data. Included in <code>PFW</code> are tools for taxonomic rollup, filtering by survey characteristics (species, state, etc.), merging in site metadata, and zerofilling for presence/absence modeling.</p>
-<div class="float">
-<img src="reference/figures/feederwatch_map.jpg" alt="FeederWatch locations from 1989-2020."><div class="figcaption">FeederWatch locations from 1989-2020.</div>
-</div>
-<p><em>Figure from Bonter &amp; Greig (2021), licensed under <a href="https://creativecommons.org/licenses/by/4.0/" class="external-link">CC BY 4.0</a>.</em></p>
+<figure><img src="reference/figures/feederwatch_map.jpg" alt="FeederWatch locations from 1989-2020."><figcaption aria-hidden="true">
+FeederWatch locations from 1989-2020.
+</figcaption></figure><p><em>Figure from Bonter &amp; Greig (2021), licensed under <a href="https://creativecommons.org/licenses/by/4.0/" class="external-link">CC BY 4.0</a>.</em></p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p><code>PFW</code> is still in development, but the development version can be installed from GitHub using:</p>
+<p><code>PFW</code> can be installed using:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"pak"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Install this package</span></span>
-<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"Visorbearer/PFW"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"PFW"</span>, repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'https://ropensci.r-universe.dev'</span>, <span class="st">'https://cloud.r-project.org'</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="vignette">Vignette<a class="anchor" aria-label="anchor" href="#vignette"></a>
 </h2>
-<p>Background and details on using <code>PFW</code> to filter and process Project FeederWatch data are outlined in the <a href="https://Visorbearer.github.io/PFW/articles/PFW.html">vignette</a>.</p>
+<p>Background and details on using <code>PFW</code> to filter and process Project FeederWatch data are outlined in the <a href="https://ropensci.github.io/PFW/articles/PFW.html" class="external-link">vignette</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
@@ -85,7 +81,7 @@
 <p>To cite <code>PFW</code> in publications, use:</p>
 <blockquote>
 <p>Maron, M. W. (2025). PFW: Tools for Filtering and Processing Data from Project FeederWatch.<br>
-R package version 0.0.1. <a href="https://github.com/Visorbearer/PFW" class="external-link uri">https://github.com/Visorbearer/PFW</a></p>
+R package version 0.1.0. <a href="https://github.com/ropensci/PFW" class="external-link uri">https://github.com/ropensci/PFW</a></p>
 </blockquote>
 <p>You can also run</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
@@ -97,7 +93,7 @@ R package version 0.0.1. <a href="https://github.com/Visorbearer/PFW" class="ext
 </h2>
 <p>This is a simple example which shows you how to do basic Project FeederWatch importing, filtering, zerofilling, and site data attachment. Here, we’ll load the example dataset and filter it for Song Sparrow, Dark-eyed Junco, and Spotted Towhee from Washington and Oregon between 2022 and 2024 in November-February. Then, we’ll zerofill that data and attach our site metadata:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Visorbearer/PFW" class="external-link">PFW</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/PFW" class="external-link">PFW</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Load in the included example dataset</span></span>
 <span><span class="va">data</span> <span class="op">&lt;-</span> <span class="va">pfw_example</span> <span class="co"># If you were using your own selection of PFW data, </span></span>
@@ -165,8 +161,8 @@ R package version 0.0.1. <a href="https://github.com/Visorbearer/PFW" class="ext
 <div class="section level2">
 <h2 id="feedback">Feedback<a class="anchor" aria-label="anchor" href="#feedback"></a>
 </h2>
-<p>Have feedback? Please submit any bugs, typos, or improvements as an <a href="https://github.com/Visorbearer/PFW/issues" class="external-link">issue</a> or as a <a href="https://github.com/Visorbearer/PFW/pulls" class="external-link">pull request</a>! Your insights help improve <code>PFW</code>.</p>
-<p>Please note that <code>PFW</code> is released with a <a href="https://Visorbearer.github.io/PFW/CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+<p>Have feedback? Please submit any bugs, typos, or improvements as an <a href="https://github.com/ropensci/PFW/issues" class="external-link">issue</a> or as a <a href="https://github.com/ropensci/PFW/pulls" class="external-link">pull request</a>! Your insights help improve <code>PFW</code>.</p>
+<p>Please note that <code>PFW</code> is released with a <a href="https://ropensci.github.io/PFW/CODE_OF_CONDUCT.html" class="external-link">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 <div class="section level2">
 <h2 id="acknowledgements">Acknowledgements<a class="anchor" aria-label="anchor" href="#acknowledgements"></a>
@@ -177,8 +173,8 @@ R package version 0.0.1. <a href="https://github.com/Visorbearer/PFW" class="ext
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/Visorbearer/PFW/" class="external-link">Browse source code</a></li>
-<li><a href="https://github.com/Visorbearer/PFW/issues" class="external-link">Report a bug</a></li>
+<li><a href="https://github.com/ropensci/PFW/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/ropensci/PFW/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
@@ -194,7 +190,6 @@ R package version 0.0.1. <a href="https://github.com/Visorbearer/PFW" class="ext
 <h2 data-toc-skip>Community</h2>
 <ul class="list-unstyled">
 <li><a href="CONTRIBUTING.html">Contributing guide</a></li>
-<li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
 </ul>
 </div>
 
@@ -216,10 +211,11 @@ R package version 0.0.1. <a href="https://github.com/Visorbearer/PFW" class="ext
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.repostatus.org/#wip" class="external-link"><img src="https://www.repostatus.org/badges/latest/wip.svg" alt="Static Badge"></a></li>
+<li><a href="https://www.repostatus.org/#active" class="external-link"><img src="https://www.repostatus.org/badges/latest/active.svg" alt="Static Badge"></a></li>
 <li><a href="http://www.gnu.org/licenses/gpl-3.0" class="external-link"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" alt="License: GPL v3"></a></li>
-<li><a href="https://github.com/Visorbearer/PFW/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/Visorbearer/PFW/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://app.codecov.io/gh/Visorbearer/PFW" class="external-link"><img src="https://codecov.io/gh/Visorbearer/PFW/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://github.com/ropensci/PFW/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/ropensci/PFW/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://app.codecov.io/gh/ropensci/PFW" class="external-link"><img src="https://codecov.io/gh/ropensci/PFW/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://github.com/ropensci/PFW" class="external-link"><img src="https://ropensci.org/badges/approved.svg" alt="rOpenSci status"></a></li>
 </ul>
 </div>
 
