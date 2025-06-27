@@ -4,11 +4,11 @@
   "identifier": "PFW",
   "description": "Provides tools to import, clean, filter, and prepare Project FeederWatch data for analysis. Includes functions for taxonomic rollup, easy filtering, zerofilling, merging in site metadata, and more.",
   "name": "PFW: Tools for Filtering and Processing Data from Project FeederWatch",
-  "relatedLink": "https://visorbearer.github.io/PFW/",
-  "codeRepository": "https://github.com/Visorbearer/PFW",
-  "issueTracker": "https://github.com/Visorbearer/PFW/issues",
+  "relatedLink": "https://ropensci.github.io/PFW/",
+  "codeRepository": "https://github.com/ropensci/PFW",
+  "issueTracker": "https://github.com/ropensci/PFW/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -20,7 +20,8 @@
       "@type": "Person",
       "givenName": ["Mason", "W."],
       "familyName": "Maron",
-      "email": "mwmaron2@illinois.edu"
+      "email": "mwmaron2@illinois.edu",
+      "@id": "https://orcid.org/0000-0001-7170-9373"
     }
   ],
   "maintainer": [
@@ -28,7 +29,8 @@
       "@type": "Person",
       "givenName": ["Mason", "W."],
       "familyName": "Maron",
-      "email": "mwmaron2@illinois.edu"
+      "email": "mwmaron2@illinois.edu",
+      "@id": "https://orcid.org/0000-0001-7170-9373"
     }
   ],
   "softwareSuggestions": [
@@ -97,18 +99,6 @@
   "softwareRequirements": {
     "1": {
       "@type": "SoftwareApplication",
-      "identifier": "data.table",
-      "name": "data.table",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=data.table"
-    },
-    "2": {
-      "@type": "SoftwareApplication",
       "identifier": "dplyr",
       "name": "dplyr",
       "provider": {
@@ -119,7 +109,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=dplyr"
     },
-    "3": {
+    "2": {
       "@type": "SoftwareApplication",
       "identifier": "lubridate",
       "name": "lubridate",
@@ -131,17 +121,29 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=lubridate"
     },
-    "4": {
+    "3": {
       "@type": "SoftwareApplication",
-      "identifier": "rvest",
-      "name": "rvest",
+      "identifier": "httr2",
+      "name": "httr2",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://CRAN.R-project.org/package=rvest"
+      "sameAs": "https://CRAN.R-project.org/package=httr2"
+    },
+    "4": {
+      "@type": "SoftwareApplication",
+      "identifier": "xml2",
+      "name": "xml2",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=xml2"
     },
     "5": {
       "@type": "SoftwareApplication",
@@ -155,13 +157,37 @@
     },
     "7": {
       "@type": "SoftwareApplication",
+      "identifier": "curl",
+      "name": "curl",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=curl"
+    },
+    "8": {
+      "@type": "SoftwareApplication",
+      "identifier": "stringdist",
+      "name": "stringdist",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=stringdist"
+    },
+    "9": {
+      "@type": "SoftwareApplication",
       "identifier": "R",
       "name": "R",
       "version": ">= 4.1.0"
     },
     "SystemRequirements": null
   },
-  "fileSize": "261.615KB",
+  "fileSize": "2982.622KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -178,8 +204,13 @@
       "description": "R package version 0.0.1"
     }
   ],
-  "releaseNotes": "https://github.com/Visorbearer/PFW/blob/master/NEWS.md",
-  "readme": "https://github.com/Visorbearer/PFW/blob/main/README.md",
-  "contIntegration": "https://github.com/Visorbearer/PFW/actions/workflows/R-CMD-check.yaml",
-  "developmentStatus": "https://www.repostatus.org/#wip"
+  "releaseNotes": "https://github.com/ropensci/PFW/blob/master/NEWS.md",
+  "readme": "https://github.com/ropensci/PFW/blob/main/README.md",
+  "contIntegration": ["https://github.com/ropensci/PFW/actions/workflows/R-CMD-check.yaml", "https://app.codecov.io/gh/ropensci/PFW"],
+  "developmentStatus": "https://www.repostatus.org/#active",
+  "review": {
+    "@type": "Review",
+    "url": "https://github.com/ropensci/software-review/issues/698",
+    "provider": "https://ropensci.org"
+  }
 }
