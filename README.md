@@ -10,8 +10,7 @@ v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/
 [![R-CMD-check](https://github.com/ropensci/PFW/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/PFW/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/ropensci/PFW/graph/badge.svg)](https://app.codecov.io/gh/ropensci/PFW)
-[![rOpenSci
-status](https://ropensci.org/badges/approved.svg)](https://github.com/ropensci/PFW)
+[![rOpenSci](https://badges.ropensci.org/698_status.svg)](https://github.com/ropensci/software-review/issues/698)
 <!-- badges: end -->
 
 ## Overview
