@@ -82,7 +82,8 @@ norollFOSP <- pfw_filter(pfw_example, species = "Fox Sparrow", rollup = FALSE)
 # 1 species successfully filtered.
 # Filtering complete. 7745 records remaining.
 
-# 116 records were identified to subspecies (e.g. "Fox Sparrow (Sooty)", listed as 'foxsp2' in SPECIES_CODE)
+# 116 records were identified to subspecies (e.g. "Fox Sparrow (Sooty)",
+# listed as 'foxsp2' in SPECIES_CODE)
 # These records are merged into the parent "Fox Sparrow" total with rollup,
 # but excluded in favor of records only identified exactly as
 # "Fox Sparrow" (no subspecies, only SPECIES_CODE = 'foxspa') if rollup = FALSE.

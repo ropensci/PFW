@@ -17,3 +17,5 @@
 ^data-raw$
 ^cran-comments\.md$
 ^CRAN-SUBMISSION$
+^PFW_.*\.pdf$
+^codemeta\.json$

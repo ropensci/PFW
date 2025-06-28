@@ -47,15 +47,15 @@ The next step is to run `pfw_import` to bring your download into your R session.
 data_raw <- pfw_import(year = 2002:2003, region = "Washington")
 ```
 
-If you chose a different file path for `pfw_download`, you'll want to enter it where "data_raw" is in that example. Alternatively, an example dataset is provided, pre-filtered to data from Washington, Oregon, and California from 2021 - May 2024. As long as you're connected to the internet, you can call this dataset with
+If you chose a different file path for `pfw_download`, you'll want to enter it where "data_raw" is in that example. Alternatively, an example dataset is provided, pre-filtered to data from Washington and Oregon from 2021 - May 2024. You can call this dataset easily with
 
 ```{r example, eval = FALSE}
-data <- pfw_example()
+data <- pfw_example
+# or
+pfw_example
 ```
 
-Doing so will download the data from the [GitHub repository](https://github.com/ropensci/PFW/blob/main/inst/extdata/pfw_example.csv) the first time you use it and call upon the existing file in following uses.
-
-Because Project FeederWatch uses [eBird/Clements Taxonomy](https://www.birds.cornell.edu/clementschecklist/download/), the species translation table and species codes in the raw data are regularly updated. As such, some situations may arise where the translation table included in the package is out of date compared to the raw data you've downloaded. This can be easily fixed by running
+Because Project FeederWatch currently uses [eBird/Clements Taxonomy](https://www.birds.cornell.edu/clementschecklist/introduction/updateindex/october-2024/2024-citation-checklist-downloads/), the species translation table and species codes in the raw data are regularly updated. As such, some situations may arise where the translation table included in the package is out of date compared to the raw data you've downloaded. This can be easily fixed by running
 
 ```{r update, eval = FALSE}
 update_taxonomy()

@@ -19,7 +19,7 @@ v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/
 `PFW` is an R package designed for easy filtering, preparation, 
 and management of data from [Project FeederWatch](https://feederwatch.org/). 
 Project FeederWatch is a community-driven project initiated in the 1980s
-and run by the [Cornell Lab of Ornithology](https://www.birds.cornell.edu/) and [Birds Canada](https://www.birdscanada.org/)
+and run by the [Cornell Lab of Ornithology](https://www.birds.cornell.edu/home) and [Birds Canada](https://www.birdscanada.org/)
 that compiles bird observations from thousands of "backyards, nature centers, 
 community areas, and other locales" across North America. Project FeederWatch data is easy to access, 
 but can often be tricky to work with; `PFW` serves to simplify and streamline the use of this data. 

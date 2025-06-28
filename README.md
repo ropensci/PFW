@@ -19,7 +19,7 @@ coverage](https://codecov.io/gh/ropensci/PFW/graph/badge.svg)](https://app.codec
 management of data from [Project FeederWatch](https://feederwatch.org/).
 Project FeederWatch is a community-driven project initiated in the 1980s
 and run by the [Cornell Lab of
-Ornithology](https://www.birds.cornell.edu/) and [Birds
+Ornithology](https://www.birds.cornell.edu/home) and [Birds
 Canada](https://www.birdscanada.org/) that compiles bird observations
 from thousands of “backyards, nature centers, community areas, and other
 locales” across North America. Project FeederWatch data is easy to
