@@ -122,14 +122,13 @@ data is imported only from Washington for 2001-2003:</p>
 <p>If you chose a different file path for <code>pfw_download</code>,
 you’ll want to enter it where “data_raw” is in that example.
 Alternatively, an example dataset is provided, pre-filtered to data from
-Washington, Oregon, and California from 2021 - May 2024. As long as
-you’re connected to the internet, you can call this dataset with</p>
+Washington and Oregon from 2021 - May 2024. You can call this dataset
+easily with</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pfw_example.html">pfw_example</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>Doing so will download the data from the <a href="https://github.com/ropensci/PFW/blob/main/inst/extdata/pfw_example.csv" class="external-link">GitHub
-repository</a> the first time you use it and call upon the existing file
-in following uses.</p>
-<p>Because Project FeederWatch uses <a href="https://www.birds.cornell.edu/clementschecklist/download/" class="external-link">eBird/Clements
+<code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="va">pfw_example</span></span>
+<span><span class="co"># or</span></span>
+<span><span class="va">pfw_example</span></span></code></pre></div>
+<p>Because Project FeederWatch currently uses <a href="https://www.birds.cornell.edu/clementschecklist/introduction/updateindex/october-2024/2024-citation-checklist-downloads/" class="external-link">eBird/Clements
 Taxonomy</a>, the species translation table and species codes in the raw
 data are regularly updated. As such, some situations may arise where the
 translation table included in the package is out of date compared to the
