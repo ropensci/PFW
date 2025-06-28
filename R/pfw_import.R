@@ -56,7 +56,7 @@ pfw_import <- function(folder = NULL, filter = FALSE, ...) {
     }
 
     # Read the full file
-    #"data" is just the raw data from Project FeederWatch
+    # "data" is just the raw data from Project FeederWatch
     data <- read.csv(file)
     data_list <- append(data_list, list(data))
   }

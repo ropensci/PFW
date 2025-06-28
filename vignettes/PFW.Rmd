@@ -177,7 +177,7 @@ Doing this will print the definition and description only for the variable you e
 ## References
 
 ```
-Bonter, D. N and E. I. Greig (2020). “Project FeederWatch Raw Data”. Mendeley Data, V1.
+Bonter, D. N. and E. I. Greig (2020). “Project FeederWatch Raw Data”. Mendeley Data, V1.
 
 Bonter, D. N. and E. I. Greig (2021). Over 30 Years of Standardized Bird Counts at Supplementary Feeding Stations in North America: A Citizen Science Data Report for Project FeederWatch. Front. Ecol. Evol. 9:619682.
 
