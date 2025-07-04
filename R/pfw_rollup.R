@@ -21,16 +21,18 @@ pfw_rollup <- function(data) {
     existing_filters <- list()
   }
 
-  # Load the species translation table
-  taxonomy_path <- list.files(
-    path = system.file("extdata/SpeciesTranslationTable", package = "PFW"),
-    pattern = "\\.csv$",
-    full.names = TRUE
-  )
+  # Check for a user-updated translation table from update_taxonomy()
+  local_path <- file.path(tools::R_user_dir("PFW", "data"), "SpeciesTranslationTable", "PFW_spp_translation_table.csv")
 
-  if (length(taxonomy_path) == 0) {
+  # Fall back to packaged translation table if update_taxonomy() wasn't run
+  pkg_path <- system.file("extdata/SpeciesTranslationTable/PFW_spp_translation_table.csv", package = "PFW")
+
+  # Choose the available translation table
+  taxonomy_path <- if (file.exists(local_path)) local_path else pkg_path
+
+  if (!file.exists(taxonomy_path)) {
     stop("No species translation table found. Run `update_taxonomy()` to download the latest version.",
-         call. = FALSE) # nocov
+         call. = FALSE)
   }
 
   # Read in translation table

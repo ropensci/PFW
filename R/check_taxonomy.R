@@ -4,7 +4,8 @@
 #' `inst/extdata/SpeciesTranslationTable/`. This is required for
 #'  use of the pfw_species and pfw_filter functions.
 #' If no file exists, it prompts the user to download it using
-#' `update_taxonomy()`, or place a manually downloaded file there.
+#' `update_taxonomy()`, or place a manually downloaded file into the
+#' R package folder.
 #'
 #' @keywords internal
 #' @return Logical (`TRUE` if a file exists, `FALSE` if not, with a message).
@@ -20,7 +21,7 @@ check_taxonomy <- function() {
       "You can run `update_taxonomy()` to download one, or manually download it from:\n",
       "https://feederwatch.org/explore/raw-dataset-requests/ \n",
       "If downloading manually, please place the file in:\n",
-      file.path(getwd(), translation_folder)
+      file.path(translation_folder)
     )
     return(FALSE)
   }
@@ -35,7 +36,7 @@ check_taxonomy <- function() {
       "You can run `update_taxonomy()` to download one, or manually download it from:\n",
       "https://feederwatch.org/explore/raw-dataset-requests/ \n",
       "If downloading manually, please place the file in:\n",
-      file.path(getwd(), translation_folder)
+      file.path(translation_folder)
     )
     return(FALSE)
   }

@@ -2,11 +2,14 @@
 #'
 #' This function downloads the latest species translation
 #' table from the Project FeederWatch website and saves it to
-#' `inst/extdata/SpeciesTranslationTable/`.
-#' If a previous version exists, the user will be asked for
-#' confirmation before overwriting it. This ensures taxonomy can
-#' readily be kept up to date annually, since it will only be
-#' manually updated on the PFW website otherwise.
+#' a local directory. If a previous version exists in the local
+#' directory, the user will be asked for confirmation before
+#' overwriting it. This ensures taxonomy can readily be kept
+#' up to date annually, since it will only be manually updated
+#' on the PFW website otherwise.
+#'
+#' @param user_dir Optional. A custom directory to write the translation table to.
+#' Using the default local directory is highly recommended.
 #'
 #' @return A message confirming whether the update was successful.
 #' @examplesIf interactive()
@@ -14,13 +17,21 @@
 #' update_taxonomy()
 #'
 #' @export
-update_taxonomy <- function() { # nocov start
+update_taxonomy <- function(user_dir = tools::R_user_dir("PFW", "data")) { # nocov start
 
   # Ensure the SpeciesTranslationTable directory exists
   translation_folder <- Sys.getenv("PFW_TRANSLATION_DIR", unset = file.path("inst", "extdata", "SpeciesTranslationTable"))
   if (!dir.exists(translation_folder)) {
-    dir.create(translation_folder, recursive = TRUE) # Create directories if missing
-    message("Created 'inst/extdata/SpeciesTranslationTable/' directory.")
+    check_taxonomy()
+  }
+
+  # CRAN-friendly writable location for the user-updated translation table
+  active_translation_table_dir <- file.path(user_dir, "SpeciesTranslationTable")
+
+  # Check if the local directory already exists, create it if not
+  if (!dir.exists(active_translation_table_dir)) {
+    dir.create(active_translation_table_dir, recursive = TRUE)
+    message("Created a local directory for the updated translation table at: ", active_translation_table_dir)
   }
 
   # Check for internet connection
@@ -55,8 +66,8 @@ update_taxonomy <- function() { # nocov start
   }
 
   # Define the save location
-  taxonomy_path <- file.path(translation_folder, "PFW_spp_translation_table.csv")
-  timestamp_path <- file.path(translation_folder, ".last_modified")
+  taxonomy_path <- file.path(active_translation_table_dir, "PFW_spp_translation_table.csv")
+  timestamp_path <- file.path(active_translation_table_dir, ".last_modified")
 
   # nocov start
 
@@ -69,7 +80,7 @@ update_taxonomy <- function() { # nocov start
   last_modified <- httr2::resp_header(head_resp, "last-modified")
 
   # If any .csv file exists in the folder, ask before overwriting
-  existing_files <- list.files(translation_folder, pattern = "\\.csv$", full.names = TRUE)
+  existing_files <- list.files(active_translation_table_dir, pattern = "\\.csv$", full.names = TRUE)
   if (length(existing_files) > 0) {
     message("A species translation table file already exists.")
 
@@ -104,7 +115,8 @@ update_taxonomy <- function() { # nocov start
   writeLines(last_modified, timestamp_path)
 
   message(
-    "Species translation table updated successfully!\n",
-    "You may need to restart your R session to use the updated version.\n"
+    paste0("Species translation table updated successfully at ",
+           active_translation_table_dir, "\n",
+    "You may need to restart your R session to use the updated version.\n")
   )
 } # nocov end

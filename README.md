@@ -57,8 +57,8 @@ FeederWatch data are outlined in the
 
 To cite `PFW` in publications, use:
 
-> Maron, M. W. (2025). PFW: Tools for Filtering and Processing Data from
-> Project FeederWatch.  
+> Maron, M. W. (2025). PFW: Filtering and Processing Data from Project
+> FeederWatch.  
 > R package version 0.1.0. <https://github.com/ropensci/PFW>
 
 You can also run
