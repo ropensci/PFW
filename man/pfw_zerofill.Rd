@@ -18,9 +18,9 @@ setting HOW_MANY = 0 for presence/absence-based analyses.
 Note that zerofilling entire, unfiltered datasets from Project FeederWatch will take a long time!
 }
 \examples{
-\dontrun{
-# Zerofill an active PFW dataset
-data_zf <- pfw_zerofill(data)
+\donttest{
+# Zerofill the PFW example dataset
+data_zf <- pfw_zerofill(pfw_example)
 }
 
 }

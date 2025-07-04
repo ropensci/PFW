@@ -9,13 +9,17 @@
 #' @keywords internal
 #' @return Logical (`TRUE` if a file exists, `FALSE` if not, with a message).
 #' @noRd
-check_taxonomy <- function() {
+check_taxonomy <- function(path = NULL) {
   # Determine the directory to check, allowing override for testing
-  translation_folder <- Sys.getenv("PFW_TRANSLATION_DIR", unset = file.path("inst", "extdata", "SpeciesTranslationTable"))
+  if (is.null(path)) {
+    translation_folder <- system.file("extdata", "SpeciesTranslationTable", package = "PFW")
+  } else {
+    translation_folder <- path
+  }
 
   # Ensure the folder exists
   if (!dir.exists(translation_folder)) {
-    message(
+    stop(
       "No species translation table detected. \n",
       "You can run `update_taxonomy()` to download one, or manually download it from:\n",
       "https://feederwatch.org/explore/raw-dataset-requests/ \n",
@@ -30,7 +34,7 @@ check_taxonomy <- function() {
 
   # If no CSV files are found, return a warning
   if (length(csv_files) == 0) {
-    message(
+    stop(
       "No species translation table detected. \n",
       "You can run `update_taxonomy()` to download one, or manually download it from:\n",
       "https://feederwatch.org/explore/raw-dataset-requests/ \n",

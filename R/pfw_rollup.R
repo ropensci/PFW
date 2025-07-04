@@ -21,20 +21,25 @@ pfw_rollup <- function(data) {
     existing_filters <- list()
   }
 
-  # Load the species translation table
-  taxonomy_path <- list.files(
-    path = system.file("extdata/SpeciesTranslationTable", package = "PFW"),
-    pattern = "\\.csv$",
-    full.names = TRUE
-  )
+  # Prefer user-updated taxonomy if available
+  user_taxonomy <- file.path(tools::R_user_dir("PFW", "data"), "SpeciesTranslationTable", "PFW_spp_translation_table.csv")
 
-  if (length(taxonomy_path) == 0) {
-    stop("No species translation table found. Run `update_taxonomy()` to download the latest version.",
-         call. = FALSE) # nocov
+  if (file.exists(user_taxonomy)) {
+    species_table <- read.csv(user_taxonomy)
+  } else {
+    taxonomy_path <- list.files(
+      path = system.file("extdata/SpeciesTranslationTable", package = "PFW"),
+      pattern = "\\.csv$",
+      full.names = TRUE
+    )
+
+    if (length(taxonomy_path) == 0) {
+      stop("No species translation table found. Run `update_taxonomy()` to download the latest version.",
+           call. = FALSE)
+    }
+
+    species_table <- read.csv(taxonomy_path[1])
   }
-
-  # Read in translation table
-  species_table <- read.csv(taxonomy_path[1])
 
   # Create a lookup for demoting subspecies/intergrades
   subspecies_lookup <- setNames(species_table$alt_full_spp_code, species_table$species_code)

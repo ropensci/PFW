@@ -1,5 +1,5 @@
 Package: PFW
-Title: Tools for Filtering and Processing Data from Project FeederWatch
+Title: Filtering and Processing Data from Project FeederWatch
 Version: 0.1.0
 Authors@R: 
     c(person(c("Mason", "W."), "Maron", , "mwmaron2@illinois.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7170-9373")),
@@ -8,6 +8,7 @@ Authors@R:
 Description: Provides tools to import, clean, filter, and prepare Project
     FeederWatch data for analysis. Includes functions for taxonomic
     rollup, easy filtering, zerofilling, merging in site metadata, and more.
+    Project FeederWatch data comes from <https://feederwatch.org/explore/raw-dataset-requests/>.
 License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

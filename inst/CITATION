@@ -2,7 +2,7 @@ citHeader("To cite PFW in publications use:")
 
 bibentry(
   bibtype      = "Manual",
-  title        = "PFW: Tools for Filtering and Processing Data from Project FeederWatch",
+  title        = "PFW: Filtering and Processing Data from Project FeederWatch",
   author       =  as.person("Mason W. Maron"),
   year         = "2025",
   note         = "R package version 0.1.0",
