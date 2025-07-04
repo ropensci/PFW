@@ -18,9 +18,13 @@ setting HOW_MANY = 0 for presence/absence-based analyses.
 Note that zerofilling entire, unfiltered datasets from Project FeederWatch will take a long time!
 }
 \examples{
-\donttest{
-# Zerofill the PFW example dataset
-data_zf <- pfw_zerofill(pfw_example)
+\dontrun{
+# This example cannot be run because it relies on a cached version of the
+# data which is created upon using pfw_import(). Storing a version of this
+# for the example dataset would be too large for CRAN!
+
+# Zerofill a PFW  dataset
+data_zf <- pfw_zerofill(data)
 }
 
 }
