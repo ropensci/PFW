@@ -32,25 +32,18 @@ pfw_species <- function(data, species, suppress_ambiguous = FALSE) {
          call. = FALSE)
   }
 
-  # Prefer user-updated taxonomy if available
-  user_taxonomy <- file.path(tools::R_user_dir("PFW", "data"), "SpeciesTranslationTable", "PFW_spp_translation_table.csv")
+  taxonomy_path <- list.files(
+    path = system.file("extdata/SpeciesTranslationTable", package = "PFW"),
+    pattern = "\\.csv$",
+    full.names = TRUE
+  )
 
-  if (file.exists(user_taxonomy)) {
-    species_table <- read.csv(user_taxonomy)
-  } else {
-    taxonomy_path <- list.files(
-      path = system.file("extdata/SpeciesTranslationTable", package = "PFW"),
-      pattern = "\\.csv$",
-      full.names = TRUE
-    )
-
-    if (length(taxonomy_path) == 0) {
-      stop("No species translation table found. Run `update_taxonomy()` to download the latest version.",
-           call. = FALSE)
-    }
-
-    species_table <- read.csv(taxonomy_path[1])
+  if (length(taxonomy_path) == 0) {
+    stop("No species translation table found. Run `update_taxonomy()` to download the latest version.",
+         call. = FALSE)
   }
+
+  species_table <- read.csv(taxonomy_path[1])
 
   if (!all(c("species_code", "american_english_name", "scientific_name") %in% colnames(species_table))) {
     stop("Species translation table is missing required columns. Try updating it with `update_taxonomy()`.",

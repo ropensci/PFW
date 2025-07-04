@@ -4,25 +4,19 @@
 \alias{update_taxonomy}
 \title{Update the Project FeederWatch Species Translation Table}
 \usage{
-update_taxonomy(
-  path = file.path(tools::R_user_dir("PFW", "data"), "SpeciesTranslationTable")
-)
-}
-\arguments{
-\item{path}{Optional. Directory to save the updated taxonomy. Defaults to a user-specific directory
-via \code{tools::R_user_dir("PFW", "data")}.}
+update_taxonomy()
 }
 \value{
 A message confirming whether the update was successful.
 }
 \description{
-This function manually downloads the latest species translation
+This function downloads the latest species translation
 table from the Project FeederWatch website and saves it to
-a local or user-defined directory. If a previous version exists,
-the user will be asked for confirmation before overwriting it in
-the active project. This ensures taxonomy can readily be kept up
-to date by the user without updating the R package, since it will
-only be manually updated on the PFW website otherwise.
+\verb{inst/extdata/SpeciesTranslationTable/}.
+If a previous version exists, the user will be asked for
+confirmation before overwriting it. This ensures taxonomy can
+readily be kept up to date annually, since it will only be
+manually updated on the PFW website otherwise.
 }
 \examples{
 \dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}

@@ -1,5 +1,5 @@
 
-# PFW: Filtering and Processing Data from Project FeederWatch <img src="man/figures/logo.png" align="right" width=140 alt="Hexagonal PFW logo, featuring a Dark-eyed Junco with a seed in its beak."/>
+# PFW: Tools for Filtering and Processing Data from Project FeederWatch <img src="man/figures/logo.png" align="right" width=140 alt="Hexagonal PFW logo, featuring a Dark-eyed Junco with a seed in its beak."/>
 
 <!-- badges: start -->
 

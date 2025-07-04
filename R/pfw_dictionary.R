@@ -35,9 +35,9 @@ pfw_dictionary <- function(variable = NULL) {
       row <- dictionary[i, ]
       if (all(is.na(row)) || all(trimws(row) == "")) next
 
-      message("\033[1mVariable:\033[0m   ", row$Variable_name, "\n")
-      message("\033[1mDefinition:\033[0m ", row$Definition, "\n")
-      message("\033[1mDescription:\033[0m", row$Description, "\n\n")
+      cat("\033[1mVariable:\033[0m   ", row$Variable_name, "\n")
+      cat("\033[1mDefinition:\033[0m ", row$Definition, "\n")
+      cat("\033[1mDescription:\033[0m", row$Description, "\n\n")
     }
     return(invisible(dictionary))
   } else {
@@ -47,9 +47,9 @@ pfw_dictionary <- function(variable = NULL) {
     if (nrow(text_match) == 0) {
       message("No matching variable found in the dictionary.")
     } else {
-      message("\033[1mVariable:\033[0m   ", text_match$Variable_name, "\n")
-      message("\033[1mDefinition:\033[0m ", text_match$Definition, "\n")
-      message("\033[1mDescription:\033[0m", text_match$Description, "\n")
+      cat("\033[1mVariable:\033[0m   ", text_match$Variable_name, "\n")
+      cat("\033[1mDefinition:\033[0m ", text_match$Definition, "\n")
+      cat("\033[1mDescription:\033[0m", text_match$Description, "\n")
     }
   }
 }

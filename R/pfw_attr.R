@@ -26,18 +26,18 @@ pfw_attr <- function(data) {
     return(invisible(NULL))
   }
 
-  message("Filters applied to this dataset:\n\n")
+  cat("Filters applied to this dataset:\n\n")
   for (f in filters) {
     if (is.list(f$value) && !is.null(names(f$value))) {
       # Handle named list (e.g., year + month from date filter)
-      message("- Filter type:", f$type, "\n")
+      cat("- Filter type:", f$type, "\n")
       for (n in names(f$value)) {
-        message("  ", n, ":", paste(f$value[[n]], collapse = ", "), "\n")
+        cat("  ", n, ":", paste(f$value[[n]], collapse = ", "), "\n")
       }
-      message("\n")
+      cat("\n")
     } else {
       # Handle basic filter types
-      message("- Filter type:", f$type, "\n  Values:", paste(f$value, collapse = ", "), "\n\n")
+      cat("- Filter type:", f$type, "\n  Values:", paste(f$value, collapse = ", "), "\n\n")
     }
   }
 

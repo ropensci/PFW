@@ -1,15 +1,12 @@
 #' Update the Project FeederWatch Species Translation Table
 #'
-#' This function manually downloads the latest species translation
+#' This function downloads the latest species translation
 #' table from the Project FeederWatch website and saves it to
-#' a local or user-defined directory. If a previous version exists,
-#' the user will be asked for confirmation before overwriting it in
-#' the active project. This ensures taxonomy can readily be kept up
-#' to date by the user without updating the R package, since it will
-#' only be manually updated on the PFW website otherwise.
-#'
-#' @param path Optional. Directory to save the updated taxonomy. Defaults to a user-specific directory
-#'  via `tools::R_user_dir("PFW", "data")`.
+#' `inst/extdata/SpeciesTranslationTable/`.
+#' If a previous version exists, the user will be asked for
+#' confirmation before overwriting it. This ensures taxonomy can
+#' readily be kept up to date annually, since it will only be
+#' manually updated on the PFW website otherwise.
 #'
 #' @return A message confirming whether the update was successful.
 #' @examplesIf interactive()
@@ -17,15 +14,14 @@
 #' update_taxonomy()
 #'
 #' @export
-update_taxonomy <- function(path = file.path(tools::R_user_dir("PFW", "data"), "SpeciesTranslationTable")) {
-  # Create a local folder for the user-updated translation table
-  if (!dir.exists(path)) {
-    dir.create(path, recursive = TRUE, showWarnings = FALSE)
-  } # nocov start
+update_taxonomy <- function() { # nocov start
 
-  # Ensure the original SpeciesTranslationTable exists
-  translation_folder <- system.file("extdata", "SpeciesTranslationTable", package = "PFW")
-  check_taxonomy()
+  # Ensure the SpeciesTranslationTable directory exists
+  translation_folder <- Sys.getenv("PFW_TRANSLATION_DIR", unset = file.path("inst", "extdata", "SpeciesTranslationTable"))
+  if (!dir.exists(translation_folder)) {
+    dir.create(translation_folder, recursive = TRUE) # Create directories if missing
+    message("Created 'inst/extdata/SpeciesTranslationTable/' directory.")
+  }
 
   # Check for internet connection
   if (!curl::has_internet()) {
@@ -59,8 +55,8 @@ update_taxonomy <- function(path = file.path(tools::R_user_dir("PFW", "data"), "
   }
 
   # Define the save location
-  taxonomy_path <- file.path(path, "PFW_spp_translation_table.csv")
-  timestamp_path <- file.path(path, ".last_modified")
+  taxonomy_path <- file.path(translation_folder, "PFW_spp_translation_table.csv")
+  timestamp_path <- file.path(translation_folder, ".last_modified")
 
   # nocov start
 
@@ -72,8 +68,7 @@ update_taxonomy <- function(path = file.path(tools::R_user_dir("PFW", "data"), "
 
   last_modified <- httr2::resp_header(head_resp, "last-modified")
 
-  # If a file already exists in the package folder, ask before overwriting for
-  # the active project's translation table
+  # If any .csv file exists in the folder, ask before overwriting
   existing_files <- list.files(translation_folder, pattern = "\\.csv$", full.names = TRUE)
   if (length(existing_files) > 0) {
     message("A species translation table file already exists.")
@@ -87,7 +82,7 @@ update_taxonomy <- function(path = file.path(tools::R_user_dir("PFW", "data"), "
     if (identical(last_modified, local_modified)) {
       response <- Sys.getenv("PFW_TEST_RESPONSE", unset = "ask")
       if (response == "ask") {
-        response <- readline(prompt = "The downloaded species translation table is up to date. Update anyway? (y/n):")
+        response <- readline(prompt = "The downloaded species translation table is up to date. Overwrite anyway? (y/n):")
       }
       if (tolower(response) != "y") {
         message("Update canceled.")
@@ -109,6 +104,7 @@ update_taxonomy <- function(path = file.path(tools::R_user_dir("PFW", "data"), "
   writeLines(last_modified, timestamp_path)
 
   message(
-    "Species translation table updated successfully!"
+    "Species translation table updated successfully!\n",
+    "You may need to restart your R session to use the updated version.\n"
   )
 } # nocov end
