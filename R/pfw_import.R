@@ -13,7 +13,10 @@
 #'
 #' @return A combined and optionally filtered dataset containing all Project FeederWatch data.
 #' @examples
-#' \donttest{
+#' \dontrun{
+#' # This example cannot be run without user-downloaded data! This data can
+#' # be downloaded manually or with pfw_download().
+#'
 #' # Import all downloaded data from the default folder ("data-raw")
 #' data <- pfw_import()
 #'
