@@ -25,7 +25,7 @@ species, year, etc.
 the \href{https://feederwatch.org/explore/raw-dataset-requests/}{Project FeederWatch website}.
 }
 \examples{
-\dontrun{
+\donttest{
 # Import all downloaded data from the default folder ("data-raw")
 data <- pfw_import()
 

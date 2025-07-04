@@ -8,10 +8,10 @@
 #'
 #' @return A dataset with zerofilled values included for each species.
 #' @examples
-#' \dontrun{
-#' # Zerofill an active PFW dataset
-#' data_zf <- pfw_zerofill(data)
-#' }
+#' \donttest{
+#' # Zerofill the PFW example dataset
+#' data_zf <- pfw_zerofill(pfw_example)
+#'}
 #'
 #' @export
 pfw_zerofill <- function(data) {

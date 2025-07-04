@@ -1,7 +1,7 @@
 #' Example Project FeederWatch Dataset
 #'
 #' A sample dataset for demonstration and testing purposes.
-#' This dataset includes data from 2021 - May 2024 from
+#' This dataset includes data from 2020 - May 2024 from
 #' Washington and Oregon.
 #'
 #' @format A data frame with 556,814 rows and 24 columns.

@@ -47,7 +47,7 @@ The next step is to run `pfw_import` to bring your download into your R session.
 data_raw <- pfw_import(year = 2002:2003, region = "Washington")
 ```
 
-If you chose a different file path for `pfw_download`, you'll want to enter it where "data_raw" is in that example. Alternatively, an example dataset is provided, pre-filtered to data from Washington and Oregon from 2021 - May 2024. You can call this dataset easily with
+If you chose a different file path for `pfw_download`, you'll want to enter it where "data_raw" is in that example. Alternatively, an example dataset is provided, pre-filtered to data from Washington and Oregon from 2020 - May 2024. You can call this dataset easily with
 
 ```{r example, eval = FALSE}
 data <- pfw_example

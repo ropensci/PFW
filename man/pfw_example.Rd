@@ -15,7 +15,7 @@ pfw_example
 }
 \description{
 A sample dataset for demonstration and testing purposes.
-This dataset includes data from 2021 - May 2024 from
+This dataset includes data from 2020 - May 2024 from
 Washington and Oregon.
 }
 \examples{
