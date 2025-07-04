@@ -63,10 +63,13 @@ Note that zerofilling entire, unfiltered datasets from Project FeederWatch will 
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
-<span class="r-in"><span><span class="co"># Zerofill an active PFW dataset</span></span></span>
-<span class="r-in"><span><span class="va">data_zf</span> <span class="op">&lt;-</span> <span class="fu">pfw_zerofill</span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="co"># Zerofill the PFW example dataset</span></span></span>
+<span class="r-in"><span><span class="va">data_zf</span> <span class="op">&lt;-</span> <span class="fu">pfw_zerofill</span><span class="op">(</span><span class="va">pfw_example</span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Full dataset not found in memory. Re-importing...</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> The folder 'C:\Users\mmaro\AppData\Local\Temp\RtmpklTRjm' does not exist. Please create it and download Project FeederWatch CSV</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span>          files into it.</span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
