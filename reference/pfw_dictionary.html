@@ -65,164 +65,164 @@ definitions for specific variables.</p>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># View the whole data dictionary</span></span></span>
 <span class="r-in"><span><span class="fu">pfw_dictionary</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   LOC_ID</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Unique identifier for each survey site</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Each observation location should have only one LOC_ID. A single observer may maintain more than one LOC_ID. This is the same field as LOC_ID in the site description dataset and can be used to link the observation data to the site description data in conjunction with PROJ_PERIOD_ID.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   LATITUDE</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Latitude in decimal degrees for each survey site</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Accuracy varies. See ENTRY_TECHNIQUE below. </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   LONGITUDE</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Longitude in decimal degrees for each survey site</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Accuracy varies. See ENTRY_TECHNIQUE below. </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   SUBNATIONAL1_CODE</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Country abbreviation and State or Province abbreviation of each survey site</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Format XX-XX where the left two letters indicate the country and the right two letters indicate the state or province code. E.g., CA-ON = Canada - Ontario</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   ENTRY_TECHNIQUE</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Variable indicating method of site localization</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Codes represent dozens of methods for site creation with varying degrees of specificity. These methods continue to evolve as online mapping technologies change. The most accurate locations have higher "zoom level" values (e.g., Google Map Zoom level 9). Note that postal code locations were geolocated at the centroid of the postal code within which the site is located (i.e., these sites lack accuracy and are not useful if you are trying to link to site to satellite-derived land cover data, for instance).</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   SUB_ID</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Unique identifier for each checklist</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   OBS_ID</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Unique identifier for each observation of a species</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>One SUB_ID will have as many OBS_ID values as there were species reported on a given checklist. </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   MONTH</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Month of 1st day of two-day observation period</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   DAY</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Day of 1st day of two-day observation period</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   YEAR</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Year of 1st day of two-day observation period</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   PROJ_PERIOD_ID</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Calendar year of end of FeederWatch season</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>In the format 'PFW_2019' where PFW = Project FeederWatch. The year indicates the FeederWatch season which is defined as the year the season ended. E.g., the November 2018 through April 2019 season is labeled 'PFW_2019'. This is the same field as PROJ_PERIOD_ID in the site description dataset and can be used to link the observation data to the site description data in conjunction with LOC_ID.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   SPECIES_CODE</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Bird species observed, stored as 6-letter species codes</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Species codes are based on the eBird taxonomy. See "Species Codes" tab below for code translations. </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   alt_full_spp_code</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Alternate code for bird species observed, lumping subspecies/recognizable forms</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>This column enables someone to "roll up" information on subspecies and recognizable forms into the species code of the full species instead of the code for the recognizable form. The species code values for the subspecies/forms are still the primary information stored in the column SPECIES_CODE, but the alternate code for the full species is available in the column immediately to its right.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   HOW_MANY</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Maximum number of individuals seen at one time during observation period</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   VALID</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Validity of each observation based on flagging system</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>1 = observation did not trigger the automated review system or was reviewed and approved. 0 = observation triggered the automated review system and has either not been reviewed or was reviewed and left as 'invalid'. Use 0 records with extreme caution. Details of the review process: Bonter, D.N. and C.B. Cooper. 2012. Data validation in citizen science: A case study from Project FeederWatch. Frontiers in Ecology and the Environment 10:305-307.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   REVIEWED</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Review state of each observation based on flagging system</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>1 = observation was reviewed by FeederWatch staff. 0 = observation either did not trigger the automated review system or has not yet been reviewed. Details of the review process: Bonter, D.N. and C.B. Cooper. 2012. Data validation in citizen science: A case study from Project FeederWatch. Frontiers in Ecology and the Environment 10:305-307.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   PLUS_CODE</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Variable indicating if the total number of a species seen was larger than the value reported</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Data field used on historic paper data forms (no longer being populated). Due to space limitations of the paper forms, some large flock sizes could not be recorded accurately. In such a case, the "PLUS_CODE" field is coded as '1', indicating that the number of birds seen was larger than that reported in the "HOW_MANY" field. Observations where PLUS_CODE = 1 and HOW_MANY = 9, 90, 99, or 999 should be used with caution. </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   DAY1_AM</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Variable indicating if observer watched during morning of count Day 1</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>0 = observer did not watch their feeders during the morning of Day 1; 1 = observer did watch their feeders during this time interval. We suggest adding the values in the DAY1_AM, DAY1_PM, DAY2_AM and DAY2_PM fields into an aggregated measure of effort indicating the number of half days of observation effort (range = 1-4). </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   DAY1_PM</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Variable indicating if observer watched during afternoon of count Day 1</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>See DAY1_AM</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   DAY2_AM</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Variable indicating if observer watched during morning of count Day 2</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>See DAY1_AM</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   DAY2_PM</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Variable indicating if observer watched during afternoon of count Day 2</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>See DAY1_AM</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   EFFORT_HRS_ATLEAST</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Participant estimate of survey time  for each checklist</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>A second measure of observation effort. Categorical: 0.001 = less than 1 hour of observation during the 2-day count period;   1.001 = 1 to 4 hours of observation; 4.001 = 4 to 8 hours of observation; 8.001 = greater than 8 hours of observation. </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   SNOW_DEP_ATLEAST</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Participant estimate of minimum snow depth during a checklist</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>An estimate of snow depth. Categorical: . = null; 0 = none; 0.001 = less than 5 cm; 5.000 = 5 to 15 cm; 15.001 = greater than 15 cm</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   DATA_ENTRY_METHOD</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Data entry method for each checklist (e.g., web, mobile app or paper form)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>As of 2020, the three modes of data entry for the dataset include paper data forms (field value indicates 'paper'), the FeederWatch website (field value indicates various versions of 'Web' entry), or the mobile phone app (field value indicates various versions of 'Mobile' entry). </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   Yard_type</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Variables indicating features of yard (*five fields)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>0 = absent, 1 = present for each category of yard type: Pavement (no vegetation), garden or courtyard, landscaped yard, natural vegetation, natural or landscaped desert.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   Habitat_type</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Variables indicating features of surrounding habitat (*fourteen fields)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>0 = absent, 1 = present for the following habitat types located within 0.5 miles of the count site: deciduous woods, evergreen woods, mixed deciduous-evergreen woods, orchard, park, fresh water, salt water, residential area, industrial or commercial, agricultural fields, desert or scrub, secondary growth woods, swamp (wooded), marsh).</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   Trees/shrubs</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Variables indicating types of surrounding vegetation (*six fields)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Minimum number of trees or shrubs of various types within the count area. EVGR = evergreen; DCID = deciduous, FRU = fruit, CACTI = cacti. Note that this field has been inconsistently recorded over time. Current (2020) categories: 0, 1-3, 4-10, &gt; 10.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   Brush/water</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Variables indicating presence of brush piles or water sources (*three fields)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Categorical. Minimum number of brush piles, water sources, and bird baths located within the count area. Note that categories changed slightly over the years. Generally, categories represent: 0, 1-3, 4-10, &gt; 10.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   NEARBY_FEEDERS</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Variable indicating if other feeders are regularly operated within 90m of survey site</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Present or absence of feeders (others than those maintained by the participant) within 90 m of the count site. 0 = feeders absent, 1 = feeders present. </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   Other_animals</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Variables indicating if squirrels, cats, dogs or humans are at the survey site (*four fields)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>0 = no, 1 = yes. Do squirrels take food from feeders at least 3 times per week? Are cats, dogs, or humans active within 30 m of the feeders for at least 30 minutes 3 days per week? </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   HOUSING_DENSITY</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Participant estimated housing density of neighborhood</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Participant-defined description of the housing density of the neighborhood. 1 = "rural", 2 = "rural/suburban", 3 = "suburban", 4 = "urban"</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   Feeding_schedule</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Variables indicating which months of the year participants provide food (*thirteen fields)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>0 = no, 1 = yes. Response to the following question for each month, "I provided food in my count site at least once per week." Note that the field indicating whether or not the participant provides food year-round (FED_YR_ROUND) has not be consistently applied throughout the history of the project. </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   Feeder_numbers_by_type</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Variables indicating the number and types of feeders provided (*eight fields)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Participants report the number of feeders maintained within their count site. Suet or fat feeders, ground feeding sites, hanging feeders, platform feeders, sugar water feeders (HUMMING), water dispensers (field retired in 2005), thistle feeders (field retired in 2005), fruit feeders. </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   POPULATION_ATLEAST</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Participant estimated population of city or town</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>1 = less than 5,000; 5001 = 5,001 - 25,000; 25001 = 25,001 - 100,000; 100001 = &gt; 100,000.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   COUNT_AREA_SIZE_SQ_M_ATLEAST</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Participant estimated area of survey site</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>0.01 = &lt; 1 square meter; 1.01 = 1 to 100 square meters; 100.01 = 100 - 375 square meters; 375.01 = &gt; 375 square meters</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   CREATION_DT</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Date of site creation</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>All sites created prior to 2001 are listed as created in 2001.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   LAST_EDITED_DT</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Date of last site location edit</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Lists the most recent date site-specific data was edited.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   supp_food</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Participant indicates whether supplementary food was provided (1) or not provided (0) at the site</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Variable added during the 2021-2022 FeederWatch season, this variable allows people to indicate if they watched birds within a fixed area but did not provide supplemental food (i.e., watching an area that they landscaped for birds but with no direct bird feeding). 1 = supplemental food provided, 0 = supplemental food NOT provided, null before the 2021-22 season could be interpreted as food provided because FeederWatch was explicitly focused on bird feeding stations. </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    LOC_ID </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Unique identifier for each survey site </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Each observation location should have only one LOC_ID. A single observer may maintain more than one LOC_ID. This is the same field as LOC_ID in the site description dataset and can be used to link the observation data to the site description data in conjunction with PROJ_PERIOD_ID. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    LATITUDE </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Latitude in decimal degrees for each survey site </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Accuracy varies. See ENTRY_TECHNIQUE below.  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    LONGITUDE </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Longitude in decimal degrees for each survey site </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Accuracy varies. See ENTRY_TECHNIQUE below.  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    SUBNATIONAL1_CODE </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Country abbreviation and State or Province abbreviation of each survey site </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Format XX-XX where the left two letters indicate the country and the right two letters indicate the state or province code. E.g., CA-ON = Canada - Ontario </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    ENTRY_TECHNIQUE </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Variable indicating method of site localization </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Codes represent dozens of methods for site creation with varying degrees of specificity. These methods continue to evolve as online mapping technologies change. The most accurate locations have higher "zoom level" values (e.g., Google Map Zoom level 9). Note that postal code locations were geolocated at the centroid of the postal code within which the site is located (i.e., these sites lack accuracy and are not useful if you are trying to link to site to satellite-derived land cover data, for instance). </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    SUB_ID </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Unique identifier for each checklist </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    OBS_ID </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Unique identifier for each observation of a species </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> One SUB_ID will have as many OBS_ID values as there were species reported on a given checklist.  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    MONTH </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Month of 1st day of two-day observation period </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    DAY </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Day of 1st day of two-day observation period </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    YEAR </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Year of 1st day of two-day observation period </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    PROJ_PERIOD_ID </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Calendar year of end of FeederWatch season </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> In the format 'PFW_2019' where PFW = Project FeederWatch. The year indicates the FeederWatch season which is defined as the year the season ended. E.g., the November 2018 through April 2019 season is labeled 'PFW_2019'. This is the same field as PROJ_PERIOD_ID in the site description dataset and can be used to link the observation data to the site description data in conjunction with LOC_ID. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    SPECIES_CODE </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Bird species observed, stored as 6-letter species codes </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Species codes are based on the eBird taxonomy. See "Species Codes" tab below for code translations.  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    alt_full_spp_code </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Alternate code for bird species observed, lumping subspecies/recognizable forms </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> This column enables someone to "roll up" information on subspecies and recognizable forms into the species code of the full species instead of the code for the recognizable form. The species code values for the subspecies/forms are still the primary information stored in the column SPECIES_CODE, but the alternate code for the full species is available in the column immediately to its right. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    HOW_MANY </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Maximum number of individuals seen at one time during observation period </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    VALID </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Validity of each observation based on flagging system </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> 1 = observation did not trigger the automated review system or was reviewed and approved. 0 = observation triggered the automated review system and has either not been reviewed or was reviewed and left as 'invalid'. Use 0 records with extreme caution. Details of the review process: Bonter, D.N. and C.B. Cooper. 2012. Data validation in citizen science: A case study from Project FeederWatch. Frontiers in Ecology and the Environment 10:305-307. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    REVIEWED </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Review state of each observation based on flagging system </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> 1 = observation was reviewed by FeederWatch staff. 0 = observation either did not trigger the automated review system or has not yet been reviewed. Details of the review process: Bonter, D.N. and C.B. Cooper. 2012. Data validation in citizen science: A case study from Project FeederWatch. Frontiers in Ecology and the Environment 10:305-307. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    PLUS_CODE </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Variable indicating if the total number of a species seen was larger than the value reported </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Data field used on historic paper data forms (no longer being populated). Due to space limitations of the paper forms, some large flock sizes could not be recorded accurately. In such a case, the "PLUS_CODE" field is coded as '1', indicating that the number of birds seen was larger than that reported in the "HOW_MANY" field. Observations where PLUS_CODE = 1 and HOW_MANY = 9, 90, 99, or 999 should be used with caution.  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    DAY1_AM </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Variable indicating if observer watched during morning of count Day 1 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> 0 = observer did not watch their feeders during the morning of Day 1; 1 = observer did watch their feeders during this time interval. We suggest adding the values in the DAY1_AM, DAY1_PM, DAY2_AM and DAY2_PM fields into an aggregated measure of effort indicating the number of half days of observation effort (range = 1-4).  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    DAY1_PM </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Variable indicating if observer watched during afternoon of count Day 1 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> See DAY1_AM </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    DAY2_AM </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Variable indicating if observer watched during morning of count Day 2 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> See DAY1_AM </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    DAY2_PM </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Variable indicating if observer watched during afternoon of count Day 2 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> See DAY1_AM </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    EFFORT_HRS_ATLEAST </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Participant estimate of survey time  for each checklist </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> A second measure of observation effort. Categorical: 0.001 = less than 1 hour of observation during the 2-day count period;   1.001 = 1 to 4 hours of observation; 4.001 = 4 to 8 hours of observation; 8.001 = greater than 8 hours of observation.  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    SNOW_DEP_ATLEAST </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Participant estimate of minimum snow depth during a checklist </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> An estimate of snow depth. Categorical: . = null; 0 = none; 0.001 = less than 5 cm; 5.000 = 5 to 15 cm; 15.001 = greater than 15 cm </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    DATA_ENTRY_METHOD </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Data entry method for each checklist (e.g., web, mobile app or paper form) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> As of 2020, the three modes of data entry for the dataset include paper data forms (field value indicates 'paper'), the FeederWatch website (field value indicates various versions of 'Web' entry), or the mobile phone app (field value indicates various versions of 'Mobile' entry).  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    Yard_type </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Variables indicating features of yard (*five fields) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> 0 = absent, 1 = present for each category of yard type: Pavement (no vegetation), garden or courtyard, landscaped yard, natural vegetation, natural or landscaped desert. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    Habitat_type </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Variables indicating features of surrounding habitat (*fourteen fields) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> 0 = absent, 1 = present for the following habitat types located within 0.5 miles of the count site: deciduous woods, evergreen woods, mixed deciduous-evergreen woods, orchard, park, fresh water, salt water, residential area, industrial or commercial, agricultural fields, desert or scrub, secondary growth woods, swamp (wooded), marsh). </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    Trees/shrubs </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Variables indicating types of surrounding vegetation (*six fields) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Minimum number of trees or shrubs of various types within the count area. EVGR = evergreen; DCID = deciduous, FRU = fruit, CACTI = cacti. Note that this field has been inconsistently recorded over time. Current (2020) categories: 0, 1-3, 4-10, &gt; 10. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    Brush/water </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Variables indicating presence of brush piles or water sources (*three fields) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Categorical. Minimum number of brush piles, water sources, and bird baths located within the count area. Note that categories changed slightly over the years. Generally, categories represent: 0, 1-3, 4-10, &gt; 10. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    NEARBY_FEEDERS </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Variable indicating if other feeders are regularly operated within 90m of survey site </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Present or absence of feeders (others than those maintained by the participant) within 90 m of the count site. 0 = feeders absent, 1 = feeders present.  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    Other_animals </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Variables indicating if squirrels, cats, dogs or humans are at the survey site (*four fields) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> 0 = no, 1 = yes. Do squirrels take food from feeders at least 3 times per week? Are cats, dogs, or humans active within 30 m of the feeders for at least 30 minutes 3 days per week?  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    HOUSING_DENSITY </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Participant estimated housing density of neighborhood </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Participant-defined description of the housing density of the neighborhood. 1 = "rural", 2 = "rural/suburban", 3 = "suburban", 4 = "urban" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    Feeding_schedule </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Variables indicating which months of the year participants provide food (*thirteen fields) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> 0 = no, 1 = yes. Response to the following question for each month, "I provided food in my count site at least once per week." Note that the field indicating whether or not the participant provides food year-round (FED_YR_ROUND) has not be consistently applied throughout the history of the project.  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    Feeder_numbers_by_type </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Variables indicating the number and types of feeders provided (*eight fields) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Participants report the number of feeders maintained within their count site. Suet or fat feeders, ground feeding sites, hanging feeders, platform feeders, sugar water feeders (HUMMING), water dispensers (field retired in 2005), thistle feeders (field retired in 2005), fruit feeders.  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    POPULATION_ATLEAST </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Participant estimated population of city or town </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> 1 = less than 5,000; 5001 = 5,001 - 25,000; 25001 = 25,001 - 100,000; 100001 = &gt; 100,000. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    COUNT_AREA_SIZE_SQ_M_ATLEAST </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Participant estimated area of survey site </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> 0.01 = &lt; 1 square meter; 1.01 = 1 to 100 square meters; 100.01 = 100 - 375 square meters; 375.01 = &gt; 375 square meters </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    CREATION_DT </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Date of site creation </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> All sites created prior to 2001 are listed as created in 2001. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    LAST_EDITED_DT </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Date of last site location edit </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Lists the most recent date site-specific data was edited. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    supp_food </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Participant indicates whether supplementary food was provided (1) or not provided (0) at the site </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Variable added during the 2021-2022 FeederWatch season, this variable allows people to indicate if they watched birds within a fixed area but did not provide supplemental food (i.e., watching an area that they landscaped for birds but with no direct bird feeding). 1 = supplemental food provided, 0 = supplemental food NOT provided, null before the 2021-22 season could be interpreted as food provided because FeederWatch was explicitly focused on bird feeding stations.  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># View the data dictionary entry for location ID ("LOC_ID")</span></span></span>
 <span class="r-in"><span><span class="fu">pfw_dictionary</span><span class="op">(</span><span class="st">"LOC_ID"</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>   LOC_ID</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span> Unique identifier for each survey site</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span>Each observation location should have only one LOC_ID. A single observer may maintain more than one LOC_ID. This is the same field as LOC_ID in the site description dataset and can be used to link the observation data to the site description data in conjunction with PROJ_PERIOD_ID.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Variable:</span>    LOC_ID </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Definition:</span>  Unique identifier for each survey site </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Description:</span> Each observation location should have only one LOC_ID. A single observer may maintain more than one LOC_ID. This is the same field as LOC_ID in the site description dataset and can be used to link the observation data to the site description data in conjunction with PROJ_PERIOD_ID. </span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
