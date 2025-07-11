@@ -7,6 +7,8 @@
 Badge](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/PFW)](https://CRAN.R-project.org/package=PFW)
 [![R-CMD-check](https://github.com/ropensci/PFW/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/PFW/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/ropensci/PFW/graph/badge.svg)](https://app.codecov.io/gh/ropensci/PFW)
