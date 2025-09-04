@@ -46,7 +46,7 @@ alt="FeederWatch locations from 1989-2020." />
 `PFW` can be installed using:
 
 ``` r
-install.packages("PFW", repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org'))
+install.packages("PFW")
 ```
 
 ## Vignette

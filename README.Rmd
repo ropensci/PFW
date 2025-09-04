@@ -36,7 +36,7 @@ Included in `PFW` are tools for taxonomic rollup, filtering by survey characteri
 `PFW` can be installed using:
 
 ```{r, eval = FALSE}
-install.packages("PFW", repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org'))
+install.packages("PFW")
 ```
 
 ## Vignette
